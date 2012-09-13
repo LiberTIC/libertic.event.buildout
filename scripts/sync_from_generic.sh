@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 cd $(dirname $0)/..
-IMPORT_URL="ssh://git@github.com/LiberTIC-Nantes/libertic.event.buildout.git"
 PROJECT="libertic.event"
 GITORIOUS=""
 GDOT="."
-IMPORT_URL="ssh://git@github.com/LiberTIC-Nantes/libertic.event.buildout.git"
+IMPORT_URL="ssh://git@github.com/LiberTIC/libertic.event.buildout.git"
 if [[ $(echo "$IMPORT_URL"|sed -re "s/.*gitorious.*/match/g") == "match" ]];then
     GITORIOUS="1"
     GDOT="-"
@@ -21,17 +20,26 @@ buildout-dev.cfg
 buildout-prod.cfg
 minitage.buildout-dev.cfg
 minitage.buildout-prod.cfg
+LINK_TO_REGENERATE.html
 README.*
 minilays/
-scripts/
 "
 for f in $files;do
     rsync -aKzv t/$f $f
 done
+rm -rf  t/src/*/src/libertic/event/skins/libertic_event_custom/.empty
+rm -rf  t/src/*/src/libertic/event/skins/libertic_event_custom/CONTENT.txt
+rm -rf  t/src/*/src/libertic/event/skins/libertic_event_custom/base_properties.props
+rm -rf  t/src/*/src/libertic/event/skins/libertic_event_custom/favicon.ico
+rm -rf  t/src/*/src/libertic/event/skins/libertic_event_custom/logo.jpg
 rsync -aKzv  --exclude=versions.cfg t/etc/ etc/
+rsync -aKzv  t/etc/ etc/
 policy="tests/base.py
-configure.zcml
+upgrades/
 interfaces.py
+configure.zcml
+tests/
+testing.py
 profiles/default/metadata.xml"
 policy_folder="src.mrdeveloper/$PROJECT.policy"
 if [[ ! -e $policy_folder ]];then
@@ -43,6 +51,8 @@ fi
 for i in $policy;do
     rsync -azKv t/src/$PROJECT/src/${PROJECT/\./\/}/$i src.mrdeveloper/$PROJECT/src/${PROJECT/\./\/}/$i
 done
+rsync -azKv t/src/$PROJECT/setup.py src.mrdeveloper/$PROJECT/setup.py
+rsync -azKv t/src/$PROJECT/RE*.mrdeveloper/$PROJECT/RE*
 EGGS_IMPORT_URL="${IMPORT_URL//\/$GPROJECT${GDOT}buildout\.git}"
 sed -re "/\[sources\]/{
         a $PROJECT =  git $EGGS_IMPORT_URL/$GPROJECT.git
@@ -50,11 +60,13 @@ sed -re "/\[sources\]/{
 sed -re "s:(src/)?$PROJECT::g" -i etc/project/$PROJECT.cfg
 sed -re "/auto-checkout \+=/{
         a \    $PROJECT
+        a \    plone.app.async
+        a \    collective.cron
 }"  -i etc/project/sources.cfg
-sed -re "/eggs \+=.*buildout:eggs/{
+sed -re "/ Pillow/{
         a \    $PROJECT
 }"  -i etc/project/$PROJECT.cfg
-sed -re "/zcml \+=/{
+sed -re "/zcml\+?=/{
         a \    $PROJECT
 }"  -i etc/project/$PROJECT.cfg
 sed -re "s/.*:default/    ${PROJECT}:default/g" -i  etc/project/$PROJECT.cfg
@@ -86,4 +98,5 @@ a\     *www.riverbankcomputing.com*
 a\     *.selenic.com*
 }" -i etc/sys/settings.cfg
 sed  -re "s/dependencies=/dependencies=git-1.7 subversion-1.6 /g" -i minilays/*/*
+sed -re "s:/.env:/$PROJECT.env:g" -i etc/project/$PROJECT.cfg
 # vim:set et sts=4 ts=4 tw=80:

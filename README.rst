@@ -7,7 +7,7 @@ INSTALLING THIS PROJECT WITHOUT MINITAGE
 ::
 
     source /minitage/bin/activate
-    git clone ssh://git@github.com/LiberTIC-Nantes/libertic.event.buildout.git libertic.event
+    git clone ssh://git@github.com/LiberTIC/libertic.event.buildout.git libertic.event
     cd libertic.event
     python bootstrap.py -dc buildout-(dev/prod).cfg
     bin/buildout -vvvvvNc -dc buildout-(dev/prod).cfg
@@ -29,7 +29,7 @@ THE MINITAGE DANCE
     virtualenv --no-site-packages --distribute $MT
     source /minitage/bin/activate
     easy_install -U minitage.core minitage.paste
-    git clone ssh://git@github.com/LiberTIC-Nantes/libertic.event.minilay.git $MT/minilays/libertic.event
+    git clone ssh://git@github.com/LiberTIC/libertic.event.minilay.git $MT/minilays/libertic.event
     minimerge -v libertic.event
     #minimerge -v libertic.event-prod
     source $MT/zope/libertic.event/sys/share/minitage/minitage.env
@@ -147,20 +147,6 @@ BACKENDS
     |-- etc/backends/relstorage.cfg            -> relstorage configuration if any
     |-- etc/backends/zeo.cfg                   -> zeoserver configuration if any
     `-- etc/backends/zodb.cfg                  -> zodb configuration if any
-
-
-KGS FILE
-----------
-We provide a part to generate the etc/libertic.event-kgs.cfg file.
-This will allow you to freeze software versions known to work with your project and make reproducible environment.
-This file will be generated the first time that you run buildout.
-To un it, just run bin/buildout -vvvvvvc <CONFIG_FILE> install kgs
-Then sync the content of the kgs file with ``etc/project/versions.cfg``.
-
-NOTES ABOUT RELSTORAGE SUPPORT
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-We use the ZODB as an egg which is patched during installation, please see ``etc/project/patches.cfg``
-
 
 OS SPECIFIC SYSTEM INSTALLERS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
