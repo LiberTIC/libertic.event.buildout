@@ -99,4 +99,29 @@ a\     *.selenic.com*
 }" -i etc/sys/settings.cfg
 sed  -re "s/dependencies=/dependencies=git-1.7 subversion-1.6 /g" -i minilays/*/*
 sed -re "s:/.env:/$PROJECT.env:g" -i etc/project/$PROJECT.cfg
+
+cat >>  etc/project/$PROJECT.cfg << EOF
+
+[async.test]
+recipe = collective.xmltestreport
+eggs = \${instance:eggs}
+    plone.app.async
+extra-paths = \${instance:extra-paths}
+defaults = ['--exit-with-status', '--auto-color', '--auto-progress', '-s', 'plone.app.async']
+environment = testenv
+extra-paths = \${zopepy:extra-paths}
+
+[cron.test]
+recipe = collective.xmltestreport
+eggs = \${instance:eggs}
+    collective.cron
+extra-paths = \${instance:extra-paths}
+defaults = ['--exit-with-status', '--auto-color', '--auto-progress', '-s', 'collective.cron']
+environment = testenv
+extra-paths = \${zopepy:extra-paths}
+
+EOF
+
+
+
 # vim:set et sts=4 ts=4 tw=80:
