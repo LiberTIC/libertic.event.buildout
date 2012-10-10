@@ -3,6 +3,7 @@ develop-eggs/
 etc/apache/100-libertic.event.reverseproxy.conf
 etc/forespir.env
 etc/hudson/libertic.event/build/activate_env.sh
+tags.python
 etc/hudson/libertic.event/config.xml
 etc/libertic.event.env
 !etc/sys
