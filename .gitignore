@@ -1,5 +1,4 @@
 bin
-tags.python
 develop-eggs/
 etc/apache/100-libertic.event.reverseproxy.conf
 etc/forespir.env
