@@ -59,7 +59,7 @@ backend zope
 
   appsession __ac len 32 timeout 1d
   balance roundrobin
-  cookie serverid insertindirect
+  cookie serverid insert indirect
   option httpchk GET /
 
   server  zope0101 ${hosts:instance1}:${ports:instance1} cookie z0101 check maxconn 2 maxqueue 50
