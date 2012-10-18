@@ -35,34 +35,21 @@ THE MINITAGE DANCE
     source $MT/zope/libertic.event/sys/share/minitage/minitage.env
     cd $INS #enjoy !
 
-
-CREATE A FIRST PLONESITE OBJECT
----------------------------------
-Just run your plone and install libertic.event
-
-PLAYING WITH DATAFS & PROJECT DATABASES
--------------------------------------------
-- Upload the latest datafs from production to staging server::
-
-    bin/buildout -vNc <CONFIG>-prod.cfg install upload-datafs
-
-- Get the latest datafs from production to staging server::
-
-    bin/buildout -vNc <CONFIG> install get-datafs
-
-
-DEVELOP MODE
----------------
-To develop your application, run the ``(minitage.)buildout-dev.cfg`` buildout, it extends this one but:
-  * it comes with development tools.
-  * it configures the instance to be more verbose (debug mode & verbose security)
-  * it has only one instance and not all the hassles from production.
-
-
 PRODUCTION MODE
 ---------------
 To make your application safe for production, run the ``(minitage.)buildout-prod.cfg`` buildout'.
 It extends this one with additionnal crontabs and backup scripts and some additionnal instances creation.
+
+In production we use supervisor to manage processes.
+
+Those processes are managed via supervisor (the only init script you add to your system init):
+
+    - zeo
+    - haproxy (loadbalancer)
+    - instance1 (plone)
+    - instance-worker (asynchron jobs runner)
+
+We also add crons to backup & pack the ZODB each night
 
 
 BASE BUILDOUTS WHICH DO ONLY SCHEDULE PARTS FROM THERE & THERE
@@ -137,107 +124,6 @@ CONFIGURATION TEMPLATES
     |                                  Copy or ln the generated file 'etc/loadbalancing/balancer.conf' to your haproxy installation if any.
     `-- logrotate.conf.template     -> logrotate configuration file template for your Zope logs
     `-- supervisor.initd            -> template for supervisor init script
-
-
-BACKENDS
-~~~~~~~~~~~
-::
-
-    etc/backends/
-    |-- etc/backends/relstorage.cfg            -> relstorage configuration if any
-    |-- etc/backends/zeo.cfg                   -> zeoserver configuration if any
-    `-- etc/backends/zodb.cfg                  -> zodb configuration if any
-
-OS SPECIFIC SYSTEM INSTALLERS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Thos popular tools around zope/plone dev (not supported, just here for your conveniance, READ BEFORE USING THEM)
-And you'd  better have to learn how to bootstrap some minitage environment out there, funny and more secure & reproductible!
-::
-
-    |-- etc/os
-        |-- debian.sh       -> debian specific
-        |-- opensuse-dev.sh -> opensuse/dev specific
-        |-- opensuse.sh     -> suse specific
-        |-- osx.sh          -> osx specific
-        `-- ubuntu.sh       -> ubuntu specific
-
-
-CONTINEOUS INTEGRATION
-~~~~~~~~~~~~~~~~~~~~~~~~~
-Here are the files needed for our hudson integration.
-
-For hudson we provide some shell helpers more or less generated to run 'a build':
-
-    - an helper which set some variables in the current environement for others helpers
-    - an helper which update the project
-    - an helper which update the associated sources grabbed via mr.developer
-    - an helper which run all the tests
-
-This is described in details on the related configuration files you will find in the layout below.
-::
-
-    |-- etc/hudson/
-    |   `-- libertic.event
-    |       |-- build
-    |           |-- build.sh               -> the project build helper
-    |           |-- test.sh                -> the project test executor helper (launch all tests needed)
-    |           |-- update_mrdeveloper.sh  -> update sources grabbed via mrdeveloper
-    |           `-- update_project.sh      -> update this layout
-    |
-    |-- etc/templates/hudson/
-        `-- libertic.event
-            |-- build
-            |   `-- activate_env.sh.in   -> buildout template to generate etc/hudson/libertic.event/build/activate.env.sh
-            `-- config.xml.in            -> buildout template to generate etc/hudson/libertic.event/config.xml (hudson job/build file)
-
-A word about minitage.paste instances
---------------------------------------
-You are maybe wondering why this big buildout do not have out of the box those fancy monitoring, load-balancing or speedy databases support.
-#
-For the author, System programs that are not well integrated via buildout and most of all not written in python don't really have to be deployed via that buildout.
-And most of all, you ll surelly have head aches to make those init-scripts or rotation logs configurations right.
-Because the recipe which do them don't support it or other problems more or less spiritual.
-#
-Keep in mind that in Unix, one thing must do one purpose, and do it well. And many sysadmins don't want to run a buildout
-to generate a configuration file or build their loadbalancer, They want to edit in place, at most fetch the configuration file from somewhere and adapt,that's all.
-#
-Nevertheless, as usual, they are exceptions:
-     - supervisord which is well integrated. So supervisor is deployed along in the production buildout if any.
-     - We generate through buildout a haproxy configuration file or hudson related stuff
-#
-That's because we support that throught 'minitage.paste.instances'. Those are templates which create some instance of some program
-inside a subdirectory which is:
-   - sys/ inside a minitage project
-   - ADirectoryOfYourChoice/ if your are not using minitage
-#
-This significate that you can install a lot of things along with your project with:
-   - minitage/bin/easy_install -U minitage.paste(.extras) (or get it via buildout)
-   - paster create -t <TEMPLATE_NAME> projectname_OR_subdirectoryName inside_minitage=y/n
-     Where TEMPLATE_NAME can be (run paster create --list-templates|grep minitage.instances to get an up2date version):
-#
-     * minitage.instances.apache:          Template for creating an apache instance
-     * minitage.instances.env:             Template for creating a file to source to get the needed environnment variables for playing in the shell or for other templates
-     * minitage.instances.mysql:           Template for creating a postgresql instance
-     * minitage.instances.nginx:           Template for creating a nginx instance
-     * minitage.instances.paste-initd:     Template for creating init script for paster serve
-     * minitage.instances.postgresql:      Template for creating a postgresql instance
-     * minitage.instances.varnish:         Template for creating a varnish instance
-     * minitage.instances.varnish2:        Template for creating a varnish2 instance
-#
-     The minitage.paste package as the following extras:
-#
-     * minitage.instances.openldap:      Template for creating an openldap instance
-     * minitage.instances.tomcat:        Template for creating a tomcat instance
-     * minitage.instances.cas:           Template for creating a Jisag CAS instance
-     * minitage.instances.hudson:        Template for creating an hudson instance
-#
-Note that if you are using minitage, you ll have better to add dependencies inside your minibuild and run minimerge to build them prior to run the paster command
-#
-For example, to add a postgresql instance to your project, you will have to issue those steps:
-    * $EDITOR minitage/minilays/libertic.event_minilay/libertic.event -> add postgresql-8.4 to the dependencies list
-    * minimerge -v  libertic.event install what was not, and surely at least postgresql-8.4
-    * minitage/bin/paster create -t minitage.instance.postgresql libertic.event
-    * Then to start the postgres : zope/libertic.event/sys/etc/init.d/libertic.event_postgresql restart
 
 
 .. vim:set ft=rst:
