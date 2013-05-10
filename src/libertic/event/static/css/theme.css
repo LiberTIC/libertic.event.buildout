@@ -1,70 +1,274 @@
+/* Resets *
+ * ****** */
+body {
+  color: #555555;
+}
+/* Links *
+ * ----- */
+a:link,
+a:visited {
+  color: #363339;
+}
+a:hover {
+  color: #5c5761;
+}
+#content a:link,
+dl.portlet a:link,
+#content a:visited,
+dl.portlet a:visited {
+  color: #363339;
+  text-decoration: underline;
+  border-bottom: none;
+}
+#content a:hover,
+dl.portlet a:hover {
+  color: #5c5761 !important;
+}
+footer a,
+#portal-footer a,
+#portal-colophon a,
+#portal-siteactions li a,
+footer a:link,
+#portal-footer a:link,
+#portal-colophon a:link,
+#portal-siteactions li a:link,
+footer:visited,
+#portal-footer:visited,
+#portal-colophon:visited,
+#portal-siteactions li:visited {
+  color: #ececec;
+  text-decoration: underline;
+}
+footer a:hover,
+#portal-footer a:hover,
+#portal-colophon a:hover,
+#portal-siteactions li a:hover {
+  color: #c6c6c6;
+}
+/* Basic classes *
+ * ------------- */
+.align-right {
+  float: right;
+}
+.align-left {
+  float: left;
+}
+/* HEADER *
+ * ****** */
+#header-wrapper,
+#footer-wrapper {
+  background: url('../images/bg-motif-jacq.png') repeat center center;
+}
+#portal-globalnav {
+  margin: 80px 10px 1em 10px;
+  background: transparent;
+  border-bottom: 1px solid #c2c2c2;
+}
+#portal-globalnav li a:hover,
+#portal-globalnav li.selected a:hover,
+#portal-globalnav li a,
+#portal-globalnav li.selected a {
+  background: transparent;
+  color: white;
+  border-bottom: 5px solid #000000;
+}
+#portal-globalnav li a {
+  border: none;
+  border-bottom: 5px solid transparent;
+  min-width: auto;
+  padding: 0.5em 0;
+  margin-right: 2em;
+  font-weight: bold;
+  margin-bottom: -4px;
+}
 /* Sunburst Theme fixes to works with 960css */
-#portal-globalnav{
-    margin: 0 10px 1em 10px;
+#portal-searchbox {
+  position: relative;
+  z-index: 10;
 }
-#portal-searchbox{
-    position: relative;
-    z-index: 10;
+#portal-personaltools {
+  z-index: 15;
 }
-#portal-personaltools{
-    z-index: 15;
+/* FOOTER *
+ * ****** */
+footer {
+  color: #fefefe;
+  padding-top: 1em;
 }
-/* THEME */
-#portal-logo img{
-    /*width: 100%;*/
+footer .clear {
+  margin-bottom: 1em;
 }
-
+#portal-footer,
+#portal-colophon,
+#portal-siteactions {
+  font-size: 85%;
+}
+#portal-footer {
+  padding: 0;
+  margin: 0 10px;
+  background: transparent;
+}
+#portal-siteactions {
+  clear: none;
+  padding-bottom: 0;
+  text-align: left;
+  line-height: 2em;
+}
+#portal-siteactions li {
+  display: block;
+}
+#portal-colophon {
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.1);
+  text-align: left;
+}
+/* PORTLETS *
+ * ******** */
 dl.portlet-libertic-context dd,
 dl.portlet-libertic-context dd ul {
-  display:block;
-  width:100%;
-  margin:0 auto;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
 }
 dl.portlet-libertic-context dd {
-  clear:both;
+  clear: both;
 }
-
-dl.portlet-libertic-context dd.portletItem p{
-  padding-top:2px;
-  padding-bottom:2px;
-  margin-top:2px;
-  margin-bottom:2px;
+dl.portlet-libertic-context dd.portletItem p {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 dl.portlet-libertic-context dd.portletItem {
   padding-bottom: 5px;
   padding-top: 5px;
 }
-
 dl.portlet-libertic-context a:hover,
 dl.portlet-libertic-context a:link,
 dl.portlet-libertic-context a:visited,
 dl.portlet-libertic-context a {
-  border-bottom:none;
-  text-underline:none;
-}
-dl.portlet-libertic-context dd.add-content ul,
-dl.portlet-libertic-context dd.home ul,
-dl.portlet-libertic-context dd.download ul {
+  border-bottom: none;
+  text-underline: none;
 }
 dl.portlet-libertic-context dd.add-content ul li,
 dl.portlet-libertic-context dd.home ul li,
 dl.portlet-libertic-context dd.download ul li {
-  text-align:center;
-  display:inline-block;
-  margin:0 auto;
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
 }
-dl.portlet-libertic-context dd.download ul li { width:40px;}
-dl.portlet-libertic-context dd.home ul li { width:70px;}
-dl.portlet-libertic-context dd.add-content ul li {text-align:left;display:block;width:210px;position:relative;}
+dl.portlet-libertic-context dd.download ul li {
+  width: 40px;
+}
+dl.portlet-libertic-context dd.home ul li {
+  width: 70px;
+}
+dl.portlet-libertic-context dd.add-content ul li {
+  text-align: left;
+  display: block;
+  width: 210px;
+  position: relative;
+}
 dl.portlet-libertic-context dd.add-content ul li p,
 dl.portlet-libertic-context dd.add-content ul li img,
 dl.portlet-libertic-context dd.add-content ul li a,
-dl.portlet-libertic-context dd.add-content ul li {height:40px;}
-dl.portlet-libertic-context dd.add-content ul li img{width:32px;height:32px;}
-dl.portlet-libertic-context dd.add-content ul li p{width:160px;position:absolute;top:10px;left:32px;}
+dl.portlet-libertic-context dd.add-content ul li {
+  height: 40px;
+}
+dl.portlet-libertic-context dd.add-content ul li img {
+  width: 32px;
+  height: 32px;
+}
+dl.portlet-libertic-context dd.add-content ul li p {
+  width: 160px;
+  position: absolute;
+  top: 10px;
+  left: 32px;
+}
 dl.portlet-libertic-context dd.add-content ul li img,
 dl.portlet-libertic-context dd.add-content ul li a,
-dl.portlet-libertic-context dd.add-content ul li p{display:inline-block;margin:0;padding:0;}
+dl.portlet-libertic-context dd.add-content ul li p {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+/* Content *
+ * ******** */
+/* heading */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #555555;
+}
+h1,
+h2.tileHeadline {
+  font-size: 100%;
+  line-height: 2.5em;
+  margin-bottom: 1.5em;
+  text-transform: uppercase;
+  background: transparent url('../images/bg-heading.png') repeat-x left bottom;
+}
+h2 {
+  font-size: 100%;
+  line-height: 2em;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+#content h2.tileHeadline a {
+  text-decoration: none;
+}
+/* lists, description, ... */
+#content ul,
+#content ol,
+#content dl {
+  margin-bottom: 1em;
+}
+#content .documentDescription,
+#content #description {
+  font-size: 1em;
+  color: #555555;
+}
+/* Summary view *
+ * ------------ */
+/* hide main documentByLine */
+body.template-summary_view #plone-document-byline {
+  display: none;
+}
+/* Read more */
+p.tileFooter {
+  padding-left: 35px;
+  line-height: 30px;
+  background: url('../images/picto-search-30.png') no-repeat left center;
+  text-transform: uppercase;
+}
+#content p.tileFooter a {
+  border-bottom: 2px solid #c2c2c2;
+  text-decoration: none;
+}
+.tileItem {
+  margin-bottom: 2em;
+  /* Documentbyline */
 
-
-
+}
+.tileItem .documentByLine {
+  padding: 2px 5px;
+  font-style: italic;
+  font-size: 0.85em;
+  color: #fefefe;
+  background-color: #363339;
+}
+.tileItem #plone-document-byline {
+  display: none;
+}
+#content .tileItem .documentByLine a {
+  color: #fefefe;
+}
+/* Images */
+#content img.tileImage,
+#content div.newsImageContainer {
+  padding: 4px;
+  background: url('../images/bg-heading.png') repeat center center;
+}
