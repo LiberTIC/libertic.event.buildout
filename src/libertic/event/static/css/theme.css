@@ -302,3 +302,49 @@ p.tileFooter {
   padding: 4px;
   background: url('../images/bg-heading.png') repeat center center;
 }
+/* Datatable view *
+ * -------------- */
+#content .dataTable,
+.dataTable {
+  padding-top: 0;
+}
+table.listing {
+  background-color: #363339;
+  padding: 9px;
+  border-radius: 9px;
+}
+table.listing th {
+  background-color: #363339;
+}
+table.listing td:last-child {
+  border-right-color: #363339;
+}
+table.listing tbody tr:first-child td:first-child {
+  border-radius: 9px 0 0 0;
+}
+table.listing tbody tr:first-child td:last-child {
+  border-radius: 0 9px 0 0;
+}
+table.listing tbody tr:last-child td:first-child {
+  border-radius: 0 0 0 9px;
+}
+table.listing tbody tr:last-child td:last-child {
+  border-radius: 0 0 9px 0;
+}
+table.dataTable thead th {
+  border-color: #363339;
+  color: #ececec;
+}
+.DataTables_sort_icon.ui-icon {
+  float: right;
+  width: 20px;
+  height: 20px;
+  background-position: 0 0;
+  background-image: url('../images/sprite-datatable.png');
+}
+.DataTables_sort_icon.ui-icon.ui-icon-triangle-1-n {
+  background-position: -20px 0;
+}
+.DataTables_sort_icon.ui-icon.ui-icon-triangle-1-s {
+  background-position: -40px 0;
+}
