@@ -17,20 +17,33 @@ from libertic.event import MessageFactory as _
 class ILogoslidePortlet(IPortletDataProvider):
     """This portlet displays the data supplier or data operator logos
     """
-    pass
-    #~ portlet_title = schema.TextLine(
-        #~ title=_(u'Portlet Title'),
-        #~ description=_('help_portlet_title',
-                      #~ default=u'Enter a title for this portlet. '
-                               #~ "This property is used as the portlet's title in "
-                               #~ 'the "@@manage-portlets" screen. '
-                               #~ 'Leave blank for "Content portlet".'),
-        #~ required=False,
-    #~ )
 
 class Assignment(base.Assignment):
     implements(ILogoslidePortlet)
     title = u'Libertic Logo slide Portlet'
+
+def userinfo_list(context, grpid):
+    mtool = getToolByName(context, 'portal_membership')
+    gtool = getToolByName(context, 'portal_groups')
+    
+    group = gtool.getGroupById(grpid) or None
+
+    if not group:
+        return []
+
+    users = group.getGroupMembers()
+    results = []
+
+    for user in users:
+        user_infos = {}
+        personnal_infos = mtool.getMemberInfo(user.id)
+        user_infos['fullname'] = personnal_infos['fullname']
+        user_infos['logo'] = mtool.getPersonalPortrait(user.id) or None
+        user_infos['home'] = mtool.getHomeUrl(user.id, verifyPermission=1);
+        results.append(user_infos)    
+    
+    return results
+    
 
 class Renderer(base.Renderer):
     render = ViewPageTemplateFile('logoslide.pt')
@@ -41,11 +54,24 @@ class Renderer(base.Renderer):
         self.portal_state = getMultiAdapter((context, self.request),
                                        name=u'plone_portal_state')
         self.portal_url = self.portal_state.portal_url()
-        self.hasName = False
+        
+    @property
+    def title(self):
+        """return title of feed for portlet"""
+        return getattr(self.data, 'portlet_title', '')
+    
+    def operators_list(self):
+        """Return a list of operators, with name and portrait in each dict"""
+        return userinfo_list(self.context, 'libertic_event_operator')
+
+    def suppliers_list(self):
+        """Return a list of operators, with name and portrait in each dict"""
+        return userinfo_list(self.context, 'libertic_event_supplier')
 
 class AddForm(base.NullAddForm):
 
     def create(self):
         return Assignment()
 
+    
 # vim:set et sts=4 ts=4 tw=80:
