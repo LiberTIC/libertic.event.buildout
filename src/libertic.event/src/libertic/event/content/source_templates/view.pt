@@ -1,0 +1,92 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone.dexterity">
+<body>
+
+<metal:main fill-slot="main">
+
+    <h1 class="documentFirstHeading" tal:content="context/Title" />
+
+    <p class="documentDescription" tal:content="context/Description" />
+
+    <p>Actions:</p>
+    <ul>
+      <li><a i18n:translate="" href="get_events">Get events</a></li>
+    </ul>
+
+    <h2 i18n:translate="">Source details</h2>
+    <tal:block repeat="widget view/widgets/values">
+      <div class="field" tal:condition="python:widget.__name__ not in (
+        'IBasic.title', 'IBasic.description', 
+        'title', 'description', 'logs', 'warns', 'fails', 'runs',
+        'created_events', 'edited_events', 'failed_events')">
+            <label tal:content="widget/label" />
+            <br />
+            <div tal:content="structure widget/render" />
+        </div>
+    </tal:block>
+    <h2 i18n:translate="">Global statistics for source runs</h2>
+    <table class="listing" style="width:auto">
+      <tr>
+        <th i18n:translate="" width="10%">OK</th>
+        <th i18n:translate="" width="5%">WARN</th>
+        <th i18n:translate="" width="85%">FAILURE</th>
+      </tr>
+      <tr>
+        <td tal:content="here/runs"></td>
+        <td tal:content="here/warns"></td>
+        <td tal:content="here/fails"></td>
+      </tr>
+    </table>
+    <h2 i18n:translate="">Global statistics for events parsed</h2>
+    <table class="listing" style="width:auto">
+      <tr>
+        <th i18n:translate="" width="10%">Created</th>
+        <th i18n:translate="" width="5%">Edited</th>
+        <th i18n:translate="" width="85%">Failed to import</th>
+      </tr>
+      <tr>
+        <td tal:content="here/created_events"></td>
+        <td tal:content="here/edited_events"></td>
+        <td tal:content="here/failed_events"></td>
+      </tr>
+    </table>
+    <h2 i18n:translate="">Logs</h2>
+    <table tal:condition="context/logs" class="listing" width="100%">
+      <tr>
+        <th width="10%">Date</th>
+        <th width="5%">Status</th>
+        <th width="85%">Messages</th>
+      </tr>
+      <tal:block tal:repeat="log context/logs">
+        <tr>
+          <td tal:content="python:view.format_date(log.date)"></td>
+          <td i18:translate="" tal:content="python:view.get_status(log.status)"></td>
+          <td>
+            <ul>
+              <tal:block tal:repeat="err log/messages">
+                <li tal:content="err"/>
+              </tal:block>
+            </ul>
+          </td>
+        </tr>
+      </tal:block>
+    </table>
+    <fieldset tal:repeat="group view/groups"
+              tal:attributes="id python:''.join((group.prefix, 'groups.', group.__name__)).replace('.', '-')">
+        <legend tal:content="group/label" />
+        <div class="field" tal:repeat="widget group/widgets/values">
+            <label tal:content="widget/label" />
+            <br />
+            <div tal:content="structure widget/render" />
+        </div>
+    </fieldset>
+</metal:main>
+
+</body>
+</html>
+

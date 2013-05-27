@@ -1,0 +1,651 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+msgid ""
+msgstr ""
+"Project-Id-Version: libertic.event 1.0\n"
+"POT-Creation-Date: 2013-05-27 20:44+0000\n"
+"PO-Revision-Date: 2013-05-28 00:40+0200\n"
+"Last-Translator: kiorky <kiorky@cryptelium.net>\n"
+"Language-Team: FR <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: fr\n"
+"Language-Name: French\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: libertic.event\n"
+
+#: ./interfaces.py:153
+msgid "${name} is not allowed"
+msgstr "${name} n'est pas autorisé"
+
+#: ./members/profile.py:147
+msgid "A new user need to be added to the suppliers group"
+msgstr "Un nouveau fournisseur de données doit être validé"
+
+#: ./members/profile.py:35
+msgid "Accept terms of use"
+msgstr "Accepter les conditions d'utilisation"
+
+#: ./interfaces.py:122
+msgid "Activated to be parsed"
+msgstr "Activer la collecte"
+
+#: ./portlets/context.pt:69
+msgid "Add or import event"
+msgstr "Ajouter ou importer un évènement"
+
+#: ./interfaces.py:185
+msgid "Address"
+msgstr "Adresse"
+
+#: ./interfaces.py:186
+msgid "Address details"
+msgstr "Adresse (détails)"
+
+#: ./portlets/context.pt:59
+msgid "Advanced export"
+msgstr "Export avancé"
+
+#: ./portlets/context.pt:34
+msgid "All events"
+msgstr "Tous les évènements"
+
+#: ./interfaces.py:217
+msgid "Audio license"
+msgstr "License audio"
+
+#: ./interfaces.py:216
+msgid "Audio url"
+msgstr "URL audio"
+
+#: ./interfaces.py:204
+msgid "Author email"
+msgstr "Email de l'auteur"
+
+#: ./interfaces.py:202
+msgid "Author firstname"
+msgstr "Prénom de l'auteur"
+
+#: ./interfaces.py:201
+msgid "Author lastname"
+msgstr "Nom de l'auteur"
+
+#: ./interfaces.py:203
+msgid "Author telephone"
+msgstr "Téléphone de l'auteur"
+
+#: ./interfaces.py:282
+msgid "Contained events"
+msgstr "Evènements contenus"
+
+#: ./interfaces.py:189
+msgid "Country"
+msgstr "Pays"
+
+#: ./portlets/context.pt:54
+msgid "Download as CSV"
+msgstr "Télécharger les évènements en csv"
+
+#: ./portlets/context.pt:48
+msgid "Download as JSON"
+msgstr "Télécharger les évènements en json"
+
+#: ./portlets/context.pt:45
+msgid "Download as XML"
+msgstr "Télécharger les évènements en XML"
+
+#: ./portlets/context.pt:51
+msgid "Downloas as ICAL"
+msgstr "Télécharger les évènements en ICAL"
+
+#: ./interfaces.py:193
+#: ./profiles/default/registry.xml
+msgid "Event end"
+msgstr "Fin de l'évènement"
+
+#: ./interfaces.py:192
+#: ./profiles/default/registry.xml
+msgid "Event start"
+msgstr "Début de l'évènement"
+
+#: ./content/source.py:108
+msgid "Events are already planned to be fetched, please refresh in a while"
+msgstr "Les évènements sont déjà prévus pour la collecte, merci de rafraichir dans un moment"
+
+#: ./content/source.py:106
+msgid "Events will be grabbed, please refresh in a while"
+msgstr "Les évènements vont être collectés, veuillez rafraichir dans un moment"
+
+#: ./portlets/context.pt:43
+msgid "Export all events as..."
+msgstr "Exporter les évènements ..."
+
+#: ./interfaces.py:30
+msgid "FAILURE"
+msgstr "ECHEC"
+
+#: ./interfaces.py:131
+msgid "Failed runs"
+msgstr "Collectes ratées"
+
+#: ./portlets/context.pt:26
+msgid "Find and reuse events"
+msgstr "Trouver et utiliser des évènements"
+
+#: ./profiles/default/registry.xml
+msgid "For a event, the jauge"
+msgstr "Pour un event, la jauge"
+
+#: ./profiles/default/registry.xml
+msgid "For a event, the left place"
+msgstr "Pour un évènement, les places restantes"
+
+#: ./profiles/default/registry.xml
+msgid "For a source, number of created events"
+msgstr "Pour une source, le nombre d'évènements créés"
+
+#: ./profiles/default/registry.xml
+msgid "For a source, number of edited events"
+msgstr "Pour une source,  le nombre d'évènements édités"
+
+#: ./profiles/default/registry.xml
+msgid "For a source, number of failed events"
+msgstr "Pour une source, le nombre d'évènements collectés en echec"
+
+#: ./profiles/default/registry.xml
+msgid "For a source, number of fails"
+msgstr "Pour une source, le nombre d'échecs de collecte"
+
+#: ./profiles/default/registry.xml
+msgid "For a source, number of runs"
+msgstr "Pour une source, le nombre d'éxecutions du job"
+
+#: ./profiles/default/registry.xml
+msgid "For a source, number of warns"
+msgstr "Pour une source, nombre de warnings"
+
+#: ./interfaces.py:206
+msgid "Gallery"
+msgstr "Gallerie"
+
+#: ./interfaces.py:207
+msgid "Gallery license"
+msgstr "License de la gallerie"
+
+#: ./interfaces.py:59
+msgid "Ical"
+msgstr "Ical"
+
+#: ./portlets/context.pt:87
+msgid "Import event as file"
+msgstr "Importer des événements à partir d'un fichier"
+
+#: ./interfaces.py:182
+msgid "Jauge"
+msgstr "Jauge"
+
+#: ./interfaces.py:58
+msgid "Json"
+msgstr "Json"
+
+#: ./profiles/default/registry.xml
+msgid "Libertic"
+msgstr "Libertic"
+
+#: ./profiles/default/portlets.xml
+msgid "Libertic Contextual Portlet"
+msgstr "Portlet libertic"
+
+#. Default: "Database"
+#: ./profiles/default/types/libertic_database.xml
+msgid "Libertic Database"
+msgstr "Base de données d'évènements"
+
+#. Default: "Event (libertic)"
+#: ./profiles/default/types/libertic_event.xml
+msgid "Libertic Event"
+msgstr "Évènement (libertic)"
+
+#. Default: "Events source"
+#: ./profiles/default/types/libertic_source.xml
+msgid "Libertic Source"
+msgstr "Source d'évènements"
+
+#: ./members/profile.py:47
+msgid "Libertic event operator"
+msgstr "Opérateur"
+
+#: ./members/profile.py:42
+msgid "Libertic event supplier"
+msgstr "Fournisseur"
+
+#: ./profiles/default/registry.xml
+msgid "Libertic: Find items contained to the selected event"
+msgstr "Trouver les évènements contenus dans cet évènements"
+
+#: ./profiles/default/registry.xml
+msgid "Libertic: Find items related to the selected event"
+msgstr "Trouver les évènements liés à cet évènements"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticEvent: Source"
+msgstr "Source"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticEvent: address"
+msgstr "Adresse"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticEvent: author_email"
+msgstr "Auteur: email"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticEvent: author_firstname"
+msgstr "Auteur: prénom"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticEvent: author_lastname"
+msgstr "Auteur: nom"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticEvent: author_telephone"
+msgstr "Auteur: téléphone"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticEvent: country"
+msgstr "Pays"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticEvent: eid"
+msgstr "eid"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticEvent: email"
+msgstr "Email"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticEvent: firstname"
+msgstr "Prénom"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticEvent: jauge"
+msgstr "jauge"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticEvent: lastname"
+msgstr "Nom"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticEvent: latlong"
+msgstr "latlong"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticEvent: left_places"
+msgstr "Places restantes"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticEvent: organizer"
+msgstr "Organisateur"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticEvent: sid"
+msgstr "sid"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticEvent: tariff_information"
+msgstr "Informations tarifaires"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticEvent: telephone"
+msgstr "Téléphone"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticEvent: town"
+msgstr "Ville"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticSource: source_created_events"
+msgstr "Source: nombre d'évènements créés par la source"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticSource: source_edited_events"
+msgstr "Source: nombre d'évènements édités par la source"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticSource: source_failed_events"
+msgstr "Source: nombre d'évènements générant une érreur pour cette source"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticSource: source_fails"
+msgstr "Source: nombre d'echecs d'éxecutions du job de la source"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticSource: source_runs"
+msgstr "Source: nombre d'execution du job de la source"
+
+#: ./profiles/default/registry.xml
+msgid "LiberticSource: source_warns"
+msgstr "Source: nombre d'éxecutions retournant un avertissement du job de la source"
+
+#: ./portlets/context.pt:19
+msgid "Login"
+msgstr "Se connecter"
+
+#: ./profiles/default/types/MemberFolder.xml
+msgid "MemberFolder"
+msgstr "Dossier utilisateur"
+
+#: ./interfaces.py:274
+msgid "Missing relative license for ${url}."
+msgstr "Il manque la license relative à ${url}."
+
+#: ./portlets/context.pt:37
+msgid "My events"
+msgstr "Mes évènements"
+
+#: ./interfaces.py:74
+msgid "No license provided"
+msgstr "Pas de license fournie"
+
+#: ./interfaces.py:31
+msgid "OK"
+msgstr "OK"
+
+#: ./interfaces.py:209
+msgid "Photos1 license"
+msgstr "License photo1"
+
+#: ./interfaces.py:208
+msgid "Photos1 url"
+msgstr "URL photos1"
+
+#: ./interfaces.py:211
+msgid "Photos2 license"
+msgstr "License photos2"
+
+#: ./interfaces.py:210
+msgid "Photos2 url"
+msgstr "URL photos2"
+
+#: ./interfaces.py:213
+msgid "Photos3 license"
+msgstr "License Photos3"
+
+#: ./interfaces.py:212
+msgid "Photos3 url"
+msgstr "URL Photos3"
+
+#: ./interfaces.py:218
+msgid "Press url"
+msgstr "URL Presse"
+
+#: ./interfaces.py:285
+msgid "Related events"
+msgstr "Évènements corrélés"
+
+#: ./interfaces.py:130
+msgid "Runned without errors tries"
+msgstr "Exécuté sans erreur"
+
+#: ./profiles/default/registry.xml
+msgid "Source of the event"
+msgstr "Source de l'évènement"
+
+#: ./interfaces.py:121
+msgid "Source url"
+msgstr "URL de la source"
+
+#: ./interfaces.py:108
+msgid "Status (OK|FAILURE|WARN)"
+msgstr "Statut (OK|FAILURE|WARN)"
+
+#: ./interfaces.py:187
+msgid "Street"
+msgstr "Rue"
+
+#: ./interfaces.py:180
+msgid "Tariff information"
+msgstr "Information tarifaires"
+
+#: ./interfaces.py:115
+msgid "Text message"
+msgstr "Message texte"
+
+#: ./content/liberticevent.py:315
+msgid "The SID/EID combination is already in use, please adapt them."
+msgstr "La combinaison SID/EID n'est pas unique, veuillez la corriger"
+
+#: ./interfaces.py:106
+msgid "The log date"
+msgstr "Date du journal"
+
+#: ./profiles/default/registry.xml
+msgid "The time and date an item will end"
+msgstr "La date et l'heure de fin de l'évènement"
+
+#: ./profiles/default/registry.xml
+msgid "The time and date an item will start"
+msgstr "La date et l'heure de début de l'évènement"
+
+#: ./interfaces.py:86
+msgid "This is not a lat long value, eg : -47.5;48.5"
+msgstr "Ce n'est pas une latlong valide, ex : -47.5;48.5"
+
+#: ./interfaces.py:188
+msgid "Town"
+msgstr "Ville"
+
+#: ./interfaces.py:123
+msgid "Type"
+msgstr "Type"
+
+#: ./interfaces.py:215
+msgid "Video license"
+msgstr "License Vidéo"
+
+#: ./interfaces.py:214
+msgid "Video url"
+msgstr "URL Vidéo"
+
+#: ./interfaces.py:32
+msgid "WARN"
+msgstr "Avertissement"
+
+#: ./interfaces.py:129
+msgid "Warn tries"
+msgstr "Jobs en avertissement"
+
+#: ./interfaces.py:60
+msgid "XML"
+msgstr "XML"
+
+#: ./members/profile.py:148
+msgid "You can manage its groups here:"
+msgstr "Vous pouvez régler ses groupes en suivant ce lien :"
+
+#: ./members/profile.py:141
+msgid "[LIBERTIC] A new user need to be added to the suppliers group: ${user}"
+msgstr "[LIBERTIC] Un nouveau fourniseur de données doit être validé : ${user}"
+
+#: ./profiles/default/registry.xml
+msgid "address of the event"
+msgstr "adresse de l'évènement"
+
+#: ./profiles/default/registry.xml
+msgid "author_firstname of the event"
+msgstr "auteur: prénom"
+
+#: ./profiles/default/registry.xml
+msgid "author_lastname of the author"
+msgstr "auteur: nom"
+
+#: ./profiles/default/registry.xml
+msgid "author_telephone of the event"
+msgstr "auteur: téléphone"
+
+#: ./profiles/default/registry.xml
+msgid "contained"
+msgstr "contenus"
+
+#: ./interfaces.py:242
+msgid "contained Items"
+msgstr "Items contenus"
+
+#: ./profiles/default/registry.xml
+msgid "country of the event"
+msgstr "pays de l'évènement"
+
+#: ./interfaces.py:61
+msgid "csv"
+msgstr "csv"
+
+#: ./profiles/default/registry.xml
+msgid "eid of the event"
+msgstr "EID de l'évènement"
+
+#: ./interfaces.py:198
+#: ./profiles/default/registry.xml
+msgid "email"
+msgstr "Email"
+
+#: ./profiles/default/registry.xml
+msgid "email of the author"
+msgstr "Auteur: email"
+
+#: ./interfaces.py:126
+msgid "events created by this source"
+msgstr "évènements créés par cette source"
+
+#: ./interfaces.py:127
+msgid "events edited by this source"
+msgstr "évènements édités par cette source"
+
+#: ./interfaces.py:128
+msgid "events failed by this source"
+msgstr "évènement en erreur par cette source"
+
+#: ./interfaces.py:196
+#: ./profiles/default/registry.xml
+msgid "firstname"
+msgstr "Prénom"
+
+#. Default: "children adullts -18"
+#: ./interfaces.py:175
+msgid "help_audience"
+msgstr "enfants adultes -18"
+
+#: ./interfaces.py:395
+msgid "help_group_moderators"
+msgstr ""
+
+#. Default: "Tick this box to indicate that you are an event operator"
+#: ./members/profile.py:48
+msgid "help_libertic_event_operator"
+msgstr "Cochez cette case pour indiquer que vous êtes un opérateur de données"
+
+#. Default: "Tick this box to indicate that you are an even supplier "
+#: ./members/profile.py:43
+msgid "help_libertic_event_supplier"
+msgstr "Cochez cette case pour intiquer que vous êtes un fournisseur d'évènement"
+
+#. Default: "Tick this box to indicate that you have found, read and accepted the terms of use for this site. "
+#: ./members/profile.py:36
+msgid "help_libertic_tgu"
+msgstr "Cochez cette case pour indiquer que vous acceptez les conditions générales de vente"
+
+#. Default: "Audience"
+#: ./interfaces.py:174
+msgid "label_audience"
+msgstr "Audience"
+
+#. Default: "Event id"
+#: ./interfaces.py:160
+msgid "label_event_id"
+msgstr "Identifiant de l'évènement"
+
+#. Default: "Suppliers members moderrators (emails)"
+#: ./interfaces.py:394
+msgid "label_group_moderators"
+msgstr "Modérateurs des groupes (emails)"
+
+#. Default: "Source"
+#: ./interfaces.py:168
+msgid "label_source"
+msgstr "Source"
+
+#. Default: "Source id"
+#: ./interfaces.py:158
+msgid "label_source_id"
+msgstr "Identifiant de la source de l'évènement"
+
+#: ./interfaces.py:195
+#: ./profiles/default/registry.xml
+msgid "lastname"
+msgstr "Nom"
+
+#: ./interfaces.py:190
+msgid "latlong"
+msgstr "latlong"
+
+#: ./profiles/default/registry.xml
+msgid "latlong of the event"
+msgstr "latlong de l'évènement"
+
+#: ./interfaces.py:183
+msgid "left_places"
+msgstr "places restantes"
+
+#: ./interfaces.py:124
+msgid "logs"
+msgstr "journaux"
+
+#: ./interfaces.py:113
+msgid "messages"
+msgstr "messages"
+
+#: ./interfaces.py:199
+msgid "organiser"
+msgstr "Organisateur"
+
+#: ./profiles/default/registry.xml
+msgid "organizer of the organizer"
+msgstr ""
+
+#: ./portlets/context.pt:79
+msgid "portlet_add_event"
+msgstr "Évènement"
+
+#: ./portlets/context.pt:83
+msgid "portlet_add_source"
+msgstr "Source d'évènement"
+
+#: ./profiles/default/registry.xml
+msgid "related"
+msgstr "liés"
+
+#: ./interfaces.py:139
+msgid "related events"
+msgstr "évènements corrélés"
+
+#: ./profiles/default/registry.xml
+msgid "sid of the event"
+msgstr "sid de l'évènement"
+
+#: ./interfaces.py:197
+msgid "telephone"
+msgstr "Téléphone"
+
+#: ./profiles/default/registry.xml
+msgid "telephone of the author"
+msgstr "Téléphone de l'auteur"
+
+#: ./profiles/default/registry.xml
+msgid "the tariff information"
+msgstr "les informations tarifaires"
+
+#: ./profiles/default/registry.xml
+msgid "town of the event"
+msgstr "ville de l'évènement"
+

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    i18n_domain="libertic.event">
+  <!--
+  <genericsetup:upgradeSteps
+      profile="libertic.event:default"
+      source="1000"
+      destination="1001">
+    <genericsetup:upgradeStep
+          title="libertic.event import CSS"
+          description=""
+          handler=".import_css" />
+    <genericsetup:upgradeStep
+        title="libertic.event import JS"
+        description=""
+        handler=".import_js"/>
+    <genericsetup:upgradeStep
+        title="libertic.event Recook resources"
+        description=""
+        handler=".recook_resources" />
+  </genericsetup:upgradeSteps>
+
+  -->
+  <genericsetup:upgradeSteps profile="libertic.event:default" source="*" destination="1001">
+    <genericsetup:upgradeStep title="libertic.event * - 1000" description="" handler=".upgrade_1001" />
+  </genericsetup:upgradeSteps>
+  <genericsetup:upgradeStep profile="libertic.event:default" source="1001" destination="1002"  handler=".upgrade_1002" title="libertic.event 1002" description="" />
+  <genericsetup:upgradeStep profile="libertic.event:default" source="1002" destination="1003"  handler=".upgrade_1003" title="libertic.event 1003" description="Upgrade to plone 4.3" />
+  <genericsetup:upgradeStep profile="libertic.event:default" source="1003" destination="1004"  handler=".upgrade_1004" title="libertic.event 1004" description="Import logo portlets" />
+  <genericsetup:upgradeStep profile="libertic.event:default" source="1004" destination="1005"  handler=".upgrade_1005" title="libertic.event 1005" description="" />
+  <!-- vim:set ft=xml: -->
+</configure>
