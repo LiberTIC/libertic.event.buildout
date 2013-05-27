@@ -63,15 +63,6 @@ On peut filtrer l'export des événements par date, et préciser le format dans 
 
 le format est choisi soit par une liste déroulante, soit par un bouton par format selon le truc le plus facile à mettre en place
 
-8
-'
-
-Selon le profil (fournisseur ou réutilisateur), des actions contextuelles sont affichées 
-
-une portlet par profil me paraît bien
-
-* ehe
-
 Page d'accueil
 ----------------
 
@@ -92,3 +83,12 @@ Fini
 
 à l'inscription, on doit cocher une case "Valider les CGU" avec un lien vers une page du site par exemple
 
+
+8
+'
+
+Selon le profil (fournisseur ou réutilisateur), des actions contextuelles sont affichées 
+
+une portlet par profil me paraît bien
+
+* ehe
