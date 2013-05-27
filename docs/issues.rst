@@ -29,11 +29,6 @@ Dans informations personnelles et à l'inscription, l'organisation peut précise
 
 On peut utiliser "Nom complet" pour le nom / prénom du contact (on ne va pas séparer les champs), ou le nom de la structure, je ne sais pas ce qui est le mieux, sachant qu'il faut afficher le nom de la structure partout.
 
-3
-'
-
-à l'inscription, on doit cocher une case "Valider les CGU" avec un lien vers une page du site par exemple
-
 4
 '
 
@@ -41,26 +36,25 @@ Une fois validée l'inscription, le texte indique que la validation est modéré
 
 * ehe
 
-5
-'
-
-Dans les informations de profil, les chans fournisseurs et réutilisateurs de données ne sont pas modifiables
-
-Il y a d'autres champs dans les informations de profil, mais je vais suggérer que ça soit fait dans un deuxième temps
 
 Evenements
 ------------
 
+9
+'
+
 Le formulaire est agencé par catégorie de champs (page 7)
 
 je pense surcharger le formulaire et utiliser des fieldsets dans le fieldset default
+
+On ne modifie pas les champs définis, ça a été spécifié au départ.
 
 * ehe
 
 6
 '
 
-Une page d'import permet d'importer un fichier ou un flux (page 8)
+Une page d'import permet d'importer un fichier en plus de la source d'événements (page 8)
 
 7
 '
@@ -87,3 +81,14 @@ Page d'accueil
 Ajouter un slideshow dans le header, ainsi que la liste des actus, des logos des fournisseurs et des réutilisateurs de données
 
 * ehe
+
+
+Fini
+=====
+
+
+3
+'
+
+à l'inscription, on doit cocher une case "Valider les CGU" avec un lien vers une page du site par exemple
+
