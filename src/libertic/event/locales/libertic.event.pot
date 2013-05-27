@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: libertic.event 1.0\n"
-"POT-Creation-Date: 2012-11-22 14:41+0000\n"
+"POT-Creation-Date: 2013-05-27 10:49+0000\n"
 "PO-Revision-Date: 2012-11-22 11:22+0100\n"
 "Last-Translator: kiorky <kiorky@cryptelium.net>\n"
 "Language-Team: FR <LL@li.org>\n"
@@ -28,12 +28,24 @@ msgstr ""
 msgid "Activated to be parsed"
 msgstr ""
 
+#: ./portlets/context.pt:69
+msgid "Add or import event"
+msgstr ""
+
 #: ./interfaces.py:173
 msgid "Address"
 msgstr ""
 
 #: ./interfaces.py:174
 msgid "Address details"
+msgstr ""
+
+#: ./portlets/context.pt:59
+msgid "Advanced export"
+msgstr ""
+
+#: ./portlets/context.pt:34
+msgid "All events"
 msgstr ""
 
 #: ./interfaces.py:205
@@ -68,19 +80,19 @@ msgstr ""
 msgid "Country"
 msgstr ""
 
-#: ./portlets/context.pt:61
+#: ./portlets/context.pt:54
 msgid "Download as CSV"
 msgstr ""
 
-#: ./portlets/context.pt:53
+#: ./portlets/context.pt:48
 msgid "Download as JSON"
 msgstr ""
 
-#: ./portlets/context.pt:49
+#: ./portlets/context.pt:45
 msgid "Download as XML"
 msgstr ""
 
-#: ./portlets/context.pt:57
+#: ./portlets/context.pt:51
 msgid "Downloas as ICAL"
 msgstr ""
 
@@ -102,12 +114,20 @@ msgstr ""
 msgid "Events will be grabbed, please refresh in a while"
 msgstr ""
 
+#: ./portlets/context.pt:43
+msgid "Export the whole database as..."
+msgstr ""
+
 #: ./interfaces.py:27
 msgid "FAILURE"
 msgstr ""
 
 #: ./interfaces.py:119
 msgid "Failed runs"
+msgstr ""
+
+#: ./portlets/context.pt:26
+msgid "Find and reuse events"
 msgstr ""
 
 #: ./profiles/default/registry.xml
@@ -152,6 +172,10 @@ msgstr ""
 
 #: ./interfaces.py:50
 msgid "Ical"
+msgstr ""
+
+#: ./portlets/context.pt:87
+msgid "Import event as file"
 msgstr ""
 
 #: ./interfaces.py:170
@@ -298,7 +322,7 @@ msgstr ""
 msgid "LiberticSource: source_warns"
 msgstr ""
 
-#: ./portlets/context.pt:26
+#: ./portlets/context.pt:19
 msgid "Login"
 msgstr ""
 
@@ -308,6 +332,10 @@ msgstr ""
 
 #: ./interfaces.py:262
 msgid "Missing relative license for ${url}."
+msgstr ""
+
+#: ./portlets/context.pt:37
+msgid "My events"
 msgstr ""
 
 #: ./interfaces.py:62
@@ -378,7 +406,7 @@ msgstr ""
 msgid "Text message"
 msgstr ""
 
-#: ./content/liberticevent.py:305
+#: ./content/liberticevent.py:315
 msgid "The SID/EID combination is already in use, please adapt them."
 msgstr ""
 
@@ -424,10 +452,6 @@ msgstr ""
 
 #: ./interfaces.py:51
 msgid "XML"
-msgstr ""
-
-#: ./portlets/context.pt:74
-msgid "add"
 msgstr ""
 
 #: ./profiles/default/registry.xml
@@ -487,10 +511,6 @@ msgstr ""
 msgid "events failed by this source"
 msgstr ""
 
-#: ./portlets/context.pt:38
-msgid "find"
-msgstr ""
-
 #: ./interfaces.py:184
 #: ./profiles/default/registry.xml
 msgid "firstname"
@@ -514,10 +534,6 @@ msgstr ""
 #. Default: "Tick this box to indicate that you have found, read and accepted the terms of use for this site. "
 #: ./members/profile.py:34
 msgid "help_libertic_tgu"
-msgstr ""
-
-#: ./portlets/context.pt:33
-msgid "home"
 msgstr ""
 
 #. Default: "Audience"
@@ -573,11 +589,11 @@ msgstr ""
 msgid "organizer of the organizer"
 msgstr ""
 
-#: ./portlets/context.pt:81
+#: ./portlets/context.pt:79
 msgid "portlet_add_event"
 msgstr ""
 
-#: ./portlets/context.pt:75
+#: ./portlets/context.pt:83
 msgid "portlet_add_source"
 msgstr ""
 

@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: libertic.event 1.0\n"
-"POT-Creation-Date: 2012-11-22 14:41+0000\n"
+"POT-Creation-Date: 2013-05-27 10:49+0000\n"
 "PO-Revision-Date: 2012-11-22 16:50+0100\n"
 "Last-Translator: kiorky <kiorky@cryptelium.net>\n"
 "Language-Team: FR <LL@li.org>\n"
@@ -28,6 +28,10 @@ msgstr "Accepter les conditions d'utilisation"
 msgid "Activated to be parsed"
 msgstr "Activer la collecte"
 
+#: ./portlets/context.pt:69
+msgid "Add or import event"
+msgstr "Ajouter ou importer un évènement"
+
 #: ./interfaces.py:173
 msgid "Address"
 msgstr "Adresse"
@@ -35,6 +39,14 @@ msgstr "Adresse"
 #: ./interfaces.py:174
 msgid "Address details"
 msgstr "Adresse (détails)"
+
+#: ./portlets/context.pt:59
+msgid "Advanced export"
+msgstr "Export avancé"
+
+#: ./portlets/context.pt:34
+msgid "All events"
+msgstr "Tous les évènements"
 
 #: ./interfaces.py:205
 msgid "Audio license"
@@ -68,19 +80,19 @@ msgstr "Evènements contenus"
 msgid "Country"
 msgstr "Pays"
 
-#: ./portlets/context.pt:61
+#: ./portlets/context.pt:54
 msgid "Download as CSV"
 msgstr "Télécharger les évenements en csv"
 
-#: ./portlets/context.pt:53
+#: ./portlets/context.pt:48
 msgid "Download as JSON"
 msgstr "Télécharger les évenements en json"
 
-#: ./portlets/context.pt:49
+#: ./portlets/context.pt:45
 msgid "Download as XML"
 msgstr "Télécharger les évenements en XML"
 
-#: ./portlets/context.pt:57
+#: ./portlets/context.pt:51
 msgid "Downloas as ICAL"
 msgstr "Télécharger les évenements en ICAL"
 
@@ -102,6 +114,10 @@ msgstr "Les évenements sont déjà prévus pour la collecte, merci de rafraichi
 msgid "Events will be grabbed, please refresh in a while"
 msgstr "Les évenements vont être collectés, veuillez rafraichir dans un moment"
 
+#: ./portlets/context.pt:43
+msgid "Export the whole database as..."
+msgstr "Exporter la base des évènements ..."
+
 #: ./interfaces.py:27
 msgid "FAILURE"
 msgstr "ECHEC"
@@ -109,6 +125,10 @@ msgstr "ECHEC"
 #: ./interfaces.py:119
 msgid "Failed runs"
 msgstr "Collectes ratées"
+
+#: ./portlets/context.pt:26
+msgid "Find and reuse events"
+msgstr "Trouver et utiliser des évènements"
 
 #: ./profiles/default/registry.xml
 msgid "For a event, the jauge"
@@ -154,6 +174,10 @@ msgstr "License de la gallerie"
 msgid "Ical"
 msgstr ""
 
+#: ./portlets/context.pt:87
+msgid "Import event as file"
+msgstr "Importer des événements à partir d'un fichier"
+
 #: ./interfaces.py:170
 msgid "Jauge"
 msgstr ""
@@ -178,12 +202,12 @@ msgstr "Base de données d'évenements"
 #. Default: "Event (libertic)"
 #: ./profiles/default/types/libertic_event.xml
 msgid "Libertic Event"
-msgstr "Evenement (libertic)"
+msgstr "Évènement (libertic)"
 
 #. Default: "Events source"
 #: ./profiles/default/types/libertic_source.xml
 msgid "Libertic Source"
-msgstr "Source d'évenements"
+msgstr "Source d'évènements"
 
 #: ./members/profile.py:45
 msgid "Libertic event operator"
@@ -301,7 +325,7 @@ msgstr "Source: nombre d'execution du job de la source"
 msgid "LiberticSource: source_warns"
 msgstr "Source: nombre d'éxecutions retournant un avertissement du job de la source"
 
-#: ./portlets/context.pt:26
+#: ./portlets/context.pt:19
 msgid "Login"
 msgstr "Se connecter"
 
@@ -313,13 +337,17 @@ msgstr "Dossier utilisateur"
 msgid "Missing relative license for ${url}."
 msgstr "Il manque la license relative à ${url}."
 
+#: ./portlets/context.pt:37
+msgid "My events"
+msgstr "Mes évènements"
+
 #: ./interfaces.py:62
 msgid "No license provided"
 msgstr "Pas de license fournie"
 
 #: ./interfaces.py:28
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: ./interfaces.py:197
 msgid "Photos1 license"
@@ -351,15 +379,15 @@ msgstr "URL Presse"
 
 #: ./interfaces.py:273
 msgid "Related events"
-msgstr "Evenements corréllés"
+msgstr "Évènements corrélés"
 
 #: ./interfaces.py:118
 msgid "Runned without errors tries"
-msgstr ""
+msgstr "Exécuté sans erreur"
 
 #: ./profiles/default/registry.xml
 msgid "Source of the event"
-msgstr "Source de l'évenement"
+msgstr "Source de l'évènement"
 
 #: ./interfaces.py:109
 msgid "Source url"
@@ -367,7 +395,7 @@ msgstr "URL de la source"
 
 #: ./interfaces.py:96
 msgid "Status (OK|FAILURE|WARN)"
-msgstr ""
+msgstr "Statut (OK|FAILURE|WARN)"
 
 #: ./interfaces.py:175
 msgid "Street"
@@ -381,7 +409,7 @@ msgstr "Information tarifaires"
 msgid "Text message"
 msgstr "Message texte"
 
-#: ./content/liberticevent.py:305
+#: ./content/liberticevent.py:315
 msgid "The SID/EID combination is already in use, please adapt them."
 msgstr "La combinaison SID/EID n'est pas unique, veuillez la corriger"
 
@@ -407,7 +435,7 @@ msgstr "Ville"
 
 #: ./interfaces.py:111
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 #: ./interfaces.py:203
 msgid "Video license"
@@ -427,10 +455,6 @@ msgstr "Jobs en avertissement"
 
 #: ./interfaces.py:51
 msgid "XML"
-msgstr ""
-
-#: ./portlets/context.pt:74
-msgid "add"
 msgstr ""
 
 #: ./profiles/default/registry.xml
@@ -490,10 +514,6 @@ msgstr "évenements édités par cette source"
 msgid "events failed by this source"
 msgstr "évenement en erreur par cette source"
 
-#: ./portlets/context.pt:38
-msgid "find"
-msgstr "Chercher"
-
 #: ./interfaces.py:184
 #: ./profiles/default/registry.xml
 msgid "firstname"
@@ -518,10 +538,6 @@ msgstr "Cochez cette case pour intiquer que vous êtes un fournisseur d'éveneme
 #: ./members/profile.py:34
 msgid "help_libertic_tgu"
 msgstr "Cochez cette case pour indiquer que vous acceptez les conditions générales de vente"
-
-#: ./portlets/context.pt:33
-msgid "home"
-msgstr "Dossier personnel (recherches personnalisées)"
 
 #. Default: "Audience"
 #: ./interfaces.py:162
@@ -576,13 +592,13 @@ msgstr "Organisateur"
 msgid "organizer of the organizer"
 msgstr ""
 
-#: ./portlets/context.pt:81
+#: ./portlets/context.pt:79
 msgid "portlet_add_event"
-msgstr "Evenement"
+msgstr "Évènement"
 
-#: ./portlets/context.pt:75
+#: ./portlets/context.pt:83
 msgid "portlet_add_source"
-msgstr "Source d'évenement"
+msgstr "Source d'évènement"
 
 #: ./profiles/default/registry.xml
 msgid "related"
@@ -590,11 +606,11 @@ msgstr "liés"
 
 #: ./interfaces.py:127
 msgid "related events"
-msgstr "évenements corréllés"
+msgstr "évènements corrélés"
 
 #: ./profiles/default/registry.xml
 msgid "sid of the event"
-msgstr "sid de l'évenements"
+msgstr "sid de l'évènement"
 
 #: ./interfaces.py:185
 msgid "telephone"
@@ -610,5 +626,5 @@ msgstr "les informations tarifaires"
 
 #: ./profiles/default/registry.xml
 msgid "town of the event"
-msgstr "ville de l'évenement"
+msgstr "ville de l'évènement"
 
