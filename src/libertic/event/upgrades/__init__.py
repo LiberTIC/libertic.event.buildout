@@ -169,4 +169,10 @@ def upgrade_1003(context):
     quickinstall_addons(context, upgrades=True)
     log('v1003 applied')
 
+def upgrade_1004(context):
+    """
+    """
+    site = getToolByName(context, 'portal_url').getPortalObject()
+    portal_setup = site.portal_setup
+    portal_setup.runImportStepFromProfile(PROFILEID, 'portlets', run_dependencies=False)
 

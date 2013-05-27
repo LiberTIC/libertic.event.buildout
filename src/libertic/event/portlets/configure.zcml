@@ -12,4 +12,15 @@
       renderer=".context.Renderer"
       addview=".context.AddForm"
     />
+    
+  <plone:portlet
+      name="libertic.portlets.logoslide"
+      interface=".logoslide.ILogoslidePortlet"
+      assignment=".logoslide.Assignment"
+      view_permission="zope2.View"
+      edit_permission="cmf.ManagePortal"
+      renderer=".logoslide.Renderer"
+      addview=".logoslide.AddForm"
+    />
+    
 </configure>

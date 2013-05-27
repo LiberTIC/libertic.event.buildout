@@ -1,0 +1,19 @@
+<dl class="portlet portlet-libertic-logoslide"
+  i18n:domain="libertic.event">
+  
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        <a href="#"
+           class="tile"
+           i18n:translate="">Navigation</a>
+        <span class="portletTopRight"></span>
+    </dt>
+  
+    <dd class="portletItem">
+        <a class="">Supplier 1</a>
+    </dd>
+    <dd class="portletItem">
+        <a class="">Supplier 2</a>
+    </dd>
+  
+</dl>

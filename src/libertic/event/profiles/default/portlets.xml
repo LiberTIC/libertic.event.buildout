@@ -15,7 +15,13 @@
   <portlet
       addview="libertic.portlets.context"
       title="Libertic Contextual Portlet"
-      description=""
+      description="Displays links and actions for an event database"
+      i18n:attributes="title; description"
+    />
+  <portlet
+      addview="libertic.portlets.logoslide"
+      title="Libertic Logo slide Portlet"
+      description="Displays supplier or reusers logos"
       i18n:attributes="title; description"
     />
   <assignment
