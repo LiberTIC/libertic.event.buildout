@@ -71,6 +71,10 @@ Page d'accueil
 
 Ajouter un slideshow dans le header, ainsi que la liste des actus, des logos des fournisseurs et des réutilisateurs de données
 
+liste des actus : 2h
+logos fournisseurs et operators en cours reste 6h
+slideshow : todo 6h
+
 * ehe
 
 
