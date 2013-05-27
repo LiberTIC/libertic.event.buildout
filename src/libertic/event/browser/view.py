@@ -12,7 +12,6 @@ from Products.CMFCore.utils import getToolByName
 from plone.registry.interfaces import IRegistry
 from Products.ATContentTypes.interfaces.interfaces import IATContentType
 from Acquisition import aq_parent
-from Acquisition import aq_parent
 
 
 class IMyView(interface.Interface):
