@@ -82,37 +82,37 @@ msgstr "Pays"
 
 #: ./portlets/context.pt:54
 msgid "Download as CSV"
-msgstr "Télécharger les évenements en csv"
+msgstr "Télécharger les évènements en csv"
 
 #: ./portlets/context.pt:48
 msgid "Download as JSON"
-msgstr "Télécharger les évenements en json"
+msgstr "Télécharger les évènements en json"
 
 #: ./portlets/context.pt:45
 msgid "Download as XML"
-msgstr "Télécharger les évenements en XML"
+msgstr "Télécharger les évènements en XML"
 
 #: ./portlets/context.pt:51
 msgid "Downloas as ICAL"
-msgstr "Télécharger les évenements en ICAL"
+msgstr "Télécharger les évènements en ICAL"
 
 #: ./interfaces.py:181
 #: ./profiles/default/registry.xml
 msgid "Event end"
-msgstr "Fin de l'évenement"
+msgstr "Fin de l'évènement"
 
 #: ./interfaces.py:180
 #: ./profiles/default/registry.xml
 msgid "Event start"
-msgstr "Début de l'évenement"
+msgstr "Début de l'évènement"
 
 #: ./content/source.py:108
 msgid "Events are already planned to be fetched, please refresh in a while"
-msgstr "Les évenements sont déjà prévus pour la collecte, merci de rafraichir dans un moment"
+msgstr "Les évènements sont déjà prévus pour la collecte, merci de rafraichir dans un moment"
 
 #: ./content/source.py:106
 msgid "Events will be grabbed, please refresh in a while"
-msgstr "Les évenements vont être collectés, veuillez rafraichir dans un moment"
+msgstr "Les évènements vont être collectés, veuillez rafraichir dans un moment"
 
 #: ./portlets/context.pt:43
 msgid "Export the whole database as..."
@@ -136,19 +136,19 @@ msgstr "Pour un event, la jauge"
 
 #: ./profiles/default/registry.xml
 msgid "For a event, the left place"
-msgstr "Pour un évenement, les places restantes"
+msgstr "Pour un évènement, les places restantes"
 
 #: ./profiles/default/registry.xml
 msgid "For a source, number of created events"
-msgstr "Pour une source, le nombre d'évenements créés"
+msgstr "Pour une source, le nombre d'évènements créés"
 
 #: ./profiles/default/registry.xml
 msgid "For a source, number of edited events"
-msgstr "Pour une source,  le nombre d'évenements édités"
+msgstr "Pour une source,  le nombre d'évènements édités"
 
 #: ./profiles/default/registry.xml
 msgid "For a source, number of failed events"
-msgstr "Pour une source, le nombre d'évenements collectés en echec"
+msgstr "Pour une source, le nombre d'évènements collectés en echec"
 
 #: ./profiles/default/registry.xml
 msgid "For a source, number of fails"
@@ -197,7 +197,7 @@ msgstr "Portlet libertic"
 #. Default: "Database"
 #: ./profiles/default/types/libertic_database.xml
 msgid "Libertic Database"
-msgstr "Base de données d'évenements"
+msgstr "Base de données d'évènements"
 
 #. Default: "Event (libertic)"
 #: ./profiles/default/types/libertic_event.xml
@@ -219,11 +219,11 @@ msgstr "Fournisseur"
 
 #: ./profiles/default/registry.xml
 msgid "Libertic: Find items contained to the selected event"
-msgstr "Trouver les évenements contenus dans cet évenements"
+msgstr "Trouver les évènements contenus dans cet évènements"
 
 #: ./profiles/default/registry.xml
 msgid "Libertic: Find items related to the selected event"
-msgstr "Trouver les évenements liés à cet évenements"
+msgstr "Trouver les évènements liés à cet évènements"
 
 #: ./profiles/default/registry.xml
 msgid "LiberticEvent: Source"
@@ -303,15 +303,15 @@ msgstr "Ville"
 
 #: ./profiles/default/registry.xml
 msgid "LiberticSource: source_created_events"
-msgstr "Source: nombre d'évenements créés par la source"
+msgstr "Source: nombre d'évènements créés par la source"
 
 #: ./profiles/default/registry.xml
 msgid "LiberticSource: source_edited_events"
-msgstr "Source: nombre d'évenements édités par la source"
+msgstr "Source: nombre d'évènements édités par la source"
 
 #: ./profiles/default/registry.xml
 msgid "LiberticSource: source_failed_events"
-msgstr "Source: nombre d'évenements générant une érreur pour cette source"
+msgstr "Source: nombre d'évènements générant une érreur pour cette source"
 
 #: ./profiles/default/registry.xml
 msgid "LiberticSource: source_fails"
@@ -419,11 +419,11 @@ msgstr "Date du journal"
 
 #: ./profiles/default/registry.xml
 msgid "The time and date an item will end"
-msgstr "La date et l'heure de fin de l'évenement"
+msgstr "La date et l'heure de fin de l'évènement"
 
 #: ./profiles/default/registry.xml
 msgid "The time and date an item will start"
-msgstr "La date et l'heure de début de l'évenement"
+msgstr "La date et l'heure de début de l'évènement"
 
 #: ./interfaces.py:74
 msgid "This is not a lat long value, eg : -47.5;48.5"
@@ -459,7 +459,7 @@ msgstr ""
 
 #: ./profiles/default/registry.xml
 msgid "address of the event"
-msgstr "adresse de l'évenement"
+msgstr "adresse de l'évènement"
 
 #: ./profiles/default/registry.xml
 msgid "author_firstname of the event"
@@ -483,7 +483,7 @@ msgstr "Items contenus"
 
 #: ./profiles/default/registry.xml
 msgid "country of the event"
-msgstr "pays de l'évenement"
+msgstr "pays de l'évènement"
 
 #: ./interfaces.py:52
 msgid "csv"
@@ -491,7 +491,7 @@ msgstr ""
 
 #: ./profiles/default/registry.xml
 msgid "eid of the event"
-msgstr "EID de l'évenement"
+msgstr "EID de l'évènement"
 
 #: ./interfaces.py:186
 #: ./profiles/default/registry.xml
@@ -504,15 +504,15 @@ msgstr "Auteur: email"
 
 #: ./interfaces.py:114
 msgid "events created by this source"
-msgstr "évenements créés par cette source"
+msgstr "évènements créés par cette source"
 
 #: ./interfaces.py:115
 msgid "events edited by this source"
-msgstr "évenements édités par cette source"
+msgstr "évènements édités par cette source"
 
 #: ./interfaces.py:116
 msgid "events failed by this source"
-msgstr "évenement en erreur par cette source"
+msgstr "évènement en erreur par cette source"
 
 #: ./interfaces.py:184
 #: ./profiles/default/registry.xml
@@ -532,7 +532,7 @@ msgstr "Cochez cette case pour indiquer que vous êtes un opérateur de données
 #. Default: "Tick this box to indicate that you are an even supplier "
 #: ./members/profile.py:41
 msgid "help_libertic_event_supplier"
-msgstr "Cochez cette case pour intiquer que vous êtes un fournisseur d'évenement"
+msgstr "Cochez cette case pour intiquer que vous êtes un fournisseur d'évènement"
 
 #. Default: "Tick this box to indicate that you have found, read and accepted the terms of use for this site. "
 #: ./members/profile.py:34
@@ -547,7 +547,7 @@ msgstr "Audience"
 #. Default: "Event id"
 #: ./interfaces.py:148
 msgid "label_event_id"
-msgstr "Identifiant de l'évenement"
+msgstr "Identifiant de l'évènement"
 
 #. Default: "Source"
 #: ./interfaces.py:156
@@ -557,7 +557,7 @@ msgstr "Source"
 #. Default: "Source id"
 #: ./interfaces.py:146
 msgid "label_source_id"
-msgstr "Identifiant de la source de l'évenement"
+msgstr "Identifiant de la source de l'évènement"
 
 #: ./interfaces.py:183
 #: ./profiles/default/registry.xml
@@ -570,7 +570,7 @@ msgstr "latlong"
 
 #: ./profiles/default/registry.xml
 msgid "latlong of the event"
-msgstr "latlong de l'évenement"
+msgstr "latlong de l'évènement"
 
 #: ./interfaces.py:171
 msgid "left_places"
