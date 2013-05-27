@@ -164,15 +164,23 @@ def upgrade_1002(context):
     log('v1002 applied')
 
 def upgrade_1003(context):
-    site = getToolByName(context, 'portal_url').getPortalObject() 
+    site = getToolByName(context, 'portal_url').getPortalObject()
     upgrade_plone(context)
     quickinstall_addons(context, upgrades=True)
     log('v1003 applied')
 
 def upgrade_1004(context):
-    """
-    """
+    """ """
     site = getToolByName(context, 'portal_url').getPortalObject()
     portal_setup = site.portal_setup
     portal_setup.runImportStepFromProfile(PROFILEID, 'portlets', run_dependencies=False)
+    log('v1004 applied')
+
+def upgrade_1005(context):
+    """ """
+    site = getToolByName(context, 'portal_url').getPortalObject()
+    portal_setup = getToolByName(site, 'portal_setup')
+    setuphandlers.install_groups(context)
+    portal_setup.runImportStepFromProfile(PROFILEID, 'plone.app.registry', run_dependencies=False)
+    log('v1005 applied')
 

@@ -1,5 +1,8 @@
 from zope.interface import invariant, Invalid, Interface
 from Products.PluggableAuthService.interfaces.authservice import IPropertiedUser
+from zope.component import getUtility
+from plone.registry.interfaces import IRegistry
+
 from z3c.relationfield.schema import RelationList, Relation, RelationChoice
 from plone.formwidget.contenttree import ObjPathSourceBinder, MultiContentTreeFieldWidget, UUIDSourceBinder
 from Products.CMFDefault.utils import checkEmailAddress
@@ -42,6 +45,12 @@ groups = {
         'title':'Libertic event supplier',
         'description':'Libertic event supplier',
     },
+    'supplier-pending': {
+        'id': 'libertic_event_supplier-pending',
+        'roles': [''],
+        'title':'Libertic event supplier moderated',
+        'description':'Libertic event supplier waiting for moderation',
+    },
 }
 
 
@@ -54,7 +63,10 @@ sources = SimpleVocabulary(
 
 
 def is_email(value):
-    checkEmailAddress(value)
+    if not isinstance(value, (list, tuple, set)):
+        value = [value]
+    for v in value:
+        checkEmailAddress(v)
     return True
 
 
@@ -375,5 +387,19 @@ class IEventSetter(ILiberticEvent):
     def set(data):
         """Set data on an event
         """
+
+
+class ILiberticEventSiteSettings(Interface):
+    group_moderators = schema.Tuple(
+        title=_('label_group_moderators', default='Suppliers members moderrators (emails)'),
+        description=_('help_group_moderators', default=''),
+        value_type= schema.TextLine(),
+        required = False,
+        constraint=is_email,
+    )
+
+def settings():
+    registry = getUtility(IRegistry)
+    return registry.forInterface(ILiberticEventSiteSettings)
 
 

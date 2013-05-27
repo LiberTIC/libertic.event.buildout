@@ -275,7 +275,7 @@
     </value>
     <value key="group" i18n:translate="">Libertic</value>
   </records>
-   <records interface="plone.app.querystring.interfaces.IQueryField" prefix="plone.app.querystring.field.left_places">
+  <records interface="plone.app.querystring.interfaces.IQueryField" prefix="plone.app.querystring.field.left_places">
     <value key="title" i18n:translate="">LiberticEvent: left_places</value>
     <value key="description" i18n:translate="">For a event, the left place</value>
     <value key="enabled">True</value>
@@ -360,5 +360,10 @@
       <element>plone.app.querystring.operation.date.afterToday</element>
     </value>
     <value key="group" i18n:translate="">Libertic</value>
+  </records>
+  <records interface="libertic.event.interfaces.ILiberticEventSiteSettings">
+    <value key="group_moderators" purge="false">
+       <element>mpa@makina-corpus.com</element>
+    </value>
   </records>
 </registry>

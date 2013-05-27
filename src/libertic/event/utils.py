@@ -115,3 +115,21 @@ def ical_string(events):
     sdata = cal.to_ical()
     return sdata
 
+
+def sendmail(context, mto, subject, msg, mfrom=None, charset='utf-8', encoding=None):
+    portal = getToolByName(context, 'portal_url').getPortalObject()
+    MailHost = getToolByName(context, 'MailHost')
+    if not encoding:
+        encoding = portal.getProperty('email_charset')
+    if not mfrom:
+        mfrom = portal.getProperty('email_from_address')
+    MailHost.send(
+        msg,
+        mto=mto,
+        mfrom=mfrom,
+        subject=subject,
+        charset=charset,
+    )
+
+
+

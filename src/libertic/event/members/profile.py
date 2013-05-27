@@ -9,6 +9,7 @@ from zope.component import getUtility, getAdapter
 from zope.component import adapts
 from Products.CMFCore.interfaces import ISiteRoot
 
+from plone.app.layout.navigation.interfaces import INavigationRoot
 from plone.app.users.browser.personalpreferences import UserDataPanelAdapter
 from Products.CMFCore.utils import getToolByName
 
@@ -21,6 +22,7 @@ from plone.app.users.userdataschema import (
 
 from libertic.event import MessageFactory as _
 from libertic.event import interfaces as i
+from libertic.event import utils
 
 
 def validateAccept(value):
@@ -70,7 +72,7 @@ class RegistrationMixin(register.BaseRegistrationForm):
         if adapter.libertic_event_operator:
             groups.append('libertic_event_operator')
         if adapter.libertic_event_supplier:
-            groups.append('libertic_event_supplier')
+            groups.append('libertic_event_supplier-pending')
         for groupname in groups:
             group = portal_groups.getGroupById(groupname)
             portal_groups.addPrincipalToGroup(
@@ -100,7 +102,7 @@ class UserDataSchemaProvider(object):
 class LiberticPanelAdapter(UserDataPanelAdapter):
     """
     """
-    adapts(ISiteRoot)
+    adapts(INavigationRoot)
     implementsOnly(ILiberticProfile)
     #def get_libertic_tgu(self):
     #    return True
@@ -125,10 +127,33 @@ class LiberticPanelAdapter(UserDataPanelAdapter):
         uid = self.uid
         if value and uid:
             self.groups.addPrincipalToGroup(
-                uid, i.groups['supplier']['id'])
+                uid, i.groups['supplier-pending']['id'])
+            # send an email to group moderators
+            data = {
+                'user' : uid,
+            }
+            moderators = i.settings().group_moderators
+            groupurl = '%s/@@usergroup-usermembership?userid=%s' % (
+                getToolByName(self.context, 'portal_url')(),
+                uid,
+            )
+            mailhost = getToolByName(self.context, 'MailHost')
+            SMODERATEGROUP = _(
+                '[LIBERTIC] A new user need to be added to the '
+                'suppliers group: ${user}', mapping=data)
+            T = self.context.translate
+            msg = "\n".join(
+                [
+                T(_('A new user need to be added to the suppliers group')),
+                T(_('You can manage its groups here:')),
+                "    - %s" % groupurl])
+            sub = self.context.translate(SMODERATEGROUP)
+            utils.sendmail(self.context, moderators, sub, msg)
         else:
             self.groups.removePrincipalFromGroup(
                 uid, i.groups['supplier']['id'])
+            self.groups.removePrincipalFromGroup(
+                uid, i.groups['supplier-pending']['id'])
         return self.context.setMemberProperties({'libertic_event_supplier': value})
 
     libertic_event_supplier = property(get_libertic_event_supplier, set_libertic_event_supplier)
