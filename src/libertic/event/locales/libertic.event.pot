@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: libertic.event 1.0\n"
-"POT-Creation-Date: 2013-05-27 10:49+0000\n"
+"POT-Creation-Date: 2013-05-27 11:55+0000\n"
 "PO-Revision-Date: 2012-11-22 11:22+0100\n"
 "Last-Translator: kiorky <kiorky@cryptelium.net>\n"
 "Language-Team: FR <LL@li.org>\n"
@@ -115,7 +115,7 @@ msgid "Events will be grabbed, please refresh in a while"
 msgstr ""
 
 #: ./portlets/context.pt:43
-msgid "Export the whole database as..."
+msgid "Export all events as..."
 msgstr ""
 
 #: ./interfaces.py:27

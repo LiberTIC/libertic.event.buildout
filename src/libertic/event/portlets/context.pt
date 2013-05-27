@@ -40,7 +40,7 @@
   </dd>
   
   <dd class="portletItem download">
-    <p i18n:translate="">Export the whole database as...</p>
+    <p i18n:translate="">Export all events as...</p>
     <ul>
       <li><a class="xml" tal:attributes="href string:${db_url}/eventsasxml"  alt="XML" title="Download as XML" i18n:attributes="title" >
           xml
