@@ -77,3 +77,13 @@ Selon le profil (fournisseur ou réutilisateur), des actions contextuelles sont 
 une portlet par profil me paraît bien
 
 * ehe
+
+Page d'accueil
+----------------
+
+9
+'
+
+Ajouter un slideshow dans le header, ainsi que la liste des actus, des logos des fournisseurs et des réutilisateurs de données
+
+* ehe
