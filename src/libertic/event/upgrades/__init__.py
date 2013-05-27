@@ -17,6 +17,8 @@ import transaction
 
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.utils import _createObjectByType
+from Testing.makerequest import makerequest
+from StringIO import StringIO
 
 from libertic.event import setuphandlers
 
@@ -35,11 +37,15 @@ def quickinstall_addons(context, install=None, uninstall=None, upgrades=None):
         for addon in install:
             if qi.isProductInstallable(addon):
                 qi.installProduct(addon)
+                log('Installed %s' % addon)
             else:
                 log('%s can t be installed' % addon, 'error')
 
     if uninstall is not None:
-        qi.uninstallProducts(uninstall)
+        for p in uninstall:
+            if qi.isProductInstalled(p):
+                qi.uninstallProducts([p])
+                log('Uninstalled %s' % p)
 
     if upgrades is not None:
         if upgrades in ("all", True):
@@ -109,6 +115,21 @@ def upgrade_profile(context, profile_id, steps=None):
         })
     portal_setup.manage_doUpgrades(fr)
 
+def upgrade_plone(portal_setup):
+    """
+    """
+    out = StringIO()
+    portal = makerequest(
+        getToolByName(
+            portal_setup, 'portal_url'
+        ).getPortalObject(),
+        stdout=out, environ={'REQUEST_METHOD':'POST'})
+    # pm = getToolByName(portal, 'portal_migration')
+    # use direct acquisition for REQUEST to be always there
+    pm = portal.portal_migration
+    report = pm.upgrade(dry_run=False)
+    return report
+
 def upgrade_1001(context):
     """
     """
@@ -142,5 +163,10 @@ def upgrade_1002(context):
     recook_resources(context)
     log('v1002 applied')
 
+def upgrade_1003(context):
+    site = getToolByName(context, 'portal_url').getPortalObject() 
+    upgrade_plone(context)
+    quickinstall_addons(context, upgrades=True)
+    log('v1003 applied')
 
 
