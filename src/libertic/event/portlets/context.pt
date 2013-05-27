@@ -15,35 +15,31 @@
   isAnon context/@@plone_portal_state/anonymous;"
   class="portlet portlet-libertic-context"
   i18n:domain="libertic.event">
-  <dt class="portletHeader">
-    <span class="portletTopLeft"></span>
-    <span i18n:translate="">
-      Find
-    </span>
-    <span class="portletTopRight"></span>
-  </dt>
   <dd class="portletItem login" tal:condition="isAnon">
     <a class="loginurl" href="" i18n:translate=""
       tal:attributes="href string:${portal_url}/login_form" >Login</a>
   </dd>
+  
+  <tal:connected  tal:condition="python:( not isAnon  )">
+  <dt class="portletHeader">
+    <span class="portletTopLeft"></span>
+    <span i18n:translate="">
+      Find and reuse events
+    </span>
+    <span class="portletTopRight"></span>
+  </dt>
   <dd class="portletItem home" tal:condition="python:( not isAnon  ) and home">
     <ul>
       <li>
         <a class="all-events" tal:attributes="href string:tous-les-evenements" i18n:translate="">All events</a>
       </li>
-      <li>
+      <li tal:condition="view/is_supplier">
         <a class="all-events" tal:attributes="href string:mes-evenements" i18n:translate="">My events</a>
       </li>
     </ul>
   </dd>
-  <dt class="portletHeader">
-    <span class="portletTopLeft"></span>
-    <span i18n:translate="">
-      Actions
-    </span>
-    <span class="portletTopRight"></span>
-  </dt>
-  <dd class="portletItem download" tal:condition="view/is_operator">
+  
+  <dd class="portletItem download">
     <p i18n:translate="">Export the whole database as...</p>
     <ul>
       <li><a class="xml" tal:attributes="href string:${db_url}/eventsasxml"  alt="XML" title="Download as XML" i18n:attributes="title" >
@@ -60,9 +56,24 @@
       </a></li>
       <div class="visualClear"></div>
     </ul>
+    <p><a href="#" i18n:translate="">Advanced export</a></p>
   </dd>
-  <dd class="portletItem add-content" tal:condition="view/is_supplier">
-    <p i18n:translate="">Add content</p>
+  
+  </tal:connected>
+  
+  
+  <tal:supplier tal:condition="view/is_supplier">
+  
+  <dt class="portletHeader">
+    <span class="portletTopLeft"></span>
+    <span i18n:translate="">
+      Add or import event
+    </span>
+    <span class="portletTopRight"></span>
+  </dt>
+  
+  
+  <dd class="portletItem add-content">
     <ul>
       <li class="event">
         <a tal:attributes="href string:${db_url}/++add++libertic_event" title="Add an event" i18n:translate="">
@@ -73,9 +84,12 @@
             portlet_add_source</a>
       </li>
       <li class="export">
-        <a tal:attributes="href string:${db_url}/++add++libertic_source" title="Add a source" i18n:translate="">
-            portlet_export</a>
+        <a tal:attributes="href string:${db_url}" title="Add a source" i18n:translate="">
+            Import event as file</a>
       </li>
     </ul>
   </dd>
+  
+  </tal:supplier>
+  
 </dl>
