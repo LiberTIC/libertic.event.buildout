@@ -1,7 +1,7 @@
 <dl class="portlet portlet-libertic-logoslide"
   i18n:domain="libertic.event">
   
-    <dt class="portletHeader">
+    <dt class="portletHeader visualClear">
         <span class="portletTopLeft"></span>
         <a href="#"
            class="tile"
@@ -10,7 +10,7 @@
     </dt>
   
     <tal:logos tal:repeat="user view/operators_list">
-    <dd class="portletItem" tal:define="has_logo python:user['logo'] and True or False">
+    <dd class="portletItem grid_2" tal:define="has_logo python:user['logo'] and True or False">
         <a class="" tal:attributes="title user/fullname">
             <span tal:attributes="class python:has_logo and 'fullname hiddenStructure' or 'fullname';
                                   " 
@@ -20,7 +20,7 @@
     </dd>
     </tal:logos>
     
-    <dt class="portletHeader">
+    <dt class="portletHeader visualClear">
         <span class="portletTopLeft"></span>
         <a href="#"
            class="tile"
@@ -29,7 +29,7 @@
     </dt>
     
     <tal:logos tal:repeat="user view/suppliers_list">
-    <dd class="portletItem" tal:define="has_logo python:user['logo'] and True or False">
+    <dd class="portletItem grid_2" tal:define="has_logo python:user['logo'] and True or False">
         <a class="" tal:attributes="title user/fullname">
             <span tal:attributes="class python:has_logo and 'fullname hiddenStructure' or 'fullname';
                                   " 
