@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: libertic.event 1.0\n"
-"POT-Creation-Date: 2013-05-27 20:44+0000\n"
+"POT-Creation-Date: 2013-05-28 08:14+0000\n"
 "PO-Revision-Date: 2012-11-22 11:22+0100\n"
 "Last-Translator: kiorky <kiorky@cryptelium.net>\n"
 "Language-Team: FR <LL@li.org>\n"
@@ -21,6 +21,10 @@ msgid "${name} is not allowed"
 msgstr ""
 
 #: ./members/profile.py:147
+msgid "A new user has registered himself on OpenDataEvents website."
+msgstr ""
+
+#: ./members/profile.py:192
 msgid "A new user need to be added to the suppliers group"
 msgstr ""
 
@@ -82,6 +86,22 @@ msgstr ""
 
 #: ./interfaces.py:189
 msgid "Country"
+msgstr ""
+
+#: ./portlets/logoslide.pt:6
+msgid "Data operators"
+msgstr ""
+
+#: ./portlets/logoslide.pt:25
+msgid "Data suppliers"
+msgstr ""
+
+#: ./profiles/default/portlets.xml
+msgid "Displays links and actions for an event database"
+msgstr ""
+
+#: ./profiles/default/portlets.xml
+msgid "Displays supplier or reusers logos"
 msgstr ""
 
 #: ./portlets/context.pt:54
@@ -204,6 +224,10 @@ msgstr ""
 
 #: ./profiles/default/types/libertic_event.xml
 msgid "Libertic Event"
+msgstr ""
+
+#: ./profiles/default/portlets.xml
+msgid "Libertic Logo slide Portlet"
 msgstr ""
 
 #: ./profiles/default/types/libertic_source.xml
@@ -458,8 +482,12 @@ msgstr ""
 msgid "XML"
 msgstr ""
 
-#: ./members/profile.py:148
+#: ./members/profile.py:193
 msgid "You can manage its groups here:"
+msgstr ""
+
+#: ./members/profile.py:148
+msgid "You can move him to the suppliers group to validate its registration following the next link : "
 msgstr ""
 
 #: ./members/profile.py:141

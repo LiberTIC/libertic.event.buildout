@@ -144,8 +144,8 @@ class LiberticPanelAdapter(UserDataPanelAdapter):
             T = self.context.translate
             msg = "\n".join(
                 [
-                T(_('A new user need to be added to the suppliers group')),
-                T(_('You can manage its groups here:')),
+                T(_('A new user has registered himself on OpenDataEvents website.')),
+                T(_('You can move him to the suppliers group to validate its registration following the next link : ')),
                 "    - %s" % groupurl])
             sub = self.context.translate(SMODERATEGROUP)
             utils.sendmail(self.context, moderators, sub, msg)
@@ -189,6 +189,7 @@ class libertic_post_create(grok.View):
     def render(self):
         """."""
         return True
-
+_('A new user need to be added to the suppliers group')
+_('You can manage its groups here:')
 
 # vim:set et sts=4 ts=4 tw=80:

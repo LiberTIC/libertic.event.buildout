@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: libertic.event 1.0\n"
-"POT-Creation-Date: 2013-05-27 20:44+0000\n"
-"PO-Revision-Date: 2013-05-28 00:40+0200\n"
+"POT-Creation-Date: 2013-05-28 08:14+0000\n"
+"PO-Revision-Date: 2013-05-28 10:14+0200\n"
 "Last-Translator: kiorky <kiorky@cryptelium.net>\n"
 "Language-Team: FR <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -21,6 +21,10 @@ msgid "${name} is not allowed"
 msgstr "${name} n'est pas autorisé"
 
 #: ./members/profile.py:147
+msgid "A new user has registered himself on OpenDataEvents website."
+msgstr "Un nouvel utilisateur s'est enregistré sur le site OpenDataEvents."
+
+#: ./members/profile.py:192
 msgid "A new user need to be added to the suppliers group"
 msgstr "Un nouveau fournisseur de données doit être validé"
 
@@ -83,6 +87,22 @@ msgstr "Evènements contenus"
 #: ./interfaces.py:189
 msgid "Country"
 msgstr "Pays"
+
+#: ./portlets/logoslide.pt:6
+msgid "Data operators"
+msgstr "Opérateurs de données"
+
+#: ./portlets/logoslide.pt:25
+msgid "Data suppliers"
+msgstr "Fournisseurs de données"
+
+#: ./profiles/default/portlets.xml
+msgid "Displays links and actions for an event database"
+msgstr "Afficher les liens et actions d'une base de données des évènements"
+
+#: ./profiles/default/portlets.xml
+msgid "Displays supplier or reusers logos"
+msgstr "Afficher les logos des fournisseurs/réutilisateurs"
 
 #: ./portlets/context.pt:54
 msgid "Download as CSV"
@@ -207,6 +227,10 @@ msgstr "Base de données d'évènements"
 #: ./profiles/default/types/libertic_event.xml
 msgid "Libertic Event"
 msgstr "Évènement (libertic)"
+
+#: ./profiles/default/portlets.xml
+msgid "Libertic Logo slide Portlet"
+msgstr "Libertic Logo slide Portlet"
 
 #. Default: "Events source"
 #: ./profiles/default/types/libertic_source.xml
@@ -461,9 +485,13 @@ msgstr "Jobs en avertissement"
 msgid "XML"
 msgstr "XML"
 
-#: ./members/profile.py:148
+#: ./members/profile.py:193
 msgid "You can manage its groups here:"
 msgstr "Vous pouvez régler ses groupes en suivant ce lien :"
+
+#: ./members/profile.py:148
+msgid "You can move him to the suppliers group to validate its registration following the next link : "
+msgstr "Vous pouvez le déplacer dans le groupe des fournisseurs de données pour valider son inscription en suivant le lien suivant"
 
 #: ./members/profile.py:141
 msgid "[LIBERTIC] A new user need to be added to the suppliers group: ${user}"
