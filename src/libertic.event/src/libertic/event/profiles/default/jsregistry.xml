@@ -21,5 +21,7 @@
       expression="" id="jquery-integration.js" inline="False"/>
   <javascript
       id="++theme++libertic.event/js/theme.js"/>
+  <javascript
+      id="++theme++libertic.event/js/jquery.carouFredSel-6.2.1-packed.js"/>
 
 </object>
