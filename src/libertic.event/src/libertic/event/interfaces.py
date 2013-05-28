@@ -377,6 +377,11 @@ class IEventConstructor(Interface):
     def construct(data):
         """Construct a event with prior data validatation"""
 
+class IEventApiUtil(Interface):
+    def mapply(**kwargs):
+        """Construct a event with prior data validatation"""
+ 
+
 
 class IEventEditor(Interface):
     def edit(data):

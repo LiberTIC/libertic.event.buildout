@@ -34,5 +34,6 @@
   <genericsetup:upgradeStep profile="libertic.event:default" source="1003" destination="1004"  handler=".upgrade_1004" title="libertic.event 1004" description="Import logo portlets" />
   <genericsetup:upgradeStep profile="libertic.event:default" source="1004" destination="1005"  handler=".upgrade_1005" title="libertic.event 1005" description="" />
   <genericsetup:upgradeStep profile="libertic.event:default" source="1005" destination="1006"  handler=".upgrade_1006" title="libertic.event 1006" description="" />
+  <genericsetup:upgradeStep profile="libertic.event:default" source="1006" destination="1007"  handler=".upgrade_1007" title="libertic.event 1007" description="" />
   <!-- vim:set ft=xml: -->
 </configure>

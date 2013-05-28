@@ -72,6 +72,9 @@ def recook_resources(context):
     cssregistry.cookResources()
     log('Recooked css/js')
 
+
+
+
 def import_js(context):
     """
     """
@@ -193,4 +196,11 @@ def upgrade_1006(context):
                   'collective.js.imagesloaded'],
         upgrades=True)
     log('v1006 applied')
+
+def upgrade_1007(context):
+    import_js(context)
+    import_css(context)
+    recook_resources(context)
+    log('v1006 applied')
+
 

@@ -730,7 +730,6 @@ class APIXMLGrabber(XMLGrabber):
     def fetch(self, data):
         return data
 
-
 class CSVGrabber(EventsGrabber):
     grok.name('csv')
     def mappings(self, contents):
@@ -760,5 +759,11 @@ class CSVGrabber(EventsGrabber):
                     result[fieldname] = value
             results.append(result)
         return results
+
+class APICSVGrabber(CSVGrabber):
+    grok.name('csvapi')
+    def fetch(self, data):
+        return data
+
 
 # vim:set et sts=4 ts=4 tw=80:

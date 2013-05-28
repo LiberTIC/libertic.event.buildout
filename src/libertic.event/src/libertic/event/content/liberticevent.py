@@ -3,6 +3,7 @@
 __docformat__ = 'restructuredtext en'
 import csv
 from copy import deepcopy
+from ordereddict import OrderedDict
 import uuid as muuid
 from five import grok
 import datetime
@@ -15,6 +16,13 @@ from AccessControl.unauthorized import Unauthorized
 
 from zope.interface import implements, alsoProvides
 from z3c.form.interfaces import ActionExecutionError
+
+from plone.directives import form
+from z3c.form import button, field
+from zope.schema.interfaces import IVocabularyFactory
+from zope.schema.vocabulary import SimpleVocabulary
+from plone.namedfile.field import NamedFile
+
 
 from zope.interface import invariant, Invalid
 from plone.dexterity.content import Container
@@ -409,7 +417,7 @@ class Ical(grok.View):
         desc = ['%(title)s', '%(source)s', '%(description)s']
         ssub = ''
         if sub:
-            ssub = ', '.join([a.strip() for a in sub if a.strip()]) 
+            ssub = ', '.join([a.strip() for a in sub if a.strip()])
             desc.append(ssub)
         desc = [(a%sdata).strip() for a in desc if (a%sdata).strip()]
         if sdata['latlong']: event['GEO'] = sdata['latlong']
@@ -434,23 +442,26 @@ class Ical(grok.View):
         self.request.response.write(resp)
 
 
-class _api(grok.View):
-    grok.baseclass()
+
+def supplier_authorized(roles):
+    auth = ['Manager',
+            'LiberticSupplier',
+            'Site Administrator'
+           ]
+    for r in auth:
+        if r in roles:
+            return True
+    return False
+
+
+class EventApiUtil(grok.Adapter):
     grok.context(lei.IDatabase)
-    grok.require('libertic.eventsdatabase.View')
-    grabber = None
-    mimetype = None
-    type = None
+    grok.implements(lei.IEventApiUtil)
 
-    def get_contents(self):
-        try:
-            contents = self.request.stdin.getvalue()
-        except:
-            contents = self.request.read()
-            self.request.seek(0)
-        return contents
+    def __init__(self, context):
+        self.context = context
 
-    def base_create(self, **kwargs):
+    def mapply(self, grabber, contents, **kwargs):
         db = self.context
         pdb = kwargs.get('pdb', None)
         catalog = getToolByName(self.context, 'portal_catalog')
@@ -463,15 +474,16 @@ class _api(grok.View):
         result = {
             'eid': None,
             'sid': sid,
+            'url': None,
+            'title': None,
             'status': None,
             'messages': [],
         }
         try:
-            if (not 'LiberticSupplier'
-                in user.getRolesInContext(db)):
+            if not supplier_authorized(
+                user.getRolesInContext(db)):
                 raise Unauthorized()
-            grabber = getUtility(lei.IEventsGrabber, name=self.grabber)
-            contents = self.get_contents()
+            grabber = getUtility(lei.IEventsGrabber, name=grabber)
             datas = grabber.data(contents)
             secondpass_datas = []
             for data in datas:
@@ -497,7 +509,11 @@ class _api(grok.View):
                         if k in cdata:
                             del cdata[k]
                     infos, ret, event = lei.IDBPusher(db).push_event(cdata, [userid], sid=sid)
-                    if event is not None: event.reindexObject()
+                    if event is not None:
+                        event.reindexObject()
+                        res['url'] = event.absolute_url()
+                        res['title'] =  "%s - %s - %s" % (
+                            event.title, event.sid, event.eid)
                     if infos:
                         if isinstance(infos, list):
                             res['messages'].extend(infos)
@@ -516,7 +532,8 @@ class _api(grok.View):
                 try:
                     cdata = deepcopy(data)
                     infos, ret, event = lei.IDBPusher(db).push_event(cdata, [user.getId()], sid=sid)
-                    if event is not None: event.reindexObject()
+                    if event is not None:
+                        event.reindexObject()
                 except Exception, e:
                     trace = traceback.format_exc()
                     res = deepcopy(result)
@@ -531,9 +548,27 @@ class _api(grok.View):
             results['messages'].append(trace)
         return results
 
+class _api(grok.View):
+    grok.baseclass()
+    grok.context(lei.IDatabase)
+    grok.require('libertic.eventsdatabase.View')
+    mimetype = None
+    type = None
+
+    def get_contents(self):
+        try:
+            contents = self.request.stdin.getvalue()
+        except:
+            contents = self.request.read()
+            self.request.seek(0)
+        return contents
+
     def create(self, *args, **kw):
         pdb = kw.get('pdb', None)
-        results = self.base_create(pdb=pdb)
+        results = lei.IEventApiUtil(self.context).mapply(
+            self.grabber,
+            self.get_contents(),
+            pdb=pdb)
         resp = self.serialize_create(results)
         lresp = len(resp)
         self.request.response.setHeader('Content-Type', self.mimetype)
@@ -573,5 +608,131 @@ class xml_api(_api):
         sdata = {'data': datas}
         resp = self.api_template(**sdata).encode('utf-8')
         return resp
+
+class EvFormats(object):
+    grok.implements(IVocabularyFactory)
+    def __call__(self, context):
+        terms = []
+        types = {
+            'csv': _('Csv'),
+            'xmlapi': _('Xml'),
+            'jsonapi': _('json'),
+
+        }
+        for term in types:
+            terms.append(SimpleVocabulary.createTerm
+                         (term, types[term], term))
+        return SimpleVocabulary(terms)
+
+
+grok.global_utility(EvFormats, name=u"lev_formats")
+
+
+class IMyForm(form.Schema):
+    ev_file = NamedFile(title=_(u"Events file"))
+    ev_format = schema.Choice(
+        title=_(u"Events file format"),
+        description=_(u"Can be empty if the extension is one of : csv, json, xml"),
+        required=False,
+        vocabulary="lev_formats")
+
+
+class file_import(form.Form):
+    """"""
+    # This form is available at the site root only
+    grok.context(lei.IDatabase)
+    ignoreContext = True
+    fields = field.Fields(IMyForm)
+    grok.require("libertic.event.Add")
+
+    @button.buttonAndHandler(u'Ok')
+    def handleApply(self, action):
+        data, errors = self.extractData()
+        if errors:
+            self.status = self.formErrorsMessage
+            return
+        ev_format = data['ev_format']
+        ev_fn = data['ev_file'].filename
+        ev_data = data['ev_file'].data
+        if not ev_format and ev_fn:
+            if '.' in ev_fn:
+                ext = ev_fn.split('.')[-1]
+                if ext in ['xml', 'json', 'csv']:
+                    ev_format = '%sapi' % ext
+
+        self.description = []
+        stats_msg, desc = '', ''
+        __ = self.context.translate
+        if not ev_format:
+            self.status = __(_('Invalid File/Format'))
+        else:
+            results = lei.IEventApiUtil(self.context).mapply(
+                ev_format, ev_data)
+            statuses, nb = {}, 0
+            if results['status'] == 0:
+                self.status = __(
+                    _('There were fatal errors during import'))
+            elif results['status'] == 2:
+                self.status = __(
+                    _('Events import has run sucessfully, '
+                      'please check the following log'))
+            links = OrderedDict()
+            links['created'] = ['<ul>']
+            links['edited'] = ['<ul>']
+            links['failed'] = []
+            if results['status'] > 0:
+                for item in results['results']:
+                    nb += 1
+                    res = item.get('status', None)
+                    if res:
+                        if not res in statuses:
+                            statuses[res] = 0
+                        statuses[res] += 1
+                    if res in ['created', 'edited']:
+                        if item['url']:
+                            links[res].append(
+                                '<li>'
+                                '<a href="%(url)s">'
+                                '%(title)s'
+                                '</a>'
+                                '</li>' % item
+                            )
+                    if res == 'failed':
+                        msg = '<ul class="failed-item">'
+
+                        msg += '\n'.join(['<li><pre>%s</pre></li>' % m
+                                          for m in item['messages']])
+                        msg += '</ul>'
+                        links[res].append(msg)
+                links['created'].append('</ul>')
+                links['edited'].append('</ul>')
+                if nb:
+                    stats_msg += (
+                        '<div class="lei-import-stats">'
+                        '<p>%s</p>'
+                        '<ul>') % (
+                            __(
+                                _('${nb} Elements processed in the file',
+                                  mapping={'nb': nb})))
+                    for i in statuses:
+                        stats_msg += '<li>%s : %s</li>' % (
+                            __(_(i)), statuses[i]
+                        )
+                    stats_msg += '</ul></div>'
+                    desc += '<div class="detailed-import">'
+                    for i in links:
+                        llen = statuses.get(i, 0)
+                        if llen:
+                            desc += '<dl class="detailed-%s collapsible collapsedOnLoad">' % i
+                            desc += '<dt class="collapsibleHeader">%s %s %s</dt>' % (
+                                llen, __(_(i)), __(_('Events')))
+                            desc += '<dd class="collapsibleContent">'
+                            desc += '\n'.join(links[i])
+                            desc += '</dd>'
+                            desc += '</dl>'
+                    desc += '</div>'
+        self.description.append(stats_msg)
+        self.description.append(desc)
+        self.description = '\n'.join(self.description)
 
 # vim:set et sts=4 ts=4 tw=80:
