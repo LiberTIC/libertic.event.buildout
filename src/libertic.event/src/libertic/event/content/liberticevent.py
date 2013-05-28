@@ -672,7 +672,7 @@ class file_import(form.Form):
             if results['status'] == 0:
                 self.status = __(
                     _('There were fatal errors during import'))
-            elif results['status'] == 2:
+            else:
                 self.status = __(
                     _('Events import has run sucessfully, '
                       'please check the following log'))
