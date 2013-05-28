@@ -6,7 +6,7 @@ INSTALLING THIS PROJECT WITHOUT MINITAGE
 -----------------------------------------
 ::
 
-    git clone ssh://git@github.com/LiberTIC/libertic.event.buildout.git libertic.event
+    git clone ssh://git@github.com/LiberTIC/libertic.event.buildout.git -b master|prod|preprod libertic.event
     cd libertic.event
     python bootstrap.py -dc buildout-(dev/prod).cfg
     bin/buildout -vvvvvNc -dc buildout-(dev/prod).cfg
@@ -29,8 +29,8 @@ THE MINITAGE DANCE
     cd $MT
     wget -O minitagetool.sh https://raw.github.com/minitage/minitage.shell/master/minitagetool.sh
     git clone ssh://git@github.com/LiberTIC/libertic.event.buildout.git $MT/zope/libertic.event
-    # or git clone ssh://git@github.com/LiberTIC/libertic.event.buildout.git $MT/zope/libertic.event-prod
-    # or git clone ssh://git@github.com/LiberTIC/libertic.event.buildout.git $MT/zope/libertic.event-preprod
+    # or git clone ssh://git@github.com/LiberTIC/libertic.event.buildout.git -b prod $MT/zope/libertic.event-prod
+    # or git clone ssh://git@github.com/LiberTIC/libertic.event.buildout.git -b preprod $MT/zope/libertic.event-preprod
     ln -sfv MT/zope/libertic.event*/*minilay $MT/minilays/libertic
     $MT/minitagetool.sh bootstrap libertic.event
     # or $MT/minitagetool.sh bootstrap libertic.event-prod
