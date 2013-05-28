@@ -7,6 +7,7 @@ import unittest2 as unittest
 from zope.component.interfaces import IFactory
 
 from plone.testing.zca import UNIT_TESTING
+from Acquisition import aq_base
 from zope.configuration import xmlconfig
 from plone.dexterity.interfaces import IDexterityFTI
 import mocker
@@ -48,6 +49,10 @@ from libertic.event import interfaces as lei
 from libertic.event.content import source as s
 from libertic.event.content import liberticevent as le
 from libertic.event.content import jobs as j
+from Products.CMFPlone.tests.utils import MockMailHost
+from zope.component import getSiteManager
+from Products.MailHost.interfaces import IMailHost
+
 
 PLONE_MANAGER_NAME = 'Plone_manager'
 PLONE_MANAGER_ID = 'plonemanager'
@@ -140,7 +145,7 @@ class LiberticEventLayer(base.CollectiveCronLayer):
         import collective.portlet.oembed
         self.loadZCML('configure.zcml', package=collective.portlet.oembed)
         import collective.datatablesviews
-        self.loadZCML('configure.zcml', package=collective.datatablesviews) 
+        self.loadZCML('configure.zcml', package=collective.datatablesviews)
         #with_ploneproduct_seo
         import collective.seo
         self.loadZCML('configure.zcml', package=collective.seo)
@@ -183,22 +188,57 @@ LIBERTIC_EVENT_FIXTURE = LiberticEventLayer(name='LiberticEvent:Fixture')
 class LayerMixin(base.LayerMixin):
     defaultBases = (LIBERTIC_EVENT_FIXTURE,)
 
-    def testTearDown(self):
-        self._getToolByName_mock = None
-        self['mocker'].restore()
-        self.loginAsPortalOwner()
-        if 'test-folder' in self['portal'].objectIds():
-            self['portal'].manage_delObjects('test-folder')
-        self['portal'].portal_membership.deleteMembers([PLONE_MANAGER_NAME])
-        self.setRoles()
-        self.login()
-        transaction.commit()
-
-    def testSetUp(self):
+    def setUp(self):
+        base.LayerMixin.setUp(self)
         self['jsongrab'] = getUtility(lei.IEventsGrabber, name=u'json')
         self['mocker'] = mocker.Mocker()
+        self['mailhost'] = MockMailHost('MailHost')
+        transaction.commit()
+
+    def tearDown(self):
+        self._getToolByName_mock = None
+        self['mocker'].restore()
+        transaction.commit()
+        base.LayerMixin.tearDown(self)
+
+    def testSetUp(self):
+        self.setup_mail()
+        self.setup_users()
+        base.LayerMixin.testSetUp(self)
+        self.login(TEST_USER_NAME)
+        self.setRoles(['Manager'])
+        if not 'test-folder' in self['portal'].objectIds():
+            self['portal'].invokeFactory('Folder', 'test-folder')
+        self['test-folder'] = self['folder'] = self['portal']['test-folder']
+        self.setRoles(TEST_USER_ROLES)
+        transaction.commit()
+
+    def testTearDown(self):
+        self.delete_content()
+        self.teardown_mail()
+        transaction.commit()
+        base.LayerMixin.testTearDown(self)
+
+    def delete_content(self):
+        self.loginAsPortalOwner()
+        delete = [
+            a.getObject()
+            for a in self['portal'].portal_catalog.search(
+                {'portal_type':[
+                    'libertic_event',
+                    'libertic_source',
+                    #'libertic_database'
+                ]})]
+        #delete = []
+        if 'test-folder' in self['portal'].objectIds():
+            delete.append(self['portal']['test-folder'])
+        for i in delete:
+            i.aq_parent.aq_inner.manage_delObjects([i.getId()])
+        self.logout()
+
+    def setup_users(self):
+        self.loginAsPortalOwner()
         if not self['portal']['acl_users'].getUser(PLONE_MANAGER_NAME):
-            self.loginAsPortalOwner()
             self.add_user(
                 self['portal'],
                 PLONE_MANAGER_ID,
@@ -226,18 +266,34 @@ class LayerMixin(base.LayerMixin):
                 SUPPLIER2_NAME,
                 SUPPLIER2_PASSWORD,
                 TEST_USER_ROLES)
-        self.logout()
         portal_groups = self['portal'].portal_groups
         portal_groups.addPrincipalToGroup(OPERATOR_ID, lei.groups['operator']['id'])
         portal_groups.addPrincipalToGroup(SUPPLIER_ID, lei.groups['supplier']['id'])
         portal_groups.addPrincipalToGroup(SUPPLIER2_ID, lei.groups['supplier']['id'])
-        self.login(TEST_USER_NAME)
-        self.setRoles(['Manager'])
-        if not 'test-folder' in self['portal'].objectIds():
-            self['portal'].invokeFactory('Folder', 'test-folder')
-        self['test-folder'] = self['folder'] = self['portal']['test-folder']
-        self.setRoles(TEST_USER_ROLES)
+        self.logout()
+
+
+    def setup_mail(self):
+        self.loginAsPortalOwner()
+        self['portal'].email_from_address = 'no@testmail.com'
+        self.logout()
+
+        self['portal']._original_MailHost = self['portal'].MailHost
+        self['portal'].MailHost = mailhost = MockMailHost('MailHost')
+        self['mailhost'] = mailhost
+        sm = getSiteManager(context=self['portal'])
+        sm.unregisterUtility(provided=IMailHost)
+        sm.registerUtility(mailhost, provided=IMailHost)
         transaction.commit()
+
+    def teardown_mail(self):
+        self['portal'].MailHost = self[
+            'portal']._original_MailHost
+        sm = getSiteManager(context=self['portal'])
+        sm.unregisterUtility(provided=IMailHost)
+        sm.registerUtility(
+            aq_base(self['portal']._original_MailHost),
+            provided=IMailHost)
 
     def add_user(self, portal, id, username, password, roles=None):
         if not roles: roles = TEST_USER_ROLES[:]
@@ -270,15 +326,32 @@ class LayerMixin(base.LayerMixin):
 
 
 class IntegrationTesting(LayerMixin, base.IntegrationTesting):
+    def setUp(self):
+        base.IntegrationTesting.setUp(self)
+        LayerMixin.setUp(self)
+    def tearDown(self):
+        base.IntegrationTesting.tearDown(self)
+        LayerMixin.tearDown(self)
     def testSetUp(self):
         base.IntegrationTesting.testSetUp(self)
         LayerMixin.testSetUp(self)
-
+    def testTearDown(self):
+        base.IntegrationTesting.testTearDown(self)
+        LayerMixin.testTearDown(self)
 
 class FunctionalTesting(LayerMixin, base.FunctionalTesting):
+    def setUp(self):
+        base.FunctionalTesting.setUp(self)
+        LayerMixin.setUp(self)
+    def tearDown(self):
+        LayerMixin.tearDown(self)
+        base.FunctionalTesting.tearDown(self)
     def testSetUp(self):
         base.FunctionalTesting.testSetUp(self)
         LayerMixin.testSetUp(self)
+    def testTearDown(self):
+        LayerMixin.testTearDown(self)
+        base.FunctionalTesting.testTearDown(self)
 
 class SimpleLayer(Layer):
     defaultBases = (UNIT_TESTING,)

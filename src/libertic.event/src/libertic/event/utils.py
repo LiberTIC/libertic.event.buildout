@@ -1,3 +1,4 @@
+import logging
 import os
 from Products.CMFCore.utils import getToolByName
 from zope.testbrowser.browser import Browser as baseBrowser
@@ -9,6 +10,7 @@ from icalendar import (
 )
 
 
+logger = logging.getLogger('libertic.event.utils')
 
 def relative_path(ctx, cctx=None):
     purl = getToolByName(ctx, 'portal_url')
@@ -117,19 +119,20 @@ def ical_string(events):
 
 
 def sendmail(context, mto, subject, msg, mfrom=None, charset='utf-8', encoding=None):
-    portal = getToolByName(context, 'portal_url').getPortalObject()
-    MailHost = getToolByName(context, 'MailHost')
-    if not encoding:
-        encoding = portal.getProperty('email_charset')
-    if not mfrom:
-        mfrom = portal.getProperty('email_from_address')
-    MailHost.send(
-        msg,
-        mto=mto,
-        mfrom=mfrom,
-        subject=subject,
-        charset=charset,
-    )
-
-
+    try:
+        portal = getToolByName(context, 'portal_url').getPortalObject()
+        MailHost = getToolByName(context, 'MailHost')
+        if not encoding:
+            encoding = portal.getProperty('email_charset')
+        if not mfrom:
+            mfrom = portal.getProperty('email_from_address')
+        MailHost.send(
+            msg,
+            mto=mto,
+            mfrom=mfrom,
+            subject=subject,
+            charset=charset,
+        )
+    except Exception, e:
+        logger.error('Cant send email: %s' % e)
 

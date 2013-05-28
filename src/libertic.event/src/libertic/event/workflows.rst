@@ -24,10 +24,9 @@ We can add a source
 ~~~~~~~~~~~~~~~~~~~~~
 ::
 
+    >>> import transaction;transaction.commit()
     >>> browser = Browser.new('http://foo/plone/fr/database', SUPPLIER_NAME, SUPPLIER_PASSWORD)
-    >>> '++add++libertic_source' in browser.contents
-    True
-    >>> browser.getLink('Libertic Source').click()
+    >>> browser.getLink(id="le-portlet-addsource").click()
     >>> browser.getControl(name="form.widgets.IDublinCore.title").value="mysource"
     >>> browser.getControl(name="form.widgets.IDublinCore.description").value="mysource desc"
     >>> browser.getControl(name="form.widgets.source").value="http://foo"
@@ -43,9 +42,8 @@ We can add and submit for moderation an event
 
 
     >>> browser = Browser.new('http://foo/plone/fr/database', SUPPLIER_NAME, SUPPLIER_PASSWORD)
-    >>> '++add++libertic_event' in browser.contents
-    True
-    >>> browser.getLink('Libertic Event').click()
+    >>> browser.getLink(id="le-portlet-addevent").click()
+    >>> browser.getLink(url='++add++libertic_event').click()
     >>> browser.getControl(name="form.widgets.source").value = "http://foo"
     >>> browser.getControl(name="form.widgets.IDublinCore.title").value="myevent"
     >>> browser.getControl(name="form.widgets.IDublinCore.description").value="myevent desc"
