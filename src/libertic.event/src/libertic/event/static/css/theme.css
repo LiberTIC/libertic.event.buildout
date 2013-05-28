@@ -173,6 +173,7 @@ dl.portlet-libertic-context dd.add-content li a {
 dl.portlet-libertic-logoslide {
   width: 100%;
 }
+dl.portlet-libertic-logoslide li.portletItem,
 dl.portlet-libertic-logoslide dd.portletItem {
   display: inline-block;
   vertical-align: top;
@@ -181,7 +182,10 @@ dl.portlet-libertic-logoslide dd.portletItem {
   height: 140px;
   margin-bottom: 20px;
 }
-dl.portlet-libertic-logoslide dd.portletItem a {
+dl.portlet-libertic-logoslide li.portletItem a,
+dl.portlet-libertic-logoslide dd.portletItem a,
+dl.portlet-libertic-logoslide li.portletItem span.image,
+dl.portlet-libertic-logoslide dd.portletItem span.image {
   display: block;
   text-align: center;
   width: 100%;
@@ -201,6 +205,7 @@ h6 {
 }
 #content dl.portlet dt,
 h1,
+h2.portletHeader,
 h2.tileHeadline {
   font-size: 100%;
   line-height: 2.5em;
@@ -252,11 +257,13 @@ p.tileFooter {
   border-bottom: 2px solid #c2c2c2;
   text-decoration: none;
 }
+.portletNews .portletItem,
 .tileItem {
   margin-bottom: 2em;
   /* Documentbyline */
 
 }
+.portletNews .portletItem .documentByLine,
 .tileItem .documentByLine {
   padding: 2px 5px;
   font-style: italic;
@@ -264,6 +271,7 @@ p.tileFooter {
   color: #fefefe;
   background-color: #363339;
 }
+.portletNews .portletItem #plone-document-byline,
 .tileItem #plone-document-byline {
   display: none;
 }

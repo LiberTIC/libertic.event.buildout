@@ -1,42 +1,42 @@
-<dl class="portlet portlet-libertic-logoslide"
+<div class="portlet portlet-libertic-logoslide"
   i18n:domain="libertic.event">
   
-    <dt class="portletHeader visualClear">
-        <span class="portletTopLeft"></span>
-        <a href="#"
+    <h2 class="portletHeader visualClear">
+        <span href="#"
            class="tile"
-           i18n:translate="">Data operators</a>
-        <span class="portletTopRight"></span>
-    </dt>
+           i18n:translate="">Data operators</span>
+    </h2>
   
-    <tal:logos tal:repeat="user view/operators_list">
-    <dd class="portletItem grid_2" tal:define="has_logo python:user['logo'] and True or False">
-        <a class="" tal:attributes="title user/fullname">
-            <span tal:attributes="class python:has_logo and 'fullname hiddenStructure' or 'fullname';
-                                  " 
-                  tal:content="user/fullname">Operator 1</span>
-            <span tal:condition="has_logo" tal:replace="structure user/logo"></span>
-        </a>
-    </dd>
-    </tal:logos>
+    <ul id="operators-list">
+        <tal:logos tal:repeat="user view/operators_list">
+        <dd class="portletItem grid_2" id="operators-list" tal:define="has_logo python:user['logo'] and True or False">
+            <a class="" tal:attributes="title user/fullname">
+                <span tal:attributes="class python:has_logo and 'fullname hiddenStructure' or 'fullname';
+                                      " 
+                      tal:content="user/fullname">Operator 1</span>
+                <span tal:condition="has_logo" tal:content="structure user/logo"></span>
+            </a>
+        </dd>
+        </tal:logos>
+    </ul>
     
-    <dt class="portletHeader visualClear">
-        <span class="portletTopLeft"></span>
-        <a href="#"
+    <h2 class="portletHeader visualClear">
+        <span href="#"
            class="tile"
-           i18n:translate="">Data suppliers</a>
-        <span class="portletTopRight"></span>
-    </dt>
+           i18n:translate="">Data suppliers</span>
+    </h2>
     
-    <tal:logos tal:repeat="user view/suppliers_list">
-    <dd class="portletItem grid_2" tal:define="has_logo python:user['logo'] and True or False">
-        <a class="" tal:attributes="title user/fullname">
-            <span tal:attributes="class python:has_logo and 'fullname hiddenStructure' or 'fullname';
-                                  " 
-                  tal:content="user/fullname">Supplier 1</span>
-            <span tal:condition="has_logo" tal:replace="structure user/logo"></span>
-        </a>
-    </dd>
-    </tal:logos>
+    <ul id="suppliers-list">
+        <tal:logos tal:repeat="user view/suppliers_list">
+        <li class="portletItem grid_2" tal:define="has_logo python:user['logo'] and True or False">
+            <a class="" tal:attributes="title user/fullname">
+                <span tal:attributes="class python:has_logo and 'fullname hiddenStructure' or 'fullname';
+                                      " 
+                      tal:content="user/fullname">Supplier 1</span>
+                <span tal:condition="has_logo" tal:content="structure user/logo"></span>
+            </a>
+        </li>
+        </tal:logos>
+    </ul>
     
-</dl>
+</div>
