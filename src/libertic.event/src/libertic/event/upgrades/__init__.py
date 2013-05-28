@@ -184,3 +184,13 @@ def upgrade_1005(context):
     portal_setup.runImportStepFromProfile(PROFILEID, 'plone.app.registry', run_dependencies=False)
     log('v1005 applied')
 
+def upgrade_1006(context):
+    site = getToolByName(context, 'portal_url').getPortalObject()
+    quickinstall_addons(
+        context,
+        install= ['plone.app.relationfield',
+                  'collective.js.masonry',
+                  'collective.js.imagesloaded'],
+        upgrades=True)
+    log('v1006 applied')
+

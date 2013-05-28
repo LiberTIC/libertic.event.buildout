@@ -82,6 +82,8 @@ setup(
         'lxml',
         # with_ploneproduct_masonry
         'collective.masonry',
+        'collective.js.masonry',
+        'collective.js.imagesloaded',
         # with_ploneproduct_cpwkf
         'Products.CMFPlacefulWorkflow',
         # with_ploneproduct_paasync
@@ -103,6 +105,7 @@ setup(
         'icalendar',
         'plone.directives.dexterity',
         'archetypes.multilingual',
+        'plone.app.relationfield',
         'plone.multilingualbehavior',
         'collective.dexteritytextindexer',
         'plone.app.referenceablebehavior',

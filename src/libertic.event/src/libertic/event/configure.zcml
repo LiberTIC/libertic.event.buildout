@@ -36,12 +36,13 @@
   <include package="Products.CMFPlacefulWorkflow" file="configure.zcml"/>
   <!--with_ploneproduct_dexterity -->
   <include package="plone.multilingualbehavior" file="configure.zcml"/>
-  <!--with_ploneproduct_dexterity -->
   <include package="plone.app.dexterity" file="meta.zcml"/>
-  <!--with_ploneproduct_dexterity -->
   <include package="plone.app.dexterity" file="configure.zcml"/>
+  <include package="plone.app.relationfield" file="configure.zcml"/>
   <!--with_ploneproduct_masonry -->
   <include package="collective.masonry" file="configure.zcml"/>
+  <include package="collective.js.masonry" file="configure.zcml"/>
+  <include package="collective.js.imagesloaded" file="configure.zcml"/>
   <!--with_ploneproduct_cga -->
   <include package="collective.googleanalytics" file="configure.zcml"/>
   <!--with_ploneproduct_oembed -->
@@ -58,6 +59,7 @@
   <include package="plone.app.multilingual" file="configure.zcml"/>
   <!--with_ploneproduct_cjqui -->
   <include package="collective.js.jqueryui" file="configure.zcml"/>
+
   <!--with_ploneproduct_addthis -->
   <include package="collective.addthis" file="configure.zcml"/>
   <include package="collective.datatablesviews" file="configure.zcml"/>
