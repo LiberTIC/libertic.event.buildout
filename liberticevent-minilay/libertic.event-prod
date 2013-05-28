@@ -7,4 +7,4 @@ category=zope
 homepage=http://www.makina-corpus.com
 description= a plone 4.2.1 buildout for libertic.event (PRODUCTION MODE)
 buildout_config=minitage.buildout-prod.cfg
-branch=prod
+scm_branch=prod
