@@ -12,10 +12,10 @@ We will have groups mapped to roles::
 
     >>> pwt = layer['portal']['portal_password_reset']
     >>> groups = layer['portal'].portal_groups
-    >>> lgroups = [groups.getGroupById(a) for a in 'libertic_event_supplier', 'libertic_event_operator']
+    >>> lgroups = [groups.getGroupById(a) for a in  'libertic_event_supplier', 'libertic_event_supplier-pending', 'libertic_event_operator']
     >>> None not in lgroups
     True
-    >>> suppliers, operators = lgroups
+    >>> suppliers, suppliersp, operators = lgroups
     >>> 'LiberticSupplier' in suppliers.getRoles()
     True
     >>> 'LiberticOperator' in operators.getRoles()
@@ -49,7 +49,7 @@ Suppliers can:
     >>> browser.getControl(name='form.libertic_event_supplier').value = True
     >>> browser.getControl(name='form.actions.register').click()
     >>> browser.getForm(action='login_form').submit()
-    >>> 'foosupplier' in [a.getId() for a in suppliers.getAllGroupMembers()]
+    >>> 'foosupplier' in [a.getId() for a in suppliersp.getAllGroupMembers()]
     True
 
 ..    >>> supplreq = [b for b in pwt._requests if pwt._requests[b][0] == 'foosupplier'][0]
@@ -110,7 +110,7 @@ With operator role, we can promote to supplier
     >>> navig = browser.new('http://foo/plone/@@personal-information', 'foooperator', 'foofoo')
     >>> navig.getControl(name='form.libertic_event_supplier').value = True
     >>> navig.getControl(name="form.actions.save").click()
-    >>> 'foooperator' in [a.getId() for a in suppliers.getAllGroupMembers()]
+    >>> 'foooperator' in [a.getId() for a in suppliersp.getAllGroupMembers()]
     True
 
 With operator role, we can demote from supplier
@@ -122,4 +122,12 @@ With operator role, we can demote from supplier
     >>> navig.getControl(name="form.actions.save").click()
     >>> 'foooperator' in [a.getId() for a in suppliers.getAllGroupMembers()]
     False
+
+Mails
+~~~~~~~~~
+Upon supplier registration, moderators get emails ::
+
+    >>> mh = layer['mailhost']
+    >>> '@@usergroup-usermembership?userid=3Dfoooperator' in mh.messages[-1]
+    True
 
