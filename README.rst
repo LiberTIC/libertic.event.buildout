@@ -6,7 +6,6 @@ INSTALLING THIS PROJECT WITHOUT MINITAGE
 -----------------------------------------
 ::
 
-    source /minitage/bin/activate
     git clone ssh://git@github.com/LiberTIC/libertic.event.buildout.git libertic.event
     cd libertic.event
     python bootstrap.py -dc buildout-(dev/prod).cfg
@@ -26,14 +25,16 @@ THE MINITAGE DANCE
 ::
 
     export MT=/minitage
-    virtualenv --no-site-packages --distribute $MT
-    source /minitage/bin/activate
-    easy_install -U minitage.core minitage.paste
-    git clone ssh://git@github.com/LiberTIC/libertic.event.minilay.git $MT/minilays/libertic.event
-    minimerge -v libertic.event
-    #minimerge -v libertic.event-prod
-    source $MT/zope/libertic.event/sys/share/minitage/minitage.env
-    cd $INS #enjoy !
+    mkdir $MT -pv $MT/zope $MT/minilays
+    cd $MT
+    wget -O minitagetool.sh https://raw.github.com/minitage/minitage.shell/master/minitagetool.sh
+    git clone ssh://git@github.com/LiberTIC/libertic.event.buildout.git $MT/zope/libertic.event
+    # or git clone ssh://git@github.com/LiberTIC/libertic.event.buildout.git $MT/zope/libertic.event-prod
+    # or git clone ssh://git@github.com/LiberTIC/libertic.event.buildout.git $MT/zope/libertic.event-preprod
+    ln -sfv MT/zope/libertic.event*/*minilay $MT/minilays/libertic
+    $MT/minitagetool.sh bootstrap libertic.event
+    # or $MT/minitagetool.sh bootstrap libertic.event-prod
+    # or $MT/minitagetool.sh bootstrap libertic.event-preprod
 
 PRODUCTION MODE
 ---------------
@@ -84,7 +85,6 @@ Set the project developement  specific settings there
     |                           - Links to find distributions.
     |-- patches.cfg          -> patches used on the project
     |-- cluster.cfg          -> define new zope instances here & also their FileSystemStorage if any.
-    |-- newsletter.cfg       -> singing & dancing integration (new instance with clockserver, version pinning, fss if any)
     |-- libertic.event-kgs.cfg   -> Generated KGS for your project (minitage's printer or buildout.dumppickledversion)
     `-- versions.cfg         -> minimal version pinning for installing your project
 
