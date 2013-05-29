@@ -27,13 +27,13 @@
   <permission id="libertic.eventsdatabase.Add"     title="Add libertic eventsdatabase"/>
   <permission id="libertic.eventsdatabase.Delete"  title="Delete libertic eventsdatabase"/>
   <class class="Products.ATContentTypes.content.topic.ATTopic">
-    <implements interface=".views.IEventsCollection"/>
+    <implements interface="..interfaces.IEventsCollection"/>
   </class>
   <class class="plone.app.collection.collection.Collection">
-    <implements interface=".views.IEventsCollection"/>
+    <implements interface="..interfaces.IEventsCollection"/>
   </class>
   <class class=".database.Database">
-    <implements interface=".views.IEventsCollection"/>
+    <implements interface="..interfaces.IEventsCollection"/>
   </class>
   <grok:grok package="."/>
 </configure>

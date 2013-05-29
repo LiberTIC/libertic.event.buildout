@@ -56,7 +56,7 @@
       </a></li>
       <div class="visualClear"></div>
     </ul>
-    <p><a href="#" i18n:translate="">Advanced export</a></p>
+    <p class="avanced-export"><a href="#" tal:attributes="href string:${db_url}/advanced_export" i18n:translate="">Advanced export</a></p>
   </dd>
 
   </tal:connected>

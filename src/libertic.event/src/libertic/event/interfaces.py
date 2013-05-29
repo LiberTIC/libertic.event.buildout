@@ -1,4 +1,7 @@
 from zope.interface import invariant, Invalid, Interface
+from five import grok
+from zope.schema.interfaces import IVocabularyFactory
+from zope.schema.vocabulary import SimpleVocabulary 
 from Products.PluggableAuthService.interfaces.authservice import IPropertiedUser
 from zope.component import getUtility
 from plone.registry.interfaces import IRegistry
@@ -408,3 +411,38 @@ def settings():
     return registry.forInterface(ILiberticEventSiteSettings)
 
 
+class EvFormats(object):
+    grok.implements(IVocabularyFactory)
+    export = True
+    def __call__(self, context):
+        terms = []
+        types = {
+            'csv': _('Csv'),
+            'xml': _('Xml'),
+            'ical': _('Ical'),
+            'json': _('json'),
+
+        }
+        if not self.export:
+            del types['ical']
+        for term in types:
+            terms.append(SimpleVocabulary.createTerm
+                         (term, term, types[term]))
+        return SimpleVocabulary(terms)
+
+
+class EvImportFormats(EvFormats):
+    export = False
+
+
+grok.global_utility(EvFormats, name=u"lev_formats")
+grok.global_utility(EvImportFormats, name=u"lev_formats_imp")
+                           
+class IEventsCollection(Interface):
+    """Marker interface for views"""
+
+class IEventsSearch(Interface):
+
+    def search(**kwargs):
+        """ search for events"""
+                              

@@ -6,6 +6,8 @@ from zope import schema
 from zope.interface import implements, alsoProvides, Interface
 
 from plone.directives import form, dexterity
+from z3c.form import button, field
+from libertic.event import MessageFactory as _
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from libertic.event.content.liberticevent import (
     data_from_ctx,
@@ -27,19 +29,15 @@ except ImportError:
 
 
 from libertic.event.utils import (
-    ical_string, 
+    ical_string,
     magicstring
 )
 
-class IEventsCollection(Interface):
-    """Marker interface for views"""
 
-class EventsViewMixin(grok.View):
-    grok.require('libertic.eventsdatabase.View')
-    grok.context(IEventsCollection)
-    grok.baseclass()
-    @property
-    def items(self):
+class EventsSearch(grok.Adapter):
+    grok.context(lei.IEventsCollection)
+    grok.implements(lei.IEventsSearch)
+    def search(self, **kwargs):
         sdata = []
         if IATTopic.providedBy(self.context):
             sdata = [a
@@ -59,8 +57,19 @@ class EventsViewMixin(grok.View):
                     'query' : '/'.join(self.context.getPhysicalPath()),
                 },
             }
+            query.update(kwargs)
             sdata = catalog.searchResults(**query)
         return sdata
+
+class EventsViewMixin(grok.View):
+    grok.require('libertic.eventsdatabase.View')
+    grok.context(lei.IEventsCollection)
+    grok.baseclass()
+
+    @property
+    def items(self):
+        return lei.IEventsSearch(self.context).search(
+            **getattr(self, 'search_params', {}))
 
 
 class EventsAsXml(EventsViewMixin):
@@ -81,7 +90,6 @@ class EventsAsXml(EventsViewMixin):
                 self.context.getId()))
         self.request.response.setHeader('Content-Length', len(resp))
         self.request.response.write(resp)
-
 
 
 class EventsAsJson(EventsViewMixin):
@@ -138,5 +146,54 @@ class EventsAsIcal(EventsViewMixin):
                 self.context.getId()))
         self.request.response.setHeader('Content-Length', len(resp))
         self.request.response.write(resp)
+
+
+class IAdvancedexportFields(form.Schema):
+    event_start = schema.Datetime(title=_("Date start"), required=False,)
+    event_end   = schema.Datetime(title=_("Date end"), required=False,)
+    format = schema.Choice(title=_("Format"), required=False, vocabulary="lev_formats")
+
+class advanced_export(form.Form):
+    """"""
+    # This form is available at the site root only
+    grok.require('libertic.eventsdatabase.View')
+    grok.context(lei.IEventsCollection)
+    fields = field.Fields(IAdvancedexportFields)
+    ignoreContext = True
+
+    def update(self):
+        __ = self.context.translate
+        self.description = __(_(
+            'Choose the dates between which you want to export events'))
+        super(advanced_export, self).update()
+
+    @button.buttonAndHandler(u'Ok')
+    def handleApply(self, action):
+        data, errors = self.extractData()
+        views = {
+            'json': EventsAsJson,
+            'xml': EventsAsXml,
+            'ical': EventsAsIcal,
+            'csv': EventsAsCsv,
+        }
+        if errors:
+            self.status = self.formErrorsMessage
+            return
+        params = dict([(a, data[a])
+                       for a in 'event_start', 'event_end'
+                       if data[a]])
+        params['review_state'] = 'published'
+        export_type = data['format']
+        if not export_type:
+            export_type = 'json'
+        if 'event_end' in params:
+            params['event_end'] = {'query': params['event_end'],
+                                   'range':'max'}
+        if 'event_start' in params:
+            params['event_start'] = {'query': params['event_start'],
+                                     'range':'min'}
+        view = views[export_type](self.context, self.request)
+        view.search_params = params
+        return view()
 
 # vim:set et sts=4 ts=4 tw=80:

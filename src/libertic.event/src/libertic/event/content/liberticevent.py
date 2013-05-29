@@ -609,32 +609,14 @@ class xml_api(_api):
         resp = self.api_template(**sdata).encode('utf-8')
         return resp
 
-class EvFormats(object):
-    grok.implements(IVocabularyFactory)
-    def __call__(self, context):
-        terms = []
-        types = {
-            'csv': _('Csv'),
-            'xmlapi': _('Xml'),
-            'jsonapi': _('json'),
 
-        }
-        for term in types:
-            terms.append(SimpleVocabulary.createTerm
-                         (term, types[term], term))
-        return SimpleVocabulary(terms)
-
-
-grok.global_utility(EvFormats, name=u"lev_formats")
-
-
-class IMyForm(form.Schema):
+class IFileImportFields(form.Schema):
     ev_file = NamedFile(title=_(u"Events file"))
     ev_format = schema.Choice(
         title=_(u"Events file format"),
         description=_(u"Can be empty if the extension is one of : csv, json, xml"),
         required=False,
-        vocabulary="lev_formats")
+        vocabulary="lev_formats_imp")
 
 
 class file_import(form.Form):
@@ -642,7 +624,7 @@ class file_import(form.Form):
     # This form is available at the site root only
     grok.context(lei.IDatabase)
     ignoreContext = True
-    fields = field.Fields(IMyForm)
+    fields = field.Fields(IFileImportFields)
     grok.require("libertic.event.Add")
 
     @button.buttonAndHandler(u'Ok')
@@ -734,5 +716,6 @@ class file_import(form.Form):
         self.description.append(stats_msg)
         self.description.append(desc)
         self.description = '\n'.join(self.description)
+
 
 # vim:set et sts=4 ts=4 tw=80:
