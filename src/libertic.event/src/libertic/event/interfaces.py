@@ -57,12 +57,12 @@ groups = {
 }
 
 
-sources = SimpleVocabulary(
-    [SimpleTerm(value=u'json', title=_(u'Json')),
-     SimpleTerm(value=u'ic al', title=_(u'Ical')),
-     SimpleTerm(value=u'xml', title=_(u'XML')),
-     SimpleTerm(value=u'csv', title=_(u'csv')),]
-)
+#sources = SimpleVocabulary(
+#    [SimpleTerm(value=u'json', title=_(u'Json')),
+#     SimpleTerm(value=u'ic al', title=_(u'Ical')),
+#     SimpleTerm(value=u'xml', title=_(u'XML')),
+#     SimpleTerm(value=u'csv', title=_(u'csv')),]
+#)
 
 
 def is_email(value):
@@ -123,7 +123,7 @@ class ISource(IDatabaseItem):
     """A source to grab event from distant sources"""
     source = schema.URI(title=_('Source url'), required=True)
     activated = schema.Bool(title=_('Activated to be parsed'), required=True, default=True)
-    type = schema.Choice(title=_(u"Type"), vocabulary=sources, required=True,)
+    type = schema.Choice(title=_(u"Type"), vocabulary="lev_formats_imp", required=True,)
     logs = schema.List(title=_('logs'), required=False,
                        value_type=schema.Object(ILog))
     created_events = schema.Int(title=_('events created by this source'), required=False, default=0)
