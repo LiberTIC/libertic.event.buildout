@@ -9,14 +9,14 @@
   
     <ul id="operators-list">
         <tal:logos tal:repeat="user view/operators_list">
-        <dd class="portletItem grid_2" id="operators-list" tal:define="has_logo python:user['logo'] and True or False">
+        <li class="portletItem grid_2" tal:define="has_logo python:user['logo'] and True or False">
             <a class="" tal:attributes="title user/fullname">
                 <span tal:attributes="class python:has_logo and 'fullname hiddenStructure' or 'fullname';
                                       " 
                       tal:content="user/fullname">Operator 1</span>
                 <span tal:condition="has_logo" tal:content="structure user/logo"></span>
             </a>
-        </dd>
+        </li>
         </tal:logos>
     </ul>
     
