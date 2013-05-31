@@ -23,4 +23,14 @@
       addview=".logoslide.AddForm"
     />
     
+  <plone:portlet
+      name="libertic.portlets.carousel"
+      interface=".carousel.ICarouselPortlet"
+      assignment=".carousel.Assignment"
+      view_permission="zope2.View"
+      edit_permission="cmf.ManagePortal"
+      renderer=".carousel.Renderer"
+      addview=".carousel.AddForm"
+    />
+    
 </configure>
