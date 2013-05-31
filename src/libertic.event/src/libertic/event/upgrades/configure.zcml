@@ -32,8 +32,9 @@
   <genericsetup:upgradeStep profile="libertic.event:default" source="1001" destination="1002"  handler=".upgrade_1002" title="libertic.event 1002" description="" />
   <genericsetup:upgradeStep profile="libertic.event:default" source="1002" destination="1003"  handler=".upgrade_1003" title="libertic.event 1003" description="Upgrade to plone 4.3" />
   <genericsetup:upgradeStep profile="libertic.event:default" source="1003" destination="1004"  handler=".upgrade_1004" title="libertic.event 1004" description="Import logo portlets" />
-  <genericsetup:upgradeStep profile="libertic.event:default" source="1004" destination="1005"  handler=".upgrade_1005" title="libertic.event 1005" description="" />
-  <genericsetup:upgradeStep profile="libertic.event:default" source="1005" destination="1006"  handler=".upgrade_1006" title="libertic.event 1006" description="" />
-  <genericsetup:upgradeStep profile="libertic.event:default" source="1006" destination="1007"  handler=".upgrade_1007" title="libertic.event 1007" description="" />
+  <genericsetup:upgradeStep profile="libertic.event:default" source="1004" destination="1005"  handler=".upgrade_1005" title="libertic.event 1005" description="Reimport registry" />
+  <genericsetup:upgradeStep profile="libertic.event:default" source="1005" destination="1006"  handler=".upgrade_1006" title="libertic.event 1006" description="Install relationfield and masonry" />
+  <genericsetup:upgradeStep profile="libertic.event:default" source="1006" destination="1007"  handler=".upgrade_1007" title="libertic.event 1007" description="Only recook js and css" />
+  <genericsetup:upgradeStep profile="libertic.event:default" source="1007" destination="1008"  handler=".upgrade_1008" title="libertic.event 1008" description="Import carousel portlet" />
   <!-- vim:set ft=xml: -->
 </configure>

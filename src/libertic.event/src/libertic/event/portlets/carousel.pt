@@ -1,0 +1,20 @@
+<div class="portlet portlet-libertic-carousel"
+  i18n:domain="libertic.event">
+  
+    <h2 class="portletHeader visualClear hiddenStructure">
+        <span href="#"
+           class="tile"
+           i18n:translate="">OpenDataEvents</span>
+    </h2>
+  
+    <ul id="carousel">
+        <tal:logos tal:repeat="image view/image_list">
+        <li class="portletItem">
+            <img class="" tal:replace="structure image/getObject" />
+            <span tal:condition="image/Description" tal:content="image/Description"></span>
+        </li>
+        </tal:logos>
+    </ul>
+    
+    
+</div>

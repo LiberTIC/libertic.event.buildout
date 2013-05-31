@@ -170,11 +170,11 @@ dl.portlet-libertic-context dd.add-content li a {
   margin: 0;
   margin-bottom: 10px;
 }
-dl.portlet-libertic-logoslide {
+#content .portlet-libertic-logoslide {
   width: 100%;
 }
-dl.portlet-libertic-logoslide li.portletItem,
-dl.portlet-libertic-logoslide dd.portletItem {
+#content .portlet-libertic-logoslide li.portletItem,
+#content .portlet-libertic-logoslide dd.portletItem {
   display: inline-block;
   vertical-align: top;
   padding: 5px;
@@ -182,10 +182,10 @@ dl.portlet-libertic-logoslide dd.portletItem {
   height: 140px;
   margin-bottom: 20px;
 }
-dl.portlet-libertic-logoslide li.portletItem a,
-dl.portlet-libertic-logoslide dd.portletItem a,
-dl.portlet-libertic-logoslide li.portletItem span.image,
-dl.portlet-libertic-logoslide dd.portletItem span.image {
+#content .portlet-libertic-logoslide li.portletItem a,
+#content .portlet-libertic-logoslide dd.portletItem a,
+#content .portlet-libertic-logoslide li.portletItem span.image,
+#content .portlet-libertic-logoslide dd.portletItem span.image {
   display: block;
   text-align: center;
   width: 100%;
@@ -212,6 +212,11 @@ h2.tileHeadline {
   margin-bottom: 1.5em;
   text-transform: uppercase;
   background: transparent url('../images/bg-heading.png') repeat-x left bottom;
+}
+h3.tileHeadline {
+  font-size: 100%;
+  line-height: 2.5em;
+  text-transform: uppercase;
 }
 #content dl.portlet dt {
   padding: 0;
@@ -247,15 +252,11 @@ body.template-summary_view #plone-document-byline {
   display: none;
 }
 /* Read more */
-p.tileFooter {
+.tileItem p.tileFooter {
   padding-left: 35px;
   line-height: 30px;
   background: url('../images/picto-search-30.png') no-repeat left center;
   text-transform: uppercase;
-}
-#content p.tileFooter a {
-  border-bottom: 2px solid #c2c2c2;
-  text-decoration: none;
 }
 .portletNews .portletItem,
 .tileItem {
@@ -275,8 +276,27 @@ p.tileFooter {
 .tileItem #plone-document-byline {
   display: none;
 }
+.portletNews .portletItem .tileFooter {
+  text-align: right;
+  background: none;
+}
+.portletNews .portletItem .tileFooter a {
+  height: 74px;
+  width: 74px;
+  display: inline-block;
+  background: url('../images/picto-search-74.png') no-repeat right center;
+}
+/* Links override */
+#content p.tileFooter a {
+  border-bottom: 2px solid #c2c2c2;
+  text-decoration: none;
+}
 #content .tileItem .documentByLine a {
   color: #fefefe;
+}
+#content .portlet h2 a,
+#content .portlet h3 a {
+  text-decoration: none;
 }
 /* Images */
 #content img.tileImage,

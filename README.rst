@@ -28,13 +28,14 @@ THE MINITAGE DANCE
     mkdir $MT -pv $MT/zope $MT/minilays
     cd $MT
     wget -O minitagetool.sh https://raw.github.com/minitage/minitage.shell/master/minitagetool.sh
+    chmod +x minitagetool.sh
     git clone ssh://git@github.com/LiberTIC/libertic.event.buildout.git $MT/zope/libertic.event
     # or git clone ssh://git@github.com/LiberTIC/libertic.event.buildout.git -b prod $MT/zope/libertic.event-prod
     # or git clone ssh://git@github.com/LiberTIC/libertic.event.buildout.git -b preprod $MT/zope/libertic.event-preprod
-    ln -sfv MT/zope/libertic.event*/*minilay $MT/minilays/libertic
-    $MT/minitagetool.sh bootstrap libertic.event
-    # or $MT/minitagetool.sh bootstrap libertic.event-prod
-    # or $MT/minitagetool.sh bootstrap libertic.event-preprod
+    ln -sfv $MT/zope/libertic.event*/*minilay $MT/minilays/libertic
+    $MT/minitagetool.sh deploy libertic.event
+    # or $MT/minitagetool.sh deploy libertic.event-prod
+    # or $MT/minitagetool.sh deploy libertic.event-preprod
 
 PRODUCTION MODE
 ---------------

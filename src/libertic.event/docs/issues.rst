@@ -51,17 +51,6 @@ On ne modifie pas les champs définis, ça a été spécifié au départ.
 
 * ehe
 
-6
-'
-
-Une page d'import permet d'importer un fichier en plus de la source d'événements (page 8)
-
-7
-'
-
-On peut filtrer l'export des événements par date, et préciser le format dans le même formulaire. La page d'export est la même pour fournisseur que pour réutilisateur
-
-le format est choisi soit par une liste déroulante, soit par un bouton par format selon le truc le plus facile à mettre en place
 
 Page d'accueil
 ----------------
@@ -81,6 +70,17 @@ slideshow : todo 6h
 Fini
 =====
 
+6
+'
+
+Une page d'import permet d'importer un fichier en plus de la source d'événements (page 8)
+
+7
+'
+
+On peut filtrer l'export des événements par date, et préciser le format dans le même formulaire. La page d'export est la même pour fournisseur que pour réutilisateur
+
+le format est choisi soit par une liste déroulante, soit par un bouton par format selon le truc le plus facile à mettre en place
 
 3
 '

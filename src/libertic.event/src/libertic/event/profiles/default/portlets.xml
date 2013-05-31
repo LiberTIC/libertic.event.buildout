@@ -24,6 +24,12 @@
       description="Displays supplier or reusers logos"
       i18n:attributes="title; description"
     />
+  <portlet
+      addview="libertic.portlets.carousel"
+      title="Libertic Carousel Portlet"
+      description="Displays images as a carousel"
+      i18n:attributes="title; description"
+    />
   <assignment
       manager="plone.leftcolumn"
       category="context"
