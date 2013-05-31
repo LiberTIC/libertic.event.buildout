@@ -170,11 +170,11 @@ dl.portlet-libertic-context dd.add-content li a {
   margin: 0;
   margin-bottom: 10px;
 }
-dl.portlet-libertic-logoslide {
+#content .portlet-libertic-logoslide {
   width: 100%;
 }
-dl.portlet-libertic-logoslide li.portletItem,
-dl.portlet-libertic-logoslide dd.portletItem {
+#content .portlet-libertic-logoslide li.portletItem,
+#content .portlet-libertic-logoslide dd.portletItem {
   display: inline-block;
   vertical-align: top;
   padding: 5px;
@@ -182,10 +182,10 @@ dl.portlet-libertic-logoslide dd.portletItem {
   height: 140px;
   margin-bottom: 20px;
 }
-dl.portlet-libertic-logoslide li.portletItem a,
-dl.portlet-libertic-logoslide dd.portletItem a,
-dl.portlet-libertic-logoslide li.portletItem span.image,
-dl.portlet-libertic-logoslide dd.portletItem span.image {
+#content .portlet-libertic-logoslide li.portletItem a,
+#content .portlet-libertic-logoslide dd.portletItem a,
+#content .portlet-libertic-logoslide li.portletItem span.image,
+#content .portlet-libertic-logoslide dd.portletItem span.image {
   display: block;
   text-align: center;
   width: 100%;
