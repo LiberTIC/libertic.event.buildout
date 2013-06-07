@@ -30,6 +30,9 @@
       id="++theme++libertic.event/css/grid.css"
       expression="request/HTTP_X_THEME_ENABLED | nothing"/>
   <stylesheet
+      id="++theme++libertic.event/css/flexslider.css"
+      expression="request/HTTP_X_THEME_ENABLED | nothing"/>
+  <stylesheet
       id="++theme++libertic.event/css/theme.css"
       expression="request/HTTP_X_THEME_ENABLED | nothing"/>
 

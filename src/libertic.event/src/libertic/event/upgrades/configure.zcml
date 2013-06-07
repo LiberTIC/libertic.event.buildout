@@ -36,5 +36,24 @@
   <genericsetup:upgradeStep profile="libertic.event:default" source="1005" destination="1006"  handler=".upgrade_1006" title="libertic.event 1006" description="Install relationfield and masonry" />
   <genericsetup:upgradeStep profile="libertic.event:default" source="1006" destination="1007"  handler=".upgrade_1007" title="libertic.event 1007" description="Only recook js and css" />
   <genericsetup:upgradeStep profile="libertic.event:default" source="1007" destination="1008"  handler=".upgrade_1008" title="libertic.event 1008" description="Import carousel portlet" />
+  
+  <genericsetup:upgradeSteps
+      profile="libertic.event:default"
+      source="1008"
+      destination="1009">
+    <genericsetup:upgradeStep
+          title="libertic.event import CSS"
+          description=""
+          handler=".import_css" />
+    <genericsetup:upgradeStep
+        title="libertic.event import JS"
+        description=""
+        handler=".import_js"/>
+    <genericsetup:upgradeStep
+        title="libertic.event Recook resources"
+        description=""
+        handler=".recook_resources" />
+  </genericsetup:upgradeSteps>
+
   <!-- vim:set ft=xml: -->
 </configure>

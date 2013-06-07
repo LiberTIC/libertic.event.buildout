@@ -178,16 +178,18 @@ dl.portlet-libertic-context {
     dd.portletItem {
         display: inline-block;
         vertical-align: top;
-        padding: 5px;
-        background: url('../images/bg-heading.png') repeat center center;
-        height: 140px;
-        margin-bottom: 20px;
-        a, span.image {
+        .wrapper {
+            background: url('../images/bg-heading.png') repeat center center;
+            padding: 5px;
+        }
+        a {
             display: block;
             text-align: center;
-            width: 100%;
-            height: 100%;
+            padding: 5px;
             background-color: white;
+        }
+        img {
+            height: auto;
         }
     }
 }
