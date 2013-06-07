@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 cd $(dirname $0)/..
-for i in prod preprod master;do 
-    git checkout $i;git merge master;
+branch=`git branch -q|grep "*"|sed  "s/* //"`
+if [[ "$branch" = 'prod' ]];then
+        branches="preprod master prod"
+elif [[ "$branch" = 'preprod' ]];then
+        branches="prod master preprod"
+else
+        branches="prod preprod master"
+fi
+for i in $branches;do 
+    git checkout $i;git merge $branch;
 done
 # vim:set et sts=4 ts=4 tw=80:
