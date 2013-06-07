@@ -9,6 +9,6 @@ else
         branches="prod preprod master"
 fi
 for i in $branches;do 
-    git checkout $i;git merge master;
+    git checkout $i;git merge $branch;
 done
 # vim:set et sts=4 ts=4 tw=80:
