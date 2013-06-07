@@ -7,36 +7,42 @@
            i18n:translate="">Data operators</span>
     </h2>
   
-    <ul id="operators-list">
+  <div id="operators-list" class="flexslider">
+    <ul class="slides">
         <tal:logos tal:repeat="user view/operators_list">
         <li class="portletItem grid_2" tal:define="has_logo python:user['logo'] and True or False">
-            <a class="" tal:attributes="title user/fullname">
-                <span tal:attributes="class python:has_logo and 'fullname hiddenStructure' or 'fullname';
-                                      " 
-                      tal:content="user/fullname">Operator 1</span>
-                <span tal:condition="has_logo" tal:content="structure user/logo"></span>
-            </a>
+            <div class="wrapper">
+                <a class="" tal:attributes="title user/fullname">
+                    <span tal:attributes="class python:has_logo and 'fullname hiddenStructure' or 'fullname';" 
+                          tal:content="user/fullname">Operator 1</span>
+                    <span tal:condition="has_logo" tal:replace="structure user/logo"></span>
+                </a>
+            </div>
         </li>
         </tal:logos>
     </ul>
-    
+    </div>
     <h2 class="portletHeader visualClear">
         <span href="#"
            class="tile"
            i18n:translate="">Data suppliers</span>
     </h2>
     
-    <ul id="suppliers-list">
+  <div id="suppliers-list" class="flexslider">
+    <ul class="slides">
         <tal:logos tal:repeat="user view/suppliers_list">
         <li class="portletItem grid_2" tal:define="has_logo python:user['logo'] and True or False">
+            <div class="wrapper">
             <a class="" tal:attributes="title user/fullname">
                 <span tal:attributes="class python:has_logo and 'fullname hiddenStructure' or 'fullname';
                                       " 
                       tal:content="user/fullname">Supplier 1</span>
-                <span tal:condition="has_logo" tal:content="structure user/logo"></span>
+                <span tal:condition="has_logo" tal:replace="structure user/logo"></span>
             </a>
+            </div>
         </li>
         </tal:logos>
     </ul>
+    </div>
     
 </div>

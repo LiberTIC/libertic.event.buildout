@@ -177,20 +177,22 @@ dl.portlet-libertic-context dd.add-content li a {
 #content .portlet-libertic-logoslide dd.portletItem {
   display: inline-block;
   vertical-align: top;
-  padding: 5px;
+}
+#content .portlet-libertic-logoslide li.portletItem .wrapper,
+#content .portlet-libertic-logoslide dd.portletItem .wrapper {
   background: url('../images/bg-heading.png') repeat center center;
-  height: 140px;
-  margin-bottom: 20px;
+  padding: 5px;
 }
 #content .portlet-libertic-logoslide li.portletItem a,
-#content .portlet-libertic-logoslide dd.portletItem a,
-#content .portlet-libertic-logoslide li.portletItem span.image,
-#content .portlet-libertic-logoslide dd.portletItem span.image {
+#content .portlet-libertic-logoslide dd.portletItem a {
   display: block;
   text-align: center;
-  width: 100%;
-  height: 100%;
+  padding: 5px;
   background-color: white;
+}
+#content .portlet-libertic-logoslide li.portletItem img,
+#content .portlet-libertic-logoslide dd.portletItem img {
+  height: auto;
 }
 /* Content *
  * ******** */
@@ -276,6 +278,12 @@ body.template-summary_view #plone-document-byline {
 .tileItem #plone-document-byline {
   display: none;
 }
+.portletNews .portletItem .newsImageContainer {
+  width: 140px;
+  margin: 0;
+  padding: 4px;
+  overflow: hidden;
+}
 .portletNews .portletItem .tileFooter {
   text-align: right;
   background: none;
@@ -299,6 +307,7 @@ body.template-summary_view #plone-document-byline {
   text-decoration: none;
 }
 /* Images */
+#content img.thumbnail,
 #content img.tileImage,
 #content div.newsImageContainer {
   padding: 4px;

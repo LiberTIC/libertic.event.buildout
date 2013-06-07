@@ -54,4 +54,10 @@
     <append css:content-children="#portal-colophon" css:theme="#portal-colophon" />
     <append css:content-children="#portal-siteactions" css:theme="#portal-siteactions" />
 
+    <rules css:if-content=".section-front-page">
+        <append css:content-children="#portlets-above" css:theme="#portlets-above" />
+        <merge attributes="class" css:content="#portlets-below .portlet" css:theme="#portal-globalnav" />
+        <drop css:content="#content #portlets-above" />
+    </rules>
+
 </rules>

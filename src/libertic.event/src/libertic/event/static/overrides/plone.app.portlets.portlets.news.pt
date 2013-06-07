@@ -22,10 +22,20 @@
     <div tal:define="oddrow repeat/obj/odd;
                     item_icon python:getIcon(obj);
                     item_description obj/Description;
-                    item_url  obj/getURL;"
+                    item_url  obj/getURL;
+                    item_title obj/pretty_title_or_id;"
          tal:attributes="class python:oddrow and 'portletItem container_12 even' or 'portletItem container_12 odd'">
         
-        <div class="grid_10">
+        <div class="grid_2" tal:define="item_obj obj/getObject">
+            
+            <a href="#" alt="Read More&hellip;"
+               tal:attributes="href item_url;
+                               alt item_title;">
+                <img tal:replace="structure python: item_obj.tag(scale='mini', css_class='thumbnail')" src="" alt="" />
+            </a>
+        </div>
+            
+        <div class="grid_9">
             <h3 class="tileHeadline"><a href=""
                class="tile"
                tal:attributes="href item_url;
@@ -41,11 +51,10 @@
                 </span>
             </p>
         </div>
-            
-        <footer class="tileFooter grid_2">
+        <footer class="tileFooter grid_1">
             <a href="#" alt="Read More&hellip;"
                tal:attributes="href item_url;
-                               alt obj/pretty_title_or_id;">
+                               alt item_title;">
                     <span i18n:translate="read_more" class="hiddenStructure">Read More&hellip;</span>
             </a>
         </footer>

@@ -6,15 +6,15 @@
            class="tile"
            i18n:translate="">OpenDataEvents</span>
     </h2>
-  
-    <ul id="carousel">
+  <div id="main-carousel" class="flexslider">
+    <ul class="slides">
         <tal:logos tal:repeat="image view/image_list">
-        <li class="portletItem">
+        <li>
             <img class="" tal:replace="structure image/getObject" />
             <span tal:condition="image/Description" tal:content="image/Description"></span>
         </li>
         </tal:logos>
     </ul>
-    
-    
+    </div>
+
 </div>
