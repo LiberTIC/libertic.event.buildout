@@ -9,6 +9,7 @@ from zope.component import getUtility, getAdapter
 from zope.component import adapts
 from Products.CMFCore.interfaces import ISiteRoot
 
+from Products.CMFCore.interfaces._tools import IMemberData
 from plone.app.layout.navigation.interfaces import INavigationRoot
 from plone.app.users.browser.personalpreferences import UserDataPanelAdapter
 from Products.CMFCore.utils import getToolByName
@@ -114,8 +115,10 @@ class LiberticPanelAdapter(UserDataPanelAdapter):
         try:
             return mt.getAuthenticatedMember().getUser().getId()
         except:
-            return None
-
+            if IMemberData.providedBy(self.context):
+                return self.context.getId()
+            else:
+                raise
 
     @property
     def groups(self):
@@ -129,9 +132,7 @@ class LiberticPanelAdapter(UserDataPanelAdapter):
             self.groups.addPrincipalToGroup(
                 uid, i.groups['supplier-pending']['id'])
             # send an email to group moderators
-            data = {
-                'user' : uid,
-            }
+            data = { 'user' : uid, }
             moderators = i.settings().group_moderators
             groupurl = '%s/@@usergroup-usermembership?userid=%s' % (
                 getToolByName(self.context, 'portal_url')(),
@@ -148,7 +149,7 @@ class LiberticPanelAdapter(UserDataPanelAdapter):
                 T(_('You can move him to the suppliers group to validate its registration following the next link : ')),
                 "    - %s" % groupurl])
             sub = self.context.translate(SMODERATEGROUP)
-            utils.sendmail(self.context, moderators, sub, msg)
+            utils.sendmail(self.context, moderators, sub, msg) 
         else:
             self.groups.removePrincipalFromGroup(
                 uid, i.groups['supplier']['id'])
