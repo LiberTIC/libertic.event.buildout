@@ -278,6 +278,12 @@ body.template-summary_view #plone-document-byline {
 .tileItem #plone-document-byline {
   display: none;
 }
+.portletNews .portletItem .newsImageContainer {
+  width: 140px;
+  margin: 0;
+  padding: 4px;
+  overflow: hidden;
+}
 .portletNews .portletItem .tileFooter {
   text-align: right;
   background: none;
@@ -301,6 +307,7 @@ body.template-summary_view #plone-document-byline {
   text-decoration: none;
 }
 /* Images */
+#content img.thumbnail,
 #content img.tileImage,
 #content div.newsImageContainer {
   padding: 4px;
