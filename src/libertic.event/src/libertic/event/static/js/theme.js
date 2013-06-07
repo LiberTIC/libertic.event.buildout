@@ -1,20 +1,22 @@
 
 function initializeliberticevent(){
 
-    //  CarouFredsel with several elements
-    $('#operators-list').carouFredSel({
-        auto: false,
-        prev: '#prev1',
-        next: '#next1',
-        });
-    $('#suppliers-list').carouFredSel({
-        auto: false,
-        prev: '#prev1',
-        next: '#next1',
-        });
-    $('#carousel').carouFredSel({
-        prev: '#prev3',
-        next: '#next3',
-        });
+    $('#main-carousel').flexslider({
+        slideshowSpeed: 4000,
+      });
+    $('#operators-list').flexslider({
+        animation: "slide",
+        itemWidth: 140,
+        itemMargin: 5,
+        minItems: 2,
+        maxItems: 6,
+    });
+    $('#suppliers-list').flexslider({
+        animation: "slide",
+        itemWidth: 140,
+        itemMargin: 5,
+        minItems: 2,
+        maxItems: 6,
+    });
 }
 jQuery(initializeliberticevent);
