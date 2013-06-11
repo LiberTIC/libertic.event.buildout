@@ -6,9 +6,9 @@
   css:if-content="#visual-portal-wrapper"
   >
 
+    <theme href="theme-three.html" css:if-content=".template-manage-portlets"/>
     <theme href="index.html" css:if-content=".section-front-page" />
     <theme href="theme-events.html" css:if-content=".section-evenements" />
-    <theme href="theme-three.html" css:if-content=".template-manage-portlets"/>
     <theme href="theme-three.html" if="$have_both_portlets"/>
     <theme href="theme-two-left.html" if="$have_left_portlets"/>
     <theme href="theme-two-right.html" if="$have_right_portlets"/>
