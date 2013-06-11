@@ -1,4 +1,8 @@
+@import 'variables.less';
 @import 'theme-variables.less';
+@import 'mixins.less';
+@import "buttons.less";
+
 /*
  * <a href="http://thenounproject.com/noun/document/#icon-No5876" target="_blank">Document</a> designed by <a href="http://thenounproject.com/jamison" target="_blank">Jamison Wieser</a> from The Noun Project */
  
@@ -87,6 +91,7 @@ footer,
 
 #event-menu-wrapper {
     font-size: 80%;
+    text-align: center;
     ul {
         margin-bottom: 0.5em;
     }
@@ -100,6 +105,11 @@ footer,
     }
 }
 
+#supplier-menu-events {
+    li {
+        display: inline;
+    }
+}
 /* Sunburst Theme fixes to works with 960css */
 #portal-searchbox{
     position: relative;
