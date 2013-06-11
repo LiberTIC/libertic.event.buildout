@@ -28,7 +28,7 @@
             Suppliers</a>
         </li>
         <li id="menu-item-webservices">
-            <a tal:attributes="href string:#"  
+            <a tal:attributes="href string:${db_url}/webservices"  
              alt="XML" 
              title="Webservices" 
              i18n:attributes="title" 
