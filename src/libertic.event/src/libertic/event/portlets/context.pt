@@ -1,4 +1,4 @@
-<dl
+<div
   tal:define="template_id template/getId;
   portal  here/portal_url/getPortalObject;
   normalizeString nocall:context/@@plone/normalizeString;
@@ -15,21 +15,67 @@
   isAnon context/@@plone_portal_state/anonymous;"
   class="portlet portlet-libertic-context"
   i18n:domain="libertic.event">
-  <dd class="portletItem login" tal:condition="isAnon">
-    <a class="loginurl" href="" i18n:translate=""
-      tal:attributes="href string:${portal_url}/login_form" >Login</a>
-  </dd>
 
   <tal:connected  tal:condition="python:( not isAnon  )">
-  <dt class="portletHeader">
-    <span class="portletTopLeft"></span>
-    <span i18n:translate="">
-      Find and reuse events
-    </span>
-    <span class="portletTopRight"></span>
-  </dt>
-  <dd class="portletItem home" tal:condition="python:( not isAnon  ) and home">
-    <ul>
+
+    <ul id="operator-menu">
+        <li id="menu-item-suppliers-list">
+            <a tal:attributes="href string:#"  
+             alt="XML" 
+             title="Download as XML" 
+             i18n:attributes="title" >
+            Suppliers</a>
+        </li>
+        <li id="menu-item-webservices">
+            <a tal:attributes="href string:#"  
+             alt="XML" 
+             title="Webservices" 
+             i18n:attributes="title" >
+            Webservices</a>
+        </li>
+        <li id="menu-item-export">
+            <a href="#" 
+             tal:attributes="href string:${db_url}/advanced_export" 
+             i18n:translate="">
+             Advanced export</a>
+        </li>
+    </ul>
+
+  </tal:connected>
+
+<div class="visualClear"></div>
+
+  <tal:supplier tal:condition="view/is_supplier">
+
+    <ul id="supplier-menu">
+      <li id="menu-item-create-event">
+        <a tal:attributes="href string:${db_url}/++add++libertic_event"
+          title="Create an event"
+          i18n:translate="">
+          Create</a>
+      </li>
+      <li id="menu-item-add-source">
+        <a tal:attributes="href string:${db_url}/++add++libertic_source"
+          title="Add a source"
+          i18n:translate="">
+          Import a feed</a>
+      </li>
+      <li id="menu-item-export">
+        <a tal:attributes="href string:${db_url}/file_import"
+          title="Add a source"
+          i18n:translate="">
+          Import as file</a>
+      </li>
+      <li id="menu-item-operators-list">
+        <a tal:attributes="href string:#"
+          title="See operators list"
+          i18n:translate="">
+          Operators</a>
+      </li>
+      
+    </ul>
+    
+    <ul id="supplier-menu-events">
       <li>
         <a class="all-events" tal:attributes="href string:tous-les-evenements" i18n:translate="">All events</a>
       </li>
@@ -37,68 +83,7 @@
         <a class="all-events" tal:attributes="href string:mes-evenements" i18n:translate="">My events</a>
       </li>
     </ul>
-  </dd>
-
-  <dd class="portletItem download">
-    <p i18n:translate="">Export all events as...</p>
-    <ul>
-      <li><a class="xml" tal:attributes="href string:${db_url}/eventsasxml"  alt="XML" title="Download as XML" i18n:attributes="title" >
-          xml
-      </a></li>
-      <li><a class="json" tal:attributes="href string:${db_url}/eventsasjson" alt="JSON" title="Download as JSON" i18n:attributes="title">
-        json
-      </a></li>
-      <li><a  class="ical" tal:attributes="href string:${db_url}/eventsasical" alt="ICAL" title="Downloas as ICAL" i18n:attributes="title">
-          ical
-      </a></li>
-      <li><a class="csv" tal:attributes="href string:${db_url}/eventsascsv" alt="CSV" title="Download as CSV" i18n:attributes="title">
-        csv
-      </a></li>
-      <div class="visualClear"></div>
-    </ul>
-    <p class="avanced-export"><a href="#" tal:attributes="href string:${db_url}/advanced_export" i18n:translate="">Advanced export</a></p>
-  </dd>
-
-  </tal:connected>
-
-
-  <tal:supplier tal:condition="view/is_supplier">
-
-  <dt class="portletHeader">
-    <span class="portletTopLeft"></span>
-    <span i18n:translate="">
-      Add or import event
-    </span>
-    <span class="portletTopRight"></span>
-  </dt>
-
-
-  <dd class="portletItem add-content">
-    <ul>
-      <li class="event">
-        <a tal:attributes="href string:${db_url}/++add++libertic_event"
-          title="Add an event"
-          i18n:translate=""
-          id="le-portlet-addevent">
-          portlet_add_event</a>
-      </li>
-      <li class="source">
-        <a tal:attributes="href string:${db_url}/++add++libertic_source"
-          title="Add a source"
-          i18n:translate=""
-          id="le-portlet-addsource">
-          portlet_add_source</a>
-      </li>
-      <li class="export">
-        <a tal:attributes="href string:${db_url}/file_import"
-          title="Add a source"
-          i18n:translate=""
-          id="le-portlet-addfile">
-          Import event as file</a>
-      </li>
-    </ul>
-  </dd>
 
   </tal:supplier>
 
-</dl>
+</div>

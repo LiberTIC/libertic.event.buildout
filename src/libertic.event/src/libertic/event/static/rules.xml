@@ -7,6 +7,7 @@
   >
 
     <theme href="index.html" css:if-content=".section-front-page" />
+    <theme href="theme-events.html" css:if-content=".section-evenements" />
     <theme href="theme-three.html" css:if-content=".template-manage-portlets"/>
     <theme href="theme-three.html" if="$have_both_portlets"/>
     <theme href="theme-two-left.html" if="$have_left_portlets"/>
@@ -56,8 +57,14 @@
 
     <rules css:if-content=".section-front-page">
         <append css:content-children="#portlets-above" css:theme="#portlets-above" />
-        <merge attributes="class" css:content="#portlets-below .portlet" css:theme="#portal-globalnav" />
         <drop css:content="#content #portlets-above" />
     </rules>
 
+    <rules css:if-content=".section-evenements">
+        <append css:content-children="#operator-menu" css:theme="#operator-menu" />
+        <append css:content-children="#supplier-menu" css:theme="#supplier-menu" />
+        <append css:content="#supplier-menu-events" css:theme="#supplier-menu-events" />
+        <drop css:content="#content #portlets-above" />
+    </rules>
+    
 </rules>
