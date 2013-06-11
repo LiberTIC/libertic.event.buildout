@@ -63,8 +63,8 @@
     <rules css:if-content=".section-evenements">
         <append css:content-children="#operator-menu" css:theme="#operator-menu" />
         <append css:content-children="#supplier-menu" css:theme="#supplier-menu" />
-        <append css:content="#supplier-menu-events" css:theme="#supplier-menu-events" />
-        <drop css:content="#content #portlets-above" />
+        <drop css:content="#content #supplier-menu" />
+        <drop css:content="#content #operator-menu" />
     </rules>
     
 </rules>

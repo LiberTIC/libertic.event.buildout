@@ -77,10 +77,10 @@
     
     <ul id="supplier-menu-events">
       <li>
-        <a class="all-events" tal:attributes="href string:tous-les-evenements" i18n:translate="">All events</a>
+        <a class="all-events btn" tal:attributes="href string:tous-les-evenements" i18n:translate="">All events</a>
       </li>
       <li tal:condition="view/is_supplier">
-        <a class="all-events" tal:attributes="href string:mes-evenements" i18n:translate="">My events</a>
+        <a class="my-events btn" tal:attributes="href string:mes-evenements" i18n:translate="">My events</a>
       </li>
     </ul>
 
