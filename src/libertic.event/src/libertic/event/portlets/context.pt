@@ -23,21 +23,25 @@
             <a tal:attributes="href string:#"  
              alt="XML" 
              title="Download as XML" 
-             i18n:attributes="title" >
+             i18n:attributes="title" 
+             i18n:translate="">
             Suppliers</a>
         </li>
         <li id="menu-item-webservices">
             <a tal:attributes="href string:#"  
              alt="XML" 
              title="Webservices" 
-             i18n:attributes="title" >
+             i18n:attributes="title" 
+             i18n:translate="">
             Webservices</a>
         </li>
         <li id="menu-item-export">
             <a href="#" 
-             tal:attributes="href string:${db_url}/advanced_export" 
+             tal:attributes="href string:${db_url}/advanced_export"
+             title="Export" 
+             i18n:attributes="title" 
              i18n:translate="">
-             Advanced export</a>
+             Export</a>
         </li>
     </ul>
 
@@ -60,12 +64,20 @@
           i18n:translate="">
           Import a feed</a>
       </li>
-      <li id="menu-item-export">
+      <li id="menu-item-import-file">
         <a tal:attributes="href string:${db_url}/file_import"
           title="Add a source"
           i18n:translate="">
           Import as file</a>
       </li>
+        <li id="menu-item-export">
+            <a href="#" 
+             tal:attributes="href string:${db_url}/advanced_export"
+             title="Export" 
+             i18n:attributes="title" 
+             i18n:translate="">
+             Export</a>
+        </li>
       <li id="menu-item-operators-list">
         <a tal:attributes="href string:#"
           title="See operators list"

@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: libertic.event 1.0\n"
-"POT-Creation-Date: 2013-05-30 09:41+0000\n"
+"POT-Creation-Date: 2013-06-11 15:17+0000\n"
 "PO-Revision-Date: 2012-11-22 11:22+0100\n"
 "Last-Translator: kiorky <kiorky@cryptelium.net>\n"
 "Language-Team: FR <LL@li.org>\n"
@@ -24,24 +24,20 @@ msgstr ""
 msgid "${nb} Elements processed in the file"
 msgstr ""
 
-#: ./members/profile.py:147
+#: ./members/profile.py:148
 msgid "A new user has registered himself on OpenDataEvents website."
 msgstr ""
 
-#: ./members/profile.py:192
+#: ./members/profile.py:193
 msgid "A new user need to be added to the suppliers group"
 msgstr ""
 
-#: ./members/profile.py:35
+#: ./members/profile.py:36
 msgid "Accept terms of use"
 msgstr ""
 
 #: ./interfaces.py:125
 msgid "Activated to be parsed"
-msgstr ""
-
-#: ./portlets/context.pt:69
-msgid "Add or import event"
 msgstr ""
 
 #: ./interfaces.py:188
@@ -52,11 +48,7 @@ msgstr ""
 msgid "Address details"
 msgstr ""
 
-#: ./portlets/context.pt:59
-msgid "Advanced export"
-msgstr ""
-
-#: ./portlets/context.pt:34
+#: ./portlets/context.pt:92
 msgid "All events"
 msgstr ""
 
@@ -100,6 +92,10 @@ msgstr ""
 msgid "Country"
 msgstr ""
 
+#: ./portlets/context.pt:56
+msgid "Create"
+msgstr ""
+
 #: ./interfaces.py:420
 msgid "Csv"
 msgstr ""
@@ -108,7 +104,7 @@ msgstr ""
 msgid "Data operators"
 msgstr ""
 
-#: ./portlets/logoslide.pt:24
+#: ./portlets/logoslide.pt:26
 msgid "Data suppliers"
 msgstr ""
 
@@ -121,6 +117,10 @@ msgid "Date start"
 msgstr ""
 
 #: ./profiles/default/portlets.xml
+msgid "Displays images as a carousel"
+msgstr ""
+
+#: ./profiles/default/portlets.xml
 msgid "Displays links and actions for an event database"
 msgstr ""
 
@@ -128,20 +128,8 @@ msgstr ""
 msgid "Displays supplier or reusers logos"
 msgstr ""
 
-#: ./portlets/context.pt:54
-msgid "Download as CSV"
-msgstr ""
-
-#: ./portlets/context.pt:48
-msgid "Download as JSON"
-msgstr ""
-
-#: ./portlets/context.pt:45
+#: ./portlets/context.pt:23
 msgid "Download as XML"
-msgstr ""
-
-#: ./portlets/context.pt:51
-msgid "Downloas as ICAL"
 msgstr ""
 
 #: ./interfaces.py:196
@@ -178,8 +166,8 @@ msgstr ""
 msgid "Events will be grabbed, please refresh in a while"
 msgstr ""
 
-#: ./portlets/context.pt:43
-msgid "Export all events as..."
+#: ./portlets/context.pt:39
+msgid "Export"
 msgstr ""
 
 #: ./interfaces.py:33
@@ -188,10 +176,6 @@ msgstr ""
 
 #: ./interfaces.py:134
 msgid "Failed runs"
-msgstr ""
-
-#: ./portlets/context.pt:26
-msgid "Find and reuse events"
 msgstr ""
 
 #: ./profiles/default/registry.xml
@@ -238,12 +222,16 @@ msgstr ""
 msgid "Gallery license"
 msgstr ""
 
-#: ./interfaces.py:62
+#: ./interfaces.py:422
 msgid "Ical"
 msgstr ""
 
-#: ./portlets/context.pt:93
-msgid "Import event as file"
+#: ./portlets/context.pt:62
+msgid "Import a feed"
+msgstr ""
+
+#: ./portlets/context.pt:68
+msgid "Import as file"
 msgstr ""
 
 #: ./content/liberticevent.py:649
@@ -254,12 +242,12 @@ msgstr ""
 msgid "Jauge"
 msgstr ""
 
-#: ./interfaces.py:61
-msgid "Json"
-msgstr ""
-
 #: ./profiles/default/registry.xml
 msgid "Libertic"
+msgstr ""
+
+#: ./profiles/default/portlets.xml
+msgid "Libertic Carousel Portlet"
 msgstr ""
 
 #: ./profiles/default/portlets.xml
@@ -282,11 +270,11 @@ msgstr ""
 msgid "Libertic Source"
 msgstr ""
 
-#: ./members/profile.py:47
+#: ./members/profile.py:48
 msgid "Libertic event operator"
 msgstr ""
 
-#: ./members/profile.py:42
+#: ./members/profile.py:43
 msgid "Libertic event supplier"
 msgstr ""
 
@@ -398,10 +386,6 @@ msgstr ""
 msgid "LiberticSource: source_warns"
 msgstr ""
 
-#: ./portlets/context.pt:19
-msgid "Login"
-msgstr ""
-
 #: ./profiles/default/types/MemberFolder.xml
 msgid "MemberFolder"
 msgstr ""
@@ -410,7 +394,7 @@ msgstr ""
 msgid "Missing relative license for ${url}."
 msgstr ""
 
-#: ./portlets/context.pt:37
+#: ./portlets/context.pt:95
 msgid "My events"
 msgstr ""
 
@@ -420,6 +404,14 @@ msgstr ""
 
 #: ./interfaces.py:34
 msgid "OK"
+msgstr ""
+
+#: ./portlets/carousel.pt:5
+msgid "OpenDataEvents"
+msgstr ""
+
+#: ./portlets/context.pt:82
+msgid "Operators"
 msgstr ""
 
 #: ./interfaces.py:212
@@ -472,6 +464,10 @@ msgstr ""
 
 #: ./interfaces.py:190
 msgid "Street"
+msgstr ""
+
+#: ./portlets/context.pt:23
+msgid "Suppliers"
 msgstr ""
 
 #: ./interfaces.py:183
@@ -530,23 +526,23 @@ msgstr ""
 msgid "Warn tries"
 msgstr ""
 
-#: ./interfaces.py:63
-msgid "XML"
+#: ./portlets/context.pt:31
+msgid "Webservices"
 msgstr ""
 
 #: ./interfaces.py:421
 msgid "Xml"
 msgstr ""
 
-#: ./members/profile.py:193
+#: ./members/profile.py:194
 msgid "You can manage its groups here:"
 msgstr ""
 
-#: ./members/profile.py:148
+#: ./members/profile.py:149
 msgid "You can move him to the suppliers group to validate its registration following the next link : "
 msgstr ""
 
-#: ./members/profile.py:141
+#: ./members/profile.py:142
 msgid "[LIBERTIC] A new user need to be added to the suppliers group: ${user}"
 msgstr ""
 
@@ -576,10 +572,6 @@ msgstr ""
 
 #: ./profiles/default/registry.xml
 msgid "country of the event"
-msgstr ""
-
-#: ./interfaces.py:64
-msgid "csv"
 msgstr ""
 
 #: ./profiles/default/registry.xml
@@ -622,17 +614,17 @@ msgid "help_group_moderators"
 msgstr ""
 
 #. Default: "Tick this box to indicate that you are an event operator"
-#: ./members/profile.py:48
+#: ./members/profile.py:49
 msgid "help_libertic_event_operator"
 msgstr ""
 
 #. Default: "Tick this box to indicate that you are an even supplier "
-#: ./members/profile.py:43
+#: ./members/profile.py:44
 msgid "help_libertic_event_supplier"
 msgstr ""
 
 #. Default: "Tick this box to indicate that you have found, read and accepted the terms of use for this site. "
-#: ./members/profile.py:36
+#: ./members/profile.py:37
 msgid "help_libertic_tgu"
 msgstr ""
 
@@ -696,14 +688,6 @@ msgstr ""
 
 #: ./profiles/default/registry.xml
 msgid "organizer of the organizer"
-msgstr ""
-
-#: ./portlets/context.pt:79
-msgid "portlet_add_event"
-msgstr ""
-
-#: ./portlets/context.pt:86
-msgid "portlet_add_source"
 msgstr ""
 
 #: ./profiles/default/registry.xml
