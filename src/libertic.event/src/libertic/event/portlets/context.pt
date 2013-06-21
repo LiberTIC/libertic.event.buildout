@@ -20,7 +20,7 @@
 
     <ul id="operator-menu">
         <li id="menu-item-suppliers-list">
-            <a tal:attributes="href string:#"  
+            <a tal:attributes="href string:${db_url}/suppliers"  
              alt="XML" 
              title="Download as XML" 
              i18n:attributes="title" 
@@ -79,7 +79,7 @@
              Export</a>
         </li>
       <li id="menu-item-operators-list">
-        <a tal:attributes="href string:#"
+        <a tal:attributes="href string:${db_url}/operators"
           title="See operators list"
           i18n:translate="">
           Operators</a>
