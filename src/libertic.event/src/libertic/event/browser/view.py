@@ -10,18 +10,21 @@ from Products.Five import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.CMFCore.utils import getToolByName
 from plone.registry.interfaces import IRegistry
-from Products.ATContentTypes.interfaces.interfaces import IATContentType
+from plone.app.collection.interfaces import ICollection
+
 from Acquisition import aq_parent
 
 
-class IMyView(interface.Interface):
+class IEventListing(interface.Interface):
     """Marker interface"""
 
 
-class MyView(BrowserView):
-    """MY view doc"""
-    interface.implements(IMyView)
-    template = ViewPageTemplateFile('templates/template.pt')
+class EventListing(BrowserView):
+    """Events listing view doc"""
+    interface.implements(ICollection)
+
+    template = ViewPageTemplateFile('templates/libertic_event_datatables_view.pt')
+
     def __call__(self, **params):
         """."""
         params = {}

@@ -20,9 +20,9 @@
       menu="plone_displayviews"
       name="libertic_event_datatables_view"
       title="OpenData Event Datatables view"
+      class=".view.EventListing"
       allowed_interface="collective.datatablesviews.browser.view.IDatatablesView"
       permission="zope2.View"
-      template="templates/libertic_event_datatables_view.pt"
       />
 
   <!-- Zope 3 browser resources -->
