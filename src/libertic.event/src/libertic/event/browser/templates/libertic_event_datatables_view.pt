@@ -44,7 +44,7 @@
           pas_member context/@@pas_member">
           <thead>
             <tr>
-              <th class="nosort"
+              <th class="nosort" i18n:domain="plone"
                 i18n:translate=""
                 tal:repeat="field fields"
                 tal:content="python: field[1]">Field name</th>
