@@ -209,3 +209,9 @@ def upgrade_1008(context):
     portal_setup = site.portal_setup
     portal_setup.runImportStepFromProfile(PROFILEID, 'portlets', run_dependencies=False)
     log('v1008 applied')
+
+def upgrade_1010(context):
+    """ """
+    site = getToolByName(context, 'portal_url').getPortalObject()
+    portal_setup = site.portal_setup
+    portal_setup.runImportStepFromProfile(PROFILEID, 'typeinfo', run_dependencies=False)

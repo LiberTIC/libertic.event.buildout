@@ -14,16 +14,16 @@
   <!-- Viewlets registration -->
 
   <!-- Zope 3 browser views -->
-  <!--
     <browser:page
-        layer="libertic.event.interfaces.ILayer"
-        for="libertic.event.interface.mycontent"
-        name="MyView"
-        class=".view.MyView"
-        allowed_interface=".view.IMyView"
-        permission="zope2.View"
+      layer="libertic.event.interfaces.ILayer"
+      for="plone.app.collection.interfaces.ICollection"
+      menu="plone_displayviews"
+      name="libertic_event_datatables_view"
+      title="OpenData Event Datatables view"
+      allowed_interface="collective.datatablesviews.browser.view.IDatatablesView"
+      permission="zope2.View"
+      template="templates/libertic_event_datatables_view.pt"
       />
-  -->
 
   <!-- Zope 3 browser resources -->
 

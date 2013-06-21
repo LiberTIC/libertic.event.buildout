@@ -21,7 +21,7 @@ class IMyView(interface.Interface):
 class MyView(BrowserView):
     """MY view doc"""
     interface.implements(IMyView)
-    template = ViewPageTemplateFile('template.pt')
+    template = ViewPageTemplateFile('templates/template.pt')
     def __call__(self, **params):
         """."""
         params = {}

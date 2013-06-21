@@ -54,6 +54,7 @@
         description=""
         handler=".recook_resources" />
   </genericsetup:upgradeSteps>
+  <genericsetup:upgradeStep profile="libertic.event:default" source="1009" destination="1010"  handler=".upgrade_1010" title="libertic.event 1010" description="Import new collection available view" />
 
   <!-- vim:set ft=xml: -->
 </configure>
