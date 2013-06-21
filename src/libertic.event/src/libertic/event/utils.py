@@ -136,3 +136,15 @@ def sendmail(context, mto, subject, msg, mfrom=None, charset='utf-8', encoding=N
     except Exception, e:
         logger.error('Cant send email: %s' % e)
 
+def users_from_group(context, group_id):
+    """
+    """
+    acl_users = getToolByName(context, 'acl_users')
+    groups_tool = getToolByName(context, 'portal_groups')
+    group = groups_tool.getGroupById(group_id)
+    
+    if group is None:
+        return None
+    members = group.getGroupMembers()
+    
+    return members

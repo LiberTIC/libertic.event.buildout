@@ -1,0 +1,51 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="libertic.event">
+
+<body>
+    
+<metal:title fill-slot="content-title">
+    <h1 class="documentFirstHeading" i18n:translate="">Operators</h1>
+</metal:title>
+
+<metal:main fill-slot="content-core"
+       tal:define="results view/operators;">
+
+    <div class="container" condition="results">
+        <table tal:define="portal_url context/@@plone_portal_state/portal_url" class="plain">
+            <thead>
+                <tr>
+                    <th i18n:translate="">Creator</th>
+                    <th i18n:translate="">Organisation</th>
+                    <th i18n:translate="">Activity</th>
+                    <th i18n:translate="">Data Usage</th>
+                    <th i18n:translate="">Town</th>
+                </tr>
+            </thead>
+            <tbody>
+                <metal:block tal:repeat="result results">
+                <tr>
+                    <td><span tal:content="result/id" /></td>
+                    <td><span tal:content="result/fullname" /></td>
+                    <td><span tal:content="result/activity" /></td>
+                    <td><a tal:attributes="href result/homeurl" target="_blank" tal:content="result/homeurl" /></td>
+                    <td><span tal:content="result/location" /></td>
+                </tr>
+                </metal:block>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div tal:condition="not: results">
+        <p><strong i18n:translate="description_no_results_found">No results were found.</strong></p>
+    </div>
+
+</metal:main>
+
+</body>
+</html>

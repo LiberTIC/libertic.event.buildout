@@ -25,6 +25,23 @@
       permission="zope2.View"
       />
 
+    <browser:page
+        layer="libertic.event.interfaces.ILayer"
+        for="*"
+        name="operators"
+        permission="zope2.Public"
+        class=".view.MemberListing"
+        template='templates/member_list_view.pt'
+          />
+
+    <browser:page
+        layer="libertic.event.interfaces.ILayer"
+        for="*"
+        name="suppliers"
+        permission="zope2.Public"
+        class=".view.MemberListing"
+        template='templates/suppliers_list_view.pt'
+          />
   <!-- Zope 3 browser resources -->
 
   <!-- Resource directory -->
