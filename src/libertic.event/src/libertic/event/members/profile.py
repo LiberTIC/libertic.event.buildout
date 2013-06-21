@@ -173,11 +173,13 @@ class LiberticPanelAdapter(UserDataPanelAdapter):
 
 
 class CustomizedUserDataPanel(UserDataPanel):
+    """/personal-information (preferences personnelles"""
     def __init__(self, context, request):
         super(CustomizedUserDataPanel, self).__init__(context, request)
         self.form_fields = self.form_fields.omit('tgu')
 
 class CustomizedUserDataConfiglet(UserDataConfiglet):
+    """/user-information (manage users"""
     def __init__(self, context, request):
         super(CustomizedUserDataConfiglet, self).__init__(context, request)
         self.form_fields = self.form_fields.omit('tgu')

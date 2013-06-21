@@ -18,6 +18,13 @@
       permission="cmf.SetOwnProperties"
       layer="libertic.event.interfaces.ILayer"
     />
+   <browser:page
+      for="plone.app.layout.navigation.interfaces.INavigationRoot"
+      name="personal-information"
+      class=".profile.CustomizedUserDataPanel"
+      permission="cmf.SetOwnProperties"
+      layer="libertic.event.interfaces.ILayer"
+    />
   <browser:page
       name="register"
       for="plone.app.layout.navigation.interfaces.INavigationRoot"
