@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: libertic.event 1.0\n"
-"POT-Creation-Date: 2013-06-11 15:17+0000\n"
+"POT-Creation-Date: 2013-06-24 14:36+0000\n"
 "PO-Revision-Date: 2012-11-22 11:22+0100\n"
 "Last-Translator: kiorky <kiorky@cryptelium.net>\n"
 "Language-Team: FR <LL@li.org>\n"
@@ -38,6 +38,11 @@ msgstr ""
 
 #: ./interfaces.py:125
 msgid "Activated to be parsed"
+msgstr ""
+
+#: ./browser/templates/member_list_view.pt:24
+#: ./browser/templates/suppliers_list_view.pt:25
+msgid "Activity"
 msgstr ""
 
 #: ./interfaces.py:188
@@ -96,8 +101,16 @@ msgstr ""
 msgid "Create"
 msgstr ""
 
+#: ./browser/templates/member_list_view.pt:22
+msgid "Creator"
+msgstr ""
+
 #: ./interfaces.py:420
 msgid "Csv"
+msgstr ""
+
+#: ./browser/templates/member_list_view.pt:25
+msgid "Data Usage"
 msgstr ""
 
 #: ./portlets/logoslide.pt:5
@@ -410,8 +423,13 @@ msgstr ""
 msgid "OpenDataEvents"
 msgstr ""
 
+#: ./browser/templates/member_list_view.pt:12
 #: ./portlets/context.pt:82
 msgid "Operators"
+msgstr ""
+
+#: ./browser/templates/member_list_view.pt:23
+msgid "Organisation"
 msgstr ""
 
 #: ./interfaces.py:212
@@ -466,6 +484,15 @@ msgstr ""
 msgid "Street"
 msgstr ""
 
+#: ./browser/templates/suppliers_list_view.pt:22
+msgid "Structure"
+msgstr ""
+
+#: ./browser/templates/suppliers_list_view.pt:24
+msgid "Structure purpose"
+msgstr ""
+
+#: ./browser/templates/suppliers_list_view.pt:12
 #: ./portlets/context.pt:23
 msgid "Suppliers"
 msgstr ""
@@ -502,10 +529,13 @@ msgstr ""
 msgid "This is not a lat long value, eg : -47.5;48.5"
 msgstr ""
 
+#: ./browser/templates/member_list_view.pt:26
+#: ./browser/templates/suppliers_list_view.pt:26
 #: ./interfaces.py:191
 msgid "Town"
 msgstr ""
 
+#: ./browser/templates/suppliers_list_view.pt:23
 #: ./interfaces.py:126
 msgid "Type"
 msgstr ""
@@ -572,6 +602,12 @@ msgstr ""
 
 #: ./profiles/default/registry.xml
 msgid "country of the event"
+msgstr ""
+
+#. Default: "No results were found."
+#: ./browser/templates/member_list_view.pt:45
+#: ./browser/templates/suppliers_list_view.pt:45
+msgid "description_no_results_found"
 msgstr ""
 
 #: ./profiles/default/registry.xml

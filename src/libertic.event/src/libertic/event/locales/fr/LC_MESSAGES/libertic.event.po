@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: libertic.event 1.0\n"
-"POT-Creation-Date: 2013-06-11 15:17+0000\n"
+"POT-Creation-Date: 2013-06-24 14:36+0000\n"
 "PO-Revision-Date: 2013-05-28 10:14+0200\n"
 "Last-Translator: kiorky <kiorky@cryptelium.net>\n"
 "Language-Team: FR <LL@li.org>\n"
@@ -39,6 +39,11 @@ msgstr "Accepter les conditions d'utilisation"
 #: ./interfaces.py:125
 msgid "Activated to be parsed"
 msgstr "Activer la collecte"
+
+#: ./browser/templates/member_list_view.pt:24
+#: ./browser/templates/suppliers_list_view.pt:25
+msgid "Activity"
+msgstr "Activité"
 
 #: ./interfaces.py:188
 msgid "Address"
@@ -96,9 +101,17 @@ msgstr "Pays"
 msgid "Create"
 msgstr "Créer"
 
+#: ./browser/templates/member_list_view.pt:22
+msgid "Creator"
+msgstr "Autheur"
+
 #: ./interfaces.py:420
 msgid "Csv"
 msgstr ""
+
+#: ./browser/templates/member_list_view.pt:25
+msgid "Data Usage"
+msgstr "Utilisation des données"
 
 #: ./portlets/logoslide.pt:5
 msgid "Data operators"
@@ -413,9 +426,14 @@ msgstr "OK"
 msgid "OpenDataEvents"
 msgstr "OpenDataEvents"
 
+#: ./browser/templates/member_list_view.pt:12
 #: ./portlets/context.pt:82
 msgid "Operators"
 msgstr "Ré-utilisateurs"
+
+#: ./browser/templates/member_list_view.pt:23
+msgid "Organisation"
+msgstr "Organisation"
 
 #: ./interfaces.py:212
 msgid "Photos1 license"
@@ -469,6 +487,15 @@ msgstr "Statut (OK|FAILURE|WARN)"
 msgid "Street"
 msgstr "Rue"
 
+#: ./browser/templates/suppliers_list_view.pt:22
+msgid "Structure"
+msgstr "Structure"
+
+#: ./browser/templates/suppliers_list_view.pt:24
+msgid "Structure purpose"
+msgstr "Vocation de la structure"
+
+#: ./browser/templates/suppliers_list_view.pt:12
 #: ./portlets/context.pt:23
 msgid "Suppliers"
 msgstr "Fournisseurs"
@@ -505,10 +532,13 @@ msgstr "Des erreurs sont apparues durant l'import"
 msgid "This is not a lat long value, eg : -47.5;48.5"
 msgstr "Ce n'est pas une latlong valide, ex : -47.5;48.5"
 
+#: ./browser/templates/member_list_view.pt:26
+#: ./browser/templates/suppliers_list_view.pt:26
 #: ./interfaces.py:191
 msgid "Town"
 msgstr "Ville"
 
+#: ./browser/templates/suppliers_list_view.pt:23
 #: ./interfaces.py:126
 msgid "Type"
 msgstr "Type"
@@ -576,6 +606,12 @@ msgstr "Items contenus"
 #: ./profiles/default/registry.xml
 msgid "country of the event"
 msgstr "pays de l'évènement"
+
+#. Default: "No results were found."
+#: ./browser/templates/member_list_view.pt:45
+#: ./browser/templates/suppliers_list_view.pt:45
+msgid "description_no_results_found"
+msgstr "Pas de résultats"
 
 #: ./profiles/default/registry.xml
 msgid "eid of the event"
