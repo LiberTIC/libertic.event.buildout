@@ -63,7 +63,7 @@
                     <a href="#"
                       tal:attributes="href item/getURL;
                       title item/Title"
-                      tal:content="item/Title">Item Title</a>
+                      tal:content="item/Title" class="link-event">Item Title</a>
                   </td>
                   <td tal:condition="python:field[0] == 'Creator'"
                     tal:define="author python:pas_member.info(item.Creator());
@@ -71,7 +71,7 @@
                     <a href="#"
                       tal:condition="author"
                       tal:attributes="href string:author/${author/username};
-                      title name"
+                      title name" class="link-user"
                       tal:content="name">Jos Henken</a>
                   </td>
                   <td tal:condition="python: field[0] in ['event_start','event_end'] "

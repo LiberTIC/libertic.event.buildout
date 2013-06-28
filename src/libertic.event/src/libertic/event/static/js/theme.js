@@ -18,5 +18,21 @@ function initializeliberticevent(){
         minItems: 2,
         maxItems: 6,
     });
+    
+     // Display event in a popup
+    $('.link-event').prepOverlay({
+        subtype: 'ajax',
+        filter: common_content_filter,
+        closeselector: '[name="form.button.Cancel"]',
+        width:'40%'
+    }); 
+    
+     // Display user in a popup
+    $('.link-user').prepOverlay({
+        subtype: 'ajax',
+        filter: common_content_filter,
+        closeselector: '[name="form.button.Cancel"]',
+        width:'40%'
+    }); 
 }
 jQuery(initializeliberticevent);
