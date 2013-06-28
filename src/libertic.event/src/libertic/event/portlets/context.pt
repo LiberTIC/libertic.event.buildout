@@ -56,18 +56,21 @@
       <li id="menu-item-create-event">
         <a tal:attributes="href string:${db_url}/++add++libertic_event"
           title="Create an event"
+          i18n:attributes="title"
           i18n:translate="">
           Create</a>
       </li>
       <li id="menu-item-add-source">
         <a tal:attributes="href string:${db_url}/++add++libertic_source"
           title="Add a source"
+          i18n:attributes="title"
           i18n:translate="">
           Import a feed</a>
       </li>
       <li id="menu-item-import-file">
         <a tal:attributes="href string:${db_url}/file_import"
           title="Add a source"
+          i18n:attributes="title"
           i18n:translate="">
           Import as file</a>
       </li>
@@ -79,9 +82,10 @@
              i18n:translate="">
              Export</a>
         </li>
-      <li id="menu-item-operators-list">
-        <a tal:attributes="href string:${db_url}/operators"
-          title="See operators list"
+      <li id="menu-item-reusers-list">
+        <a tal:attributes="href string:${db_url}/reusers"
+          title="See reusers list"
+          i18n:attributes="title"
           i18n:translate="">
           Operators</a>
       </li>

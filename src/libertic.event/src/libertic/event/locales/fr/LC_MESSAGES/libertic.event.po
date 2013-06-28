@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: libertic.event 1.0\n"
-"POT-Creation-Date: 2013-06-28 15:21+0000\n"
+"POT-Creation-Date: 2013-06-28 15:30+0000\n"
 "PO-Revision-Date: 2013-05-28 10:14+0200\n"
 "Last-Translator: kiorky <kiorky@cryptelium.net>\n"
 "Language-Team: FR <LL@li.org>\n"
@@ -45,6 +45,10 @@ msgstr "Activer la collecte"
 msgid "Activity"
 msgstr "Activité"
 
+#: ./portlets/context.pt:64
+msgid "Add a source"
+msgstr "Ajouter une source"
+
 #: ./interfaces.py:188
 msgid "Address"
 msgstr "Adresse"
@@ -53,7 +57,7 @@ msgstr "Adresse"
 msgid "Address details"
 msgstr "Adresse (détails)"
 
-#: ./portlets/context.pt:93
+#: ./portlets/context.pt:97
 msgid "All events"
 msgstr "Tous les évènements"
 
@@ -100,6 +104,10 @@ msgstr "Pays"
 #: ./portlets/context.pt:57
 msgid "Create"
 msgstr "Créer"
+
+#: ./portlets/context.pt:57
+msgid "Create an event"
+msgstr "Créer un événement"
 
 #: ./browser/templates/reusers_list_view.pt:22
 msgid "Creator"
@@ -239,11 +247,11 @@ msgstr "License de la gallerie"
 msgid "Ical"
 msgstr "Ical"
 
-#: ./portlets/context.pt:63
+#: ./portlets/context.pt:64
 msgid "Import a feed"
 msgstr "Importer un flux"
 
-#: ./portlets/context.pt:69
+#: ./portlets/context.pt:71
 msgid "Import as file"
 msgstr "Importer un fichier"
 
@@ -410,7 +418,7 @@ msgstr "Dossier utilisateur"
 msgid "Missing relative license for ${url}."
 msgstr "Il manque la license relative à ${url}."
 
-#: ./portlets/context.pt:96
+#: ./portlets/context.pt:100
 msgid "My events"
 msgstr "Mes évènements"
 
@@ -426,7 +434,7 @@ msgstr "OK"
 msgid "OpenDataEvents"
 msgstr "OpenDataEvents"
 
-#: ./portlets/context.pt:83
+#: ./portlets/context.pt:86
 msgid "Operators"
 msgstr "Ré-utilisateurs"
 
@@ -473,6 +481,10 @@ msgstr "Réutilisateurs"
 #: ./interfaces.py:133
 msgid "Runned without errors tries"
 msgstr "Exécuté sans erreur"
+
+#: ./portlets/context.pt:86
+msgid "See reusers list"
+msgstr "Voir les réutilisateurs"
 
 #: ./profiles/default/registry.xml
 msgid "Source of the event"
