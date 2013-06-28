@@ -28,10 +28,10 @@
     <browser:page
         layer="libertic.event.interfaces.ILayer"
         for="*"
-        name="operators"
+        name="reusers"
         permission="zope2.Public"
         class=".view.MemberListing"
-        template='templates/member_list_view.pt'
+        template='templates/reusers_list_view.pt'
           />
 
     <browser:page

@@ -4,12 +4,12 @@
     <h2 class="portletHeader visualClear">
         <span href="#"
            class="tile"
-           i18n:translate="">Data operators</span>
+           i18n:translate="">Data reusers</span>
     </h2>
   
-  <div id="operators-list" class="flexslider">
+  <div id="reusers-list" class="flexslider">
     <ul class="slides">
-        <tal:logos tal:repeat="user view/operators_list">
+        <tal:logos tal:repeat="user view/reusers_list">
         <li class="portletItem grid_2" tal:define="has_logo python:user['logo'] and True or False">
             <div class="wrapper">
                 <a class="" tal:attributes="title user/fullname">

@@ -4,7 +4,7 @@ function initializeliberticevent(){
     $('#main-carousel').flexslider({
         slideshowSpeed: 4000,
       });
-    $('#operators-list').flexslider({
+    $('#reusers-list').flexslider({
         animation: "slide",
         itemWidth: 140,
         itemMargin: 5,

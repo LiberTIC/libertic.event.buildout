@@ -45,9 +45,9 @@ class ILiberticProfile(IUserDataSchema):
                       default=u"Tick this box to indicate that you are an even supplier "),
         required=True,)
     libertic_event_operator = schema.Bool(
-        title=_("Libertic event operator"),
-        description=_(u'help_libertic_event_operator',
-                      default=u"Tick this box to indicate that you are an event operator"),
+        title=_("Libertic event reuser"),
+        description=_(u'help_libertic_event_reuser',
+                      default=u"Tick this box to indicate that you are an event reuser"),
         required=True)
 
 class RegistrationMixin(register.BaseRegistrationForm):

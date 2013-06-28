@@ -39,7 +39,7 @@ class MemberListing(BrowserView):
         #~ return self.template(**params)
 
     def operators(self):
-        """Operators infos"""
+        """Reuser infos"""
         context = self.context.aq_inner
         members = users_from_group(context, "libertic_event_operator")
         mtool = getToolByName(context, 'portal_membership')
@@ -59,7 +59,7 @@ class MemberListing(BrowserView):
         return results
 
     def suppliers(self):
-        """Operators infos"""
+        """Supplier infos"""
         context = self.context.aq_inner
         members = users_from_group(context, "libertic_event_supplier")
         mtool = getToolByName(context, 'portal_membership')

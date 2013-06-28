@@ -60,12 +60,12 @@ class Renderer(base.Renderer):
         """return title of feed for portlet"""
         return getattr(self.data, 'portlet_title', '')
     
-    def operators_list(self):
-        """Return a list of operators, with name and portrait in each dict"""
+    def reusers_list(self):
+        """Return a list of reusers, with name and portrait in each dict"""
         return userinfo_list(self.context, 'libertic_event_operator')
 
     def suppliers_list(self):
-        """Return a list of operators, with name and portrait in each dict"""
+        """Return a list of suppliers, with name and portrait in each dict"""
         return userinfo_list(self.context, 'libertic_event_supplier')
 
 class AddForm(base.NullAddForm):

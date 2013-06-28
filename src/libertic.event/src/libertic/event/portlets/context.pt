@@ -12,11 +12,12 @@
   home portal/portal_membership/getHomeUrl;
   db_url view/db_url;
   is_supplier view/is_supplier;
+  is_operator view/is_operator;
   isAnon context/@@plone_portal_state/anonymous;"
   class="portlet portlet-libertic-context"
   i18n:domain="libertic.event">
 
-  <tal:connected  tal:condition="python:( not isAnon  )">
+  <tal:connected  tal:condition="is_operator">
 
     <ul id="operator-menu">
         <li id="menu-item-suppliers-list">
@@ -49,7 +50,7 @@
 
 <div class="visualClear"></div>
 
-  <tal:supplier tal:condition="view/is_supplier">
+  <tal:supplier tal:condition="is_supplier">
 
     <ul id="supplier-menu">
       <li id="menu-item-create-event">

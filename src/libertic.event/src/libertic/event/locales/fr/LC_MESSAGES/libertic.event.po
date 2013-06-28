@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: libertic.event 1.0\n"
-"POT-Creation-Date: 2013-06-24 14:36+0000\n"
+"POT-Creation-Date: 2013-06-28 15:21+0000\n"
 "PO-Revision-Date: 2013-05-28 10:14+0200\n"
 "Last-Translator: kiorky <kiorky@cryptelium.net>\n"
 "Language-Team: FR <LL@li.org>\n"
@@ -28,7 +28,7 @@ msgstr "${nb} éléments du fichier traités"
 msgid "A new user has registered himself on OpenDataEvents website."
 msgstr "Un nouvel utilisateur s'est enregistré sur le site OpenDataEvents."
 
-#: ./members/profile.py:193
+#: ./members/profile.py:195
 msgid "A new user need to be added to the suppliers group"
 msgstr "Un nouveau fournisseur de données doit être validé"
 
@@ -40,7 +40,7 @@ msgstr "Accepter les conditions d'utilisation"
 msgid "Activated to be parsed"
 msgstr "Activer la collecte"
 
-#: ./browser/templates/member_list_view.pt:24
+#: ./browser/templates/reusers_list_view.pt:24
 #: ./browser/templates/suppliers_list_view.pt:25
 msgid "Activity"
 msgstr "Activité"
@@ -53,7 +53,7 @@ msgstr "Adresse"
 msgid "Address details"
 msgstr "Adresse (détails)"
 
-#: ./portlets/context.pt:92
+#: ./portlets/context.pt:93
 msgid "All events"
 msgstr "Tous les évènements"
 
@@ -97,25 +97,25 @@ msgstr "Evènements contenus"
 msgid "Country"
 msgstr "Pays"
 
-#: ./portlets/context.pt:56
+#: ./portlets/context.pt:57
 msgid "Create"
 msgstr "Créer"
 
-#: ./browser/templates/member_list_view.pt:22
+#: ./browser/templates/reusers_list_view.pt:22
 msgid "Creator"
-msgstr "Autheur"
+msgstr "Auteur"
 
 #: ./interfaces.py:420
 msgid "Csv"
 msgstr ""
 
-#: ./browser/templates/member_list_view.pt:25
+#: ./browser/templates/reusers_list_view.pt:25
 msgid "Data Usage"
 msgstr "Utilisation des données"
 
 #: ./portlets/logoslide.pt:5
-msgid "Data operators"
-msgstr "Opérateurs de données"
+msgid "Data reusers"
+msgstr "Réutilisateurs de données"
 
 #: ./portlets/logoslide.pt:26
 msgid "Data suppliers"
@@ -141,7 +141,7 @@ msgstr "Afficher les liens et actions d'une base de données des évènements"
 msgid "Displays supplier or reusers logos"
 msgstr "Afficher les logos des fournisseurs/réutilisateurs"
 
-#: ./portlets/context.pt:23
+#: ./portlets/context.pt:24
 msgid "Download as XML"
 msgstr "Télécharger les évènements en XML"
 
@@ -179,7 +179,7 @@ msgstr "L'import des évènement a réussi, merci de vérifier le log suivant"
 msgid "Events will be grabbed, please refresh in a while"
 msgstr "Les évènements vont être collectés, veuillez rafraichir dans un moment"
 
-#: ./portlets/context.pt:39
+#: ./portlets/context.pt:40
 msgid "Export"
 msgstr "Exporter"
 
@@ -239,11 +239,11 @@ msgstr "License de la gallerie"
 msgid "Ical"
 msgstr "Ical"
 
-#: ./portlets/context.pt:62
+#: ./portlets/context.pt:63
 msgid "Import a feed"
 msgstr "Importer un flux"
 
-#: ./portlets/context.pt:68
+#: ./portlets/context.pt:69
 msgid "Import as file"
 msgstr "Importer un fichier"
 
@@ -287,8 +287,8 @@ msgid "Libertic Source"
 msgstr "Source d'évènements"
 
 #: ./members/profile.py:48
-msgid "Libertic event operator"
-msgstr "Opérateur"
+msgid "Libertic event reuser"
+msgstr "Réutilisateurs"
 
 #: ./members/profile.py:43
 msgid "Libertic event supplier"
@@ -410,7 +410,7 @@ msgstr "Dossier utilisateur"
 msgid "Missing relative license for ${url}."
 msgstr "Il manque la license relative à ${url}."
 
-#: ./portlets/context.pt:95
+#: ./portlets/context.pt:96
 msgid "My events"
 msgstr "Mes évènements"
 
@@ -426,12 +426,11 @@ msgstr "OK"
 msgid "OpenDataEvents"
 msgstr "OpenDataEvents"
 
-#: ./browser/templates/member_list_view.pt:12
-#: ./portlets/context.pt:82
+#: ./portlets/context.pt:83
 msgid "Operators"
 msgstr "Ré-utilisateurs"
 
-#: ./browser/templates/member_list_view.pt:23
+#: ./browser/templates/reusers_list_view.pt:23
 msgid "Organisation"
 msgstr "Organisation"
 
@@ -467,6 +466,10 @@ msgstr "URL Presse"
 msgid "Related events"
 msgstr "Évènements corrélés"
 
+#: ./browser/templates/reusers_list_view.pt:12
+msgid "Reusers"
+msgstr "Réutilisateurs"
+
 #: ./interfaces.py:133
 msgid "Runned without errors tries"
 msgstr "Exécuté sans erreur"
@@ -496,7 +499,7 @@ msgid "Structure purpose"
 msgstr "Vocation de la structure"
 
 #: ./browser/templates/suppliers_list_view.pt:12
-#: ./portlets/context.pt:23
+#: ./portlets/context.pt:24
 msgid "Suppliers"
 msgstr "Fournisseurs"
 
@@ -532,7 +535,7 @@ msgstr "Des erreurs sont apparues durant l'import"
 msgid "This is not a lat long value, eg : -47.5;48.5"
 msgstr "Ce n'est pas une latlong valide, ex : -47.5;48.5"
 
-#: ./browser/templates/member_list_view.pt:26
+#: ./browser/templates/reusers_list_view.pt:26
 #: ./browser/templates/suppliers_list_view.pt:26
 #: ./interfaces.py:191
 msgid "Town"
@@ -559,7 +562,7 @@ msgstr "Avertissement"
 msgid "Warn tries"
 msgstr "Jobs en avertissement"
 
-#: ./portlets/context.pt:31
+#: ./portlets/context.pt:32
 msgid "Webservices"
 msgstr "Webservices"
 
@@ -567,7 +570,7 @@ msgstr "Webservices"
 msgid "Xml"
 msgstr ""
 
-#: ./members/profile.py:194
+#: ./members/profile.py:196
 msgid "You can manage its groups here:"
 msgstr "Vous pouvez régler ses groupes en suivant ce lien :"
 
@@ -608,7 +611,7 @@ msgid "country of the event"
 msgstr "pays de l'évènement"
 
 #. Default: "No results were found."
-#: ./browser/templates/member_list_view.pt:45
+#: ./browser/templates/reusers_list_view.pt:45
 #: ./browser/templates/suppliers_list_view.pt:45
 msgid "description_no_results_found"
 msgstr "Pas de résultats"
@@ -652,10 +655,10 @@ msgstr "enfants adultes -18"
 msgid "help_group_moderators"
 msgstr ""
 
-#. Default: "Tick this box to indicate that you are an event operator"
+#. Default: "Tick this box to indicate that you are an event reuser"
 #: ./members/profile.py:49
-msgid "help_libertic_event_operator"
-msgstr "Cochez cette case pour indiquer que vous êtes un opérateur de données"
+msgid "help_libertic_event_reuser"
+msgstr "Cochez cette case pour intiquer que vous êtes un réutilisateur d'évènement"
 
 #. Default: "Tick this box to indicate that you are an even supplier "
 #: ./members/profile.py:44
