@@ -12,6 +12,7 @@ from Products.CMFDefault.utils import checkEmailAddress
 from zope import interface, schema
 from plone.theme.interfaces import IDefaultPloneLayer
 from plone.directives import form, dexterity
+from plone.supermodel import model
 
 from libertic.event import MessageFactory as _
 from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
@@ -173,39 +174,61 @@ class ILiberticEvent(IDatabaseItem):
                           constraint=sideidchars_check,  required=True)
     eid = schema.TextLine(title=_('label_event_id',  default='Event id'),
                           constraint=sideidchars_check, required=True)
-    targets = schema.Tuple(
-        title=_('label_audience', default='Audience'),
-        description=_('help_audience', default='children adullts -18'),
-        value_type= schema.TextLine(),
-        required = False,
-        defaultFactory = tuple,
-    )
-    tariff_information = schema.Text(title=_('Tariff information'), required=False)
 
-    jauge = schema.Int(title=_('Jauge'), required=False)
-    left_places = schema.Int(title=_('left_places'), required=False)
-    #
+    # Fieldset location
+    model.fieldset(
+        'event_location',
+        label=_(u"Location"),
+        fields=['address', 'address_details', 'street', 'town', 'country', 'latlong']
+    )
+    
     address = schema.Text(title=_('Address'), required=True)
     address_details = schema.Text(title=_('Address details'), required=False)
     street = schema.TextLine(title=_('Street'), required=True)
     town = schema.TextLine(title=_('Town'), required=True)
     country = schema.TextLine(title=_('Country'), required=True)
     latlong = schema.TextLine(title=_('latlong'), required=True, constraint=is_latlon)
-    #
+
+    # Fieldset Date
+    model.fieldset(
+        'event_dates',
+        label=_(u"Event dates"),
+        fields=['event_start', 'event_end']
+    )
     event_start = schema.Datetime(title=_('Event start'), required=True)
     event_end = schema.Datetime(title=_('Event end'), required=True)
-    #
-    lastname = schema.TextLine(title=_('lastname'), required=False)
-    firstname = schema.TextLine(title=_('firstname'), required=False)
-    telephone = schema.TextLine(title=_('telephone'), required=False)
-    email = schema.TextLine(title=_('email'), constraint=is_email)
-    organiser = schema.TextLine(title=_('organiser'), required=False)
-    #
-    author_lastname = schema.TextLine(title=_('Author lastname'), required=True)
-    author_firstname = schema.TextLine(title=_('Author firstname'), required=True)
-    author_telephone = schema.TextLine(title=_('Author telephone'), required=False)
-    author_email = schema.TextLine(title=_('Author email'), required=False, constraint=is_email)
-    #
+
+    # Fieldset Description
+    model.fieldset(
+        'event_description',
+        label=_(u"Description"),
+        fields=['targets', 'tariff_information', 'jauge', 'left_places']
+    )
+    
+    targets = schema.Tuple(
+        title=_('label_audience', default='Audience'),
+        description=_('help_audience', default='children adults -18'),
+        value_type= schema.TextLine(),
+        required = False,
+        defaultFactory = tuple,
+    )
+    tariff_information = schema.Text(title=_('Tarif information'), required=False)
+
+    jauge = schema.Int(title=_('Jauge'), required=False)
+    left_places = schema.Int(title=_('left_places'), required=False)
+
+    # Fieldset Medias
+    model.fieldset(
+        'event_media',
+        label=_(u"Medias"),
+        fields=['gallery_url', 'gallery_license',
+                'photos1_url', 'photos1_license',
+                'photos2_url', 'photos2_license',
+                'photos3_url', 'photos3_license',
+                'video_url', 'video_license',
+                'audio_url', 'audio_license',
+                'press_url',]
+    )
     gallery_url = schema.URI(title=_('Gallery'))
     gallery_license = schema.TextLine(title=_('Gallery license', ))
     photos1_url = schema.URI(title=_('Photos1 url'), required=True)
@@ -219,24 +242,33 @@ class ILiberticEvent(IDatabaseItem):
     audio_url = schema.URI(title=_('Audio url'), required=False)
     audio_license = schema.TextLine(title=_('Audio license', ), required=False)
     press_url = schema.URI(title=_('Press url'), required=False)
-    #contained = RelationList(
-    #        title=u"contained Items",
-    #        default=[],
-    #        value_type = RelationChoice(
-    #            title = _(u"contained Items"),
-    #            source = ObjPathSourceBinder(
-    #                **{'portal_type':'libertic_event'})
-    #        ),
-    #)
-    #related = RelationList(
-    #        title=u"related events",
-    #        default=[],
-    #        value_type = RelationChoice(
-    #            title = _(u"related events"),
-    #            source = ObjPathSourceBinder(
-    #                **{'portal_type':'libertic_event'})
-    #        ),
-    #)
+
+    # Fieldset publication date
+    #~ model.fieldset(
+        #~ 'date',
+        #~ label=_(u"Publication dates"),
+        #~ fields=['', '',]
+    #~ )
+
+    # Fieldset Contact
+    model.fieldset(
+        'event_contact',
+        label=_(u"Event contact"),
+        fields=['lastname', 'firstname', 'telephone', 'email', 'organiser', 'author_lastname', 'author_firstname', 'author_telephone', 'author_email',]
+    )
+
+    #
+    lastname = schema.TextLine(title=_('lastname'), required=False)
+    firstname = schema.TextLine(title=_('firstname'), required=False)
+    telephone = schema.TextLine(title=_('telephone'), required=False)
+    email = schema.TextLine(title=_('email'), constraint=is_email)
+    organiser = schema.TextLine(title=_('organiser'), required=False)
+    #
+    author_lastname = schema.TextLine(title=_('Author lastname'), required=True)
+    author_firstname = schema.TextLine(title=_('Author firstname'), required=True)
+    author_telephone = schema.TextLine(title=_('Author telephone'), required=False)
+    author_email = schema.TextLine(title=_('Author email'), required=False, constraint=is_email)
+    
     form.widget(contained=MultiContentTreeFieldWidget)
     contained = schema.List(
             title=u"contained Items",
