@@ -371,7 +371,7 @@
    </property>
    <property name="visible">False</property>
   </object>
-  <object name="information" meta_type="CMF Action" i18n:domain="plone">
+  <object name="information" meta_type="CMF Action" i18n:domain="libertic.event">
    <property name="title" i18n:translate="">My profile</property>
    <property name="description" i18n:translate=""></property>
    <property

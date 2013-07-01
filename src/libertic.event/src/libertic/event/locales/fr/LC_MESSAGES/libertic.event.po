@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: libertic.event 1.0\n"
-"POT-Creation-Date: 2013-06-28 15:30+0000\n"
+"POT-Creation-Date: 2013-07-01 08:44+0000\n"
 "PO-Revision-Date: 2013-05-28 10:14+0200\n"
 "Last-Translator: kiorky <kiorky@cryptelium.net>\n"
 "Language-Team: FR <LL@li.org>\n"
@@ -421,6 +421,10 @@ msgstr "Il manque la license relative à ${url}."
 #: ./portlets/context.pt:100
 msgid "My events"
 msgstr "Mes évènements"
+
+#: ./profiles/default/actions.xml
+msgid "My profile"
+msgstr "Mon profil"
 
 #: ./interfaces.py:77
 msgid "No license provided"
