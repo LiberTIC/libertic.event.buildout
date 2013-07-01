@@ -528,6 +528,16 @@ footer a:hover,
 #portal-personaltools {
   z-index: 15;
 }
+#portal-languageselector,
+#portal-personaltools,
+#portal-personaltools dd {
+  background-color: #363339;
+}
+#portal-languageselector a,
+dl.actionMenu a,
+dl.actionMenu div {
+  color: #fefefe;
+}
 /* FOOTER *
  * ****** */
 footer {
