@@ -39,11 +39,17 @@
     <copy attributes="id dir" css:content="body" css:theme="body" />
 
 <!-- HEADER -->
+<!--    <append css:theme="#header-wrapper"
+        css:content="body"
+        href="/Plone/++theme++libertic.event/header.html" />-->
     <append css:content="#portal-logo" css:theme="#portal-logo-wrapper"/>
     <append css:content="#portal-languageselector" css:theme="#tools" />
     <append css:content="#portal-personaltools-wrapper" css:theme="#tools"/>
+<!--
     <append css:content='#portal-searchbox' css:theme='#tools' />
+-->
     <append css:content-children="#portal-globalnav" css:theme="#portal-globalnav"/>
+    
 
 <!-- CONTENT -->
     <append css:content-children="#portal-column-content" css:theme="#portal-column-content"/>
