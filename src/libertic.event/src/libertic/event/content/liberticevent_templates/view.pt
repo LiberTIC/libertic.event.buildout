@@ -11,32 +11,34 @@
 
     <h1 class="documentFirstHeading" tal:content="context/Title" /> 
 
-    <p class="documentDescription" tal:content="context/Description" />
-    <p>View as</p>
-    <ul> 
-      <li><a href="json">json</a></li>
-      <li><a href="csv">csv</a></li>
-      <li><a href="ical">ical</a></li>
-      <li><a href="xml">xml</a></li>
-    </ul>
+    <fieldset tal:repeat="group view/groups" 
+              tal:attributes="id python:'-'.join(('form', group.__name__)).replace('.', '-')">
+        <legend tal:content="group/label" />
+        
+        <p tal:condition="python:group.__name__ == 'event_description'" class="documentDescription" tal:content="context/Description" />
+        
+        <div class="field" tal:attributes="id widget/id" tal:repeat="widget group/widgets/values">
+            <label tal:content="widget/label" />
+            <div tal:content="structure widget/render" />
+        </div>
+    </fieldset>
+
+    <div class="pull-right export">
+        <p i18n:translate="">View as</p>
+        <ul> 
+          <li><a href="json">json</a></li>
+          <li><a href="csv">csv</a></li>
+          <li><a href="ical">ical</a></li>
+          <li><a href="xml">xml</a></li>
+        </ul>
+    </div>
 
     <tal:block repeat="widget view/widgets/values">
         <div class="field" tal:condition="python:widget.__name__ not in ('IBasic.title', 'IBasic.description', 'title', 'description',)">
             <label tal:content="widget/label" />
-            <br />
             <div tal:content="structure widget/render" />
         </div>
     </tal:block>
-            
-    <fieldset tal:repeat="group view/groups"
-              tal:attributes="id python:''.join((group.prefix, 'groups.', group.__name__)).replace('.', '-')">
-        <legend tal:content="group/label" />
-        <div class="field" tal:repeat="widget group/widgets/values">
-            <label tal:content="widget/label" />
-            <br />
-            <div tal:content="structure widget/render" />
-        </div>
-    </fieldset>
 
 </metal:main>
 
