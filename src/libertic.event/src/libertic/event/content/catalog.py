@@ -128,20 +128,15 @@ grok.global_adapter(addressIndexer, name="address")
 searchable(ILiberticEvent, 'address')
 
 @indexer(ILiberticEvent)
-def tariff_informationIndexer(obj):
+def tarif_informationIndexer(obj):
     return obj.tariff_information
-grok.global_adapter(tariff_informationIndexer, name="tariff_information")
-searchable(ILiberticEvent, 'tariff_information') 
+grok.global_adapter(tarif_informationIndexer, name="tarif_information")
+searchable(ILiberticEvent, 'tarif_information') 
 
 @indexer(ILiberticEvent)
-def jaugeIndexer(obj):
+def capacityIndexer(obj):
     return obj.jauge
-grok.global_adapter(jaugeIndexer, name="jauge")
-
-@indexer(ILiberticEvent)
-def left_placesIndexer(obj):
-    return obj.left_places
-grok.global_adapter(left_placesIndexer, name="left_places")
+grok.global_adapter(capacityIndexer, name="capacity")
 
 @indexer(ISource)
 def sourcecreatedeventIndexer(obj):

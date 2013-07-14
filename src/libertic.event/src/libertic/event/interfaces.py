@@ -168,7 +168,7 @@ class ISourceMapping(form.Schema):
 
 class ILiberticEvent(IDatabaseItem):
     """A libertic event"""
-    form.omitted('sid',)
+    form.omitted('sid','address_details','country',)
     source = schema.URI(title=_('label_source', default='Source'), required=True)
     sid = schema.TextLine(title=_('label_source_id', default='Source id'),
                           constraint=sideidchars_check,  required=True)
@@ -179,12 +179,13 @@ class ILiberticEvent(IDatabaseItem):
     model.fieldset(
         'event_location',
         label=_(u"Location"),
-        fields=['address', 'address_details', 'street', 'town', 'country', 'latlong']
+        fields=['location_name', 'address', 'address_details', 'cp', 'town', 'country', 'latlong']
     )
     
+    location_name = schema.TextLine(title=_('Location name'), required=True)
     address = schema.Text(title=_('Address'), required=True)
     address_details = schema.Text(title=_('Address details'), required=False)
-    street = schema.TextLine(title=_('Street'), required=True)
+    cp = schema.TextLine(title=_('CP'), required=True)
     town = schema.TextLine(title=_('Town'), required=True)
     country = schema.TextLine(title=_('Country'), required=True)
     latlong = schema.TextLine(title=_('latlong'), required=True, constraint=is_latlon)
@@ -202,53 +203,42 @@ class ILiberticEvent(IDatabaseItem):
     model.fieldset(
         'event_description',
         label=_(u"Description"),
-        fields=['targets', 'tariff_information', 'jauge', 'left_places']
+        fields=['performers', 'target', 'tarif_information', 'capacity']
     )
-    
-    targets = schema.Tuple(
-        title=_('label_audience', default='Audience'),
-        description=_('help_audience', default='children adults -18'),
+    performers = schema.Tuple(
+        title=_('Artists, performers'),
+        description=_('One performer by line'),
         value_type= schema.TextLine(),
         required = False,
         defaultFactory = tuple,
     )
-    tariff_information = schema.Text(title=_('Tarif information'), required=False)
-
-    jauge = schema.Int(title=_('Jauge'), required=False)
-    left_places = schema.Int(title=_('left_places'), required=False)
+    target = schema.TextLine(
+        title=_('label_audience', default='Audience'),
+        description=_('help_audience', default='children, adults, all..'),
+    )
+    tarif_information = schema.TextLine(title=_('Tarif information'), required=False)
+    capacity = schema.Int(title=_('Capacity'), required=False)
 
     # Fieldset Medias
     model.fieldset(
         'event_media',
         label=_(u"Medias"),
-        fields=['gallery_url', 'gallery_license',
-                'photos1_url', 'photos1_license',
+        fields=['photos1_url', 'photos1_license',
                 'photos2_url', 'photos2_license',
-                'photos3_url', 'photos3_license',
                 'video_url', 'video_license',
                 'audio_url', 'audio_license',
                 'press_url',]
     )
-    gallery_url = schema.URI(title=_('Gallery'))
-    gallery_license = schema.TextLine(title=_('Gallery license', ))
+
     photos1_url = schema.URI(title=_('Photos1 url'), required=True)
     photos1_license = schema.TextLine(title=_('Photos1 license'), required=True)
     photos2_url = schema.URI(title=_('Photos2 url'), required=False)
     photos2_license = schema.TextLine(title=_('Photos2 license', ), required=False)
-    photos3_url = schema.URI(title=_('Photos3 url'), required=False)
-    photos3_license = schema.TextLine(title=_('Photos3 license', ), required=False)
     video_url = schema.URI(title=_('Video url'), required=False)
     video_license = schema.TextLine(title=_('Video license', ), required=False)
     audio_url = schema.URI(title=_('Audio url'), required=False)
     audio_license = schema.TextLine(title=_('Audio license', ), required=False)
     press_url = schema.URI(title=_('Press url'), required=False)
-
-    # Fieldset publication date
-    #~ model.fieldset(
-        #~ 'date',
-        #~ label=_(u"Publication dates"),
-        #~ fields=['', '',]
-    #~ )
 
     # Fieldset Contact
     model.fieldset(
@@ -298,7 +288,6 @@ class ILiberticEvent(IDatabaseItem):
             ('gallery_url', 'gallery_license'),
             ('photos1_url', 'photos1_license'),
             ('photos2_url', 'photos2_license'),
-            ('photos3_url', 'photos3_license'),
             ('video_url',   'video_license'),
             ('audio_url',   'audio_license'),
             ):
