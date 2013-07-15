@@ -168,7 +168,7 @@ class ISourceMapping(form.Schema):
 
 class ILiberticEvent(IDatabaseItem):
     """A libertic event"""
-    form.omitted('sid','eid','country','source','contained','related')
+    form.omitted('sid','country','source','contained','related','organiser')
     source = schema.URI(title=_('label_source', default='Source'), required=True)
     sid = schema.TextLine(title=_('label_source_id', default='Source id'),
                           constraint=sideidchars_check,  required=True)
@@ -256,11 +256,11 @@ class ILiberticEvent(IDatabaseItem):
     lastname = schema.TextLine(title=_('Lastname'), required=False)
     firstname = schema.TextLine(title=_('Firstname'), required=False)
     telephone = schema.TextLine(title=_('Telephone'), required=False)
-    email = schema.TextLine(title=_('Email'), constraint=is_email)
+    email = schema.TextLine(title=_('Email'), constraint=is_email, required=False)
     organiser = schema.TextLine(title=_('organiser'), required=False)
     #
-    author_lastname = schema.TextLine(title=_('Lastname'), required=True)
-    author_firstname = schema.TextLine(title=_('Firstname'), required=True)
+    author_lastname = schema.TextLine(title=_('Lastname'), required=False)
+    author_firstname = schema.TextLine(title=_('Firstname'), required=False)
     author_telephone = schema.TextLine(title=_('Telephone'), required=False)
     author_email = schema.TextLine(title=_('Email'), required=False, constraint=is_email)
     

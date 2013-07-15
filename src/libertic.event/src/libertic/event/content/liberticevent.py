@@ -331,7 +331,6 @@ class View(dexterity.DisplayForm):
     grok.context(lei.ILiberticEvent)
     grok.require('libertic.event.View')
 
-    form.omitted('sid','address_details','country','related')
 
 class Json(grok.View):
     grok.context(lei.ILiberticEvent)
