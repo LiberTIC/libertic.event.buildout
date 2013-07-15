@@ -11,35 +11,31 @@
     <tal:block tal:repeat="s ctx/subjects">
       <subjects tal:condition="s" tal:content="s"></subjects>
     </tal:block>
-    <tal:block tal:repeat="s ctx/targets">
-      <targets tal:condition="s" tal:content="s"></targets>
-    </tal:block>
+    <target tal:repeat="s ctx/target"></target>
+    <location_name tal:content="ctx/location_name"/>
     <address tal:content="ctx/address"/>
-    <address_details tal:content="ctx/address_details"/>
-    <street tal:content="ctx/street"/>
+    <cp tal:content="ctx/cp"></cp>
     <town tal:content="ctx/town"></town>
     <country tal:content="ctx/country"></country>
     <latlong tal:content="ctx/latlong"></latlong>
+    <tal:block tal:repeat="p ctx/performers">
+      <performers tal:condition="p" tal:content="p"></performers>
+    </tal:block>
     <lastname tal:content="ctx/lastname"></lastname>
     <firstname tal:content="ctx/firstname"></firstname>
     <telephone tal:content="ctx/telephone"></telephone>
     <email tal:content="ctx/email"></email>
-    <jauge tal:content="ctx/jauge"></jauge>
-    <left_places tal:content="ctx/left_places"></left_places>
-    <tariff_information tal:content="ctx/tariff_information"></tariff_information>
+    <capacity tal:content="ctx/capacity"></capacity>
+    <tarif_information tal:content="ctx/tarif_information"></tarif_information>
     <organiser tal:content="ctx/organiser"></organiser>
     <author_lastname tal:content="ctx/author_lastname"></author_lastname>
     <author_firstname tal:content="ctx/author_firstname"></author_firstname>
     <author_telephone tal:content="ctx/author_telephone"></author_telephone>
     <author_email tal:content="ctx/author_email"></author_email>
-    <gallery_url tal:content="ctx/gallery_url"></gallery_url>
-    <gallery_license tal:content="ctx/gallery_license"></gallery_license>
     <photos1_url tal:content="ctx/photos1_url"></photos1_url>
     <photos1_license tal:content="ctx/photos1_license"/>
     <photos2_url tal:content="ctx/photos2_url"/>
     <photos2_license tal:content="ctx/photos2_license"/>
-    <photos3_url tal:content="ctx/photos3_url"/>
-    <photos3_license tal:content="ctx/photos3_license"/>
     <video_url tal:content="ctx/video_url"></video_url>
     <video_license tal:content="ctx/video_license"></video_license>
     <audio_url tal:content="ctx/audio_url"></audio_url>

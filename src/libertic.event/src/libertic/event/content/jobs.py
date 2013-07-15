@@ -127,7 +127,7 @@ def smart_type(field, value):
                     itms.append(itm)
         value = tuple(itms)
     # ensure tuples
-    if field.__name__ in ['targets', 'subjects']:
+    if field.__name__ in ['performers', 'subjects']:
         if value and isinstance(value, (list, tuple)):
             value = [to_unicode(v) for v in value]
     if si.ITuple.providedBy(field):

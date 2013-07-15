@@ -23,6 +23,7 @@
         </div>
     </fieldset>
 
+<!--
     <div class="pull-right export">
         <p i18n:translate="">View as</p>
         <ul> 
@@ -32,6 +33,7 @@
           <li><a href="xml">xml</a></li>
         </ul>
     </div>
+-->
 
     <tal:block repeat="widget view/widgets/values">
         <div class="field" tal:condition="python:widget.__name__ not in ('IBasic.title', 'IBasic.description', 'title', 'description',)">

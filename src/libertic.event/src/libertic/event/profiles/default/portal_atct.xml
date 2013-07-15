@@ -246,7 +246,7 @@
      friendlyName="Folder-like">
    <criteria>ATBooleanCriterion</criteria>
   </index>
-  <index name="jauge" description="" enabled="True" friendlyName="">
+  <index name="capacity" description="" enabled="True" friendlyName="">
    <criteria>ATBooleanCriterion</criteria>
    <criteria>ATCurrentAuthorCriterion</criteria>
    <criteria>ATDateRangeCriterion</criteria>
@@ -494,7 +494,7 @@
    <criteria>ATSimpleStringCriterion</criteria>
    <criteria>ATListCriterion</criteria>
   </index>
-  <index name="tariff_information" description="" enabled="True"
+  <index name="tarif_information" description="" enabled="True"
      friendlyName="">
    <criteria>ATSimpleStringCriterion</criteria>
   </index>

@@ -72,6 +72,7 @@ Test the json various load failures
 
 Get data from json mapping
 ++++++++++++++++++++++++++++
+
 When we have enought data from a json mapping, we got a list of mappings::
 
     >>> jg.fetch('file://%s/nonexisting' % testdir)
@@ -82,7 +83,7 @@ When we have enought data from a json mapping, we got a list of mappings::
     >>> json = jg.mappings(data)
     >>> pprint(json)
     [{'address': u'sdfgsfdsfdgsfdgsfdgsfdg',
-      'address_details': ...
+      'audio_license': ...
     >>> data = json[0]
 
 The most important settings of the data are the **eid** and the **sid**. Indeed, they represent the unique identifier of every each event.
@@ -119,11 +120,11 @@ Tuples::
     >>> k='contained';edata[k]= ['aaa'];dm.to_event_values(edata)[k]
     ('aaa',)
 
-Subjects && targets::
+Subjects && performers::
 
     >>> k='subjects';edata[k]= ['aaa'];dm.to_event_values(edata)[k]
     (u'aaa',)
-    >>> k='targets';edata[k]= ['aaa'];dm.to_event_values(edata)[k]
+    >>> k='performers';edata[k]= ['aaa'];dm.to_event_values(edata)[k]
     (u'aaa',)
 
 ByteStrings::
@@ -142,6 +143,7 @@ Language is fr by default::
 
 Second step, Validation
 ++++++++++++++++++++++++++
+
 Either the method raise a ValidationError or returns:
 
     - a to_event_valuesd mapping of the raw data
@@ -239,8 +241,8 @@ Some events got created and edited::
 
     >>> [getattr(db['event1'], k) for k in ['event_start', 'sid', 'eid', 'press_url']]
     [datetime.datetime(2012, 10, 4, 0, 0), 'plonesupplier', u'sqdf', 'http://qsdf']
-    >>> db['event1'].address_details
-    u'edited address details'
+    >>> db['event1'].location_name
+    u'edited location name'
 
 Related fields are set in a second pass::
 
@@ -254,7 +256,7 @@ An event failed validation::
     >>> print jsource.logs[0].messages[0]
     A record failed validation:
     {...
-    [('gallery_url', InvalidURI('not an url'))]
+    [('press_url', InvalidURI('not an url'))]
     <BLANKLINE>
 
 With events failed, we get a warning status::
@@ -334,8 +336,8 @@ Oups, we forgot to say that's XML::
 
     >>> jsource.type = 'xml'
     >>> lei.IEventsImporter(jsource).do_import()
-    >>> print '\n'.join(jsource.logs[0].messages).strip()
-    14 created, 0 edited, 0 failed
+
+
     >>> jsource.logs[0].status
     1
 
@@ -380,9 +382,9 @@ Validating, and verifing the filtered data::
     >>> vjson[1]['initial']['event_start']
     '20121004T0000'
     >>> vjson[1]['initial']['subjects']
-    ['fdhd', 'd  fg', 'h', 'fd ', 'h', 'gh', 'ddd']
+    ['Litt\xc3\xa9rature,Th\xc3\xa9\xc3\xa2tre']
     >>> vjson[1]['initial']['subjects']
-    ['fdhd', 'd  fg', 'h', 'fd ', 'h', 'gh', 'ddd']
+    ['Litt\xc3\xa9rature,Th\xc3\xa9\xc3\xa2tre']
     >>> vjson[1]['initial']['title']
     'csvevent1'
     >>> vjson[1]['transformed']['title']

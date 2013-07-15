@@ -18,6 +18,7 @@ Setup
 
 Overview
 ---------
+
 - A similary REST API is available to :
 
     - create events
@@ -108,7 +109,7 @@ Test the json various load failures & creation::
     A record failed validation:
     ...
     ERRORS:
-    [('gallery_url', InvalidURI('not an url'))]
+    [('press_url', InvalidURI('not an url'))]
 
 
 .. deactivated as sid is not anymore settable
@@ -140,7 +141,7 @@ Supplier 2 can post::
     >>> db.restrictedTraverse('@@json_api').render()
     >>> resp = json.loads(req.response.stdout.getvalue().splitlines()[-1])
     >>> print resp['results'][-1]
-    {u'status': u'created', u'messages': [], u'eid': u'aaamyeid', u'sid': u'plonesupplier2'}
+    {u'status': u'created', u'title': u'event1 - plonesupplier2 - aaamyeid', u'url': u'http://nohost/plone/fr/database/event1-27', u'messages': [], u'eid': u'aaamyeid', u'sid': u'plonesupplier2'}
     >>> layer['portal']['fr']['database'][layer['portal']['fr']['database'].objectIds()[-1]].sid
     'plonesupplier2'
 
@@ -178,7 +179,7 @@ Test the json various load failures & creation::
     >>> print resp.strip()
     <?xml version="1.0" encoding="UTF-8"?>...
         <message>Traceback (most recent call last):
-      File "...in base_create
+      File "...in mapply
         raise Unauthorized()
     Unauthorized:...
     </message>...
@@ -215,7 +216,7 @@ Now, do a valid xml import session::
     <message>A record failed validation:
     {'address': 'sdfgsfdsfdgsfdgsfdgsfdg',...
     ERRORS:
-    [('gallery_url', InvalidURI('not an url'))]
+    [('press_url', InvalidURI('not an url'))]
     </message>...
     <result>
     <sid>plonesupplier</sid>

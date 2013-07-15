@@ -168,7 +168,7 @@ class ISourceMapping(form.Schema):
 
 class ILiberticEvent(IDatabaseItem):
     """A libertic event"""
-    form.omitted('sid','address_details','country',)
+    form.omitted('sid','country',)
     source = schema.URI(title=_('label_source', default='Source'), required=True)
     sid = schema.TextLine(title=_('label_source_id', default='Source id'),
                           constraint=sideidchars_check,  required=True)
@@ -179,12 +179,11 @@ class ILiberticEvent(IDatabaseItem):
     model.fieldset(
         'event_location',
         label=_(u"Location"),
-        fields=['location_name', 'address', 'address_details', 'cp', 'town', 'country', 'latlong']
+        fields=['location_name', 'address', 'cp', 'town', 'country', 'latlong']
     )
     
     location_name = schema.TextLine(title=_('Location name'), required=True)
     address = schema.Text(title=_('Address'), required=True)
-    address_details = schema.Text(title=_('Address details'), required=False)
     cp = schema.TextLine(title=_('CP'), required=True)
     town = schema.TextLine(title=_('Town'), required=True)
     country = schema.TextLine(title=_('Country'), required=True)

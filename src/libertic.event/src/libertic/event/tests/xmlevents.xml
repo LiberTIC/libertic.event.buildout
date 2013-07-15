@@ -2,9 +2,9 @@
 <events xml:lang="en" lang="en">
   <event xml:lang="en" lang="en">
     <source>http://qsdf</source>
-    <sid>xmlsxmlqsdfqsdf</sid>
-    <eid>xmlsxmlsqdf</eid>
-    <title>xmlsxmlevent1</title>
+    <sid>xmlqsdfqsdf</sid>
+    <eid>xmlsqdf</eid>
+    <title>xmlevent1</title>
     <description>16546548979846</description>
     <subjects>fdhd</subjects>
     <subjects>d  fg</subjects>
@@ -13,17 +13,10 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>edited address details</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>edited address details</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -36,44 +29,41 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>not an url</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
     <audio_license>qsdfsdqf</audio_license>
+    <press_url>not an url</press_url>
     <expires></expires>
     <effective></effective>
     <event_start>20121004T0000</event_start>
     <event_end>20121010T1400</event_end>
     <related>
-      <sid>xmlsxmlaaamysid2</sid>
-      <eid>xmlsxmlaaamyeid2</eid>
+      <sid>xmlaaamysid2</sid>
+      <eid>xmlaaamyeid2</eid>
     </related>
     <related>
-      <sid>xmlsxmlaaamysid</sid>
-      <eid>xmlsxmlaaamyeid</eid>
+      <sid>xmlaaamysid</sid>
+      <eid>xmlaaamyeid</eid>
     </related>
     <contained>
-      <sid>xmlsxmlmysid2</sid>
-      <eid>xmlsxmlmyeid2</eid>
+      <sid>xmlmysid2</sid>
+      <eid>xmlmyeid2</eid>
     </contained>
     <contained>
-      <sid>xmlsxmlmysid</sid>
-      <eid>xmlsxmlmyeid</eid>
+      <sid>xmlmysid</sid>
+      <eid>xmlmyeid</eid>
     </contained>
   </event>
   <event xml:lang="en" lang="en">
     <source>http://qsdf</source>
-    <sid>xmlsxmlqsdfqsdf</sid>
-    <eid>xmlsxml1sqdf</eid>
-    <title>xmlsxmlevent1</title>
+    <sid>xmlqsdfqsdf</sid>
+    <eid>xml1sqdf</eid>
+    <title>xmlevent1</title>
     <description>16546548979846</description>
     <subjects>fdhd</subjects>
     <subjects>d  fg</subjects>
@@ -82,17 +72,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -105,44 +95,41 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
     <audio_license>qsdfsdqf</audio_license>
+    <press_url>http://qsdf</press_url>
     <expires></expires>
     <effective></effective>
     <event_start>20121004T0000</event_start>
     <event_end>20121010T1400</event_end>
     <related>
-      <sid>xmlsxmlaaamysid2</sid>
-      <eid>xmlsxmlaaamyeid2</eid>
+      <sid>xmlaaamysid2</sid>
+      <eid>xmlaaamyeid2</eid>
     </related>
     <related>
-      <sid>xmlsxmlaaamysid</sid>
-      <eid>xmlsxmlaaamyeid</eid>
+      <sid>xmlaaamysid</sid>
+      <eid>xmlaaamyeid</eid>
     </related>
     <contained>
-      <sid>xmlsxmlmysid2</sid>
-      <eid>xmlsxmlmyeid2</eid>
+      <sid>xmlmysid2</sid>
+      <eid>xmlmyeid2</eid>
     </contained>
     <contained>
-      <sid>xmlsxmlmysid</sid>
-      <eid>xmlsxmlmyeid</eid>
+      <sid>xmlmysid</sid>
+      <eid>xmlmyeid</eid>
     </contained>
   </event>
   <event xml:lang="en" lang="en">
     <source>http://qsdf</source>
-    <sid>xmlsxmlqsdfqsdf</sid>
-    <eid>xmlsxml2sqdf</eid>
-    <title>xmlsxmlevent1</title>
+    <sid>xmlqsdfqsdf</sid>
+    <eid>xml2sqdf</eid>
+    <title>xmlevent1</title>
     <description>16546548979846</description>
     <subjects>fdhd</subjects>
     <subjects>d  fg</subjects>
@@ -151,17 +138,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -174,44 +161,41 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
     <audio_license>qsdfsdqf</audio_license>
+    <press_url>http://qsdf</press_url>
     <expires></expires>
     <effective></effective>
     <event_start>20121004T0000</event_start>
     <event_end>20121010T1400</event_end>
     <related>
-      <sid>xmlsxmlaaamysid2</sid>
-      <eid>xmlsxmlaaamyeid2</eid>
+      <sid>xmlaaamysid2</sid>
+      <eid>xmlaaamyeid2</eid>
     </related>
     <related>
-      <sid>xmlsxmlaaamysid</sid>
-      <eid>xmlsxmlaaamyeid</eid>
+      <sid>xmlaaamysid</sid>
+      <eid>xmlaaamyeid</eid>
     </related>
     <contained>
-      <sid>xmlsxmlmysid2</sid>
-      <eid>xmlsxmlmyeid2</eid>
+      <sid>xmlmysid2</sid>
+      <eid>xmlmyeid2</eid>
     </contained>
     <contained>
-      <sid>xmlsxmlmysid</sid>
-      <eid>xmlsxmlmyeid</eid>
+      <sid>xmlmysid</sid>
+      <eid>xmlmyeid</eid>
     </contained>
   </event>
   <event xml:lang="en" lang="en">
     <source>http://qsdf</source>
-    <sid>xmlsxmlqsdfqsdf</sid>
-    <eid>xmlsxml3sqdf</eid>
-    <title>xmlsxmlevent1</title>
+    <sid>xmlqsdfqsdf</sid>
+    <eid>xml3sqdf</eid>
+    <title>xmlevent1</title>
     <description>16546548979846</description>
     <subjects>fdhd</subjects>
     <subjects>d  fg</subjects>
@@ -220,17 +204,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -243,44 +227,41 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
     <audio_license>qsdfsdqf</audio_license>
+    <press_url>http://qsdf</press_url>
     <expires></expires>
     <effective></effective>
     <event_start>20121004T0000</event_start>
     <event_end>20121010T1400</event_end>
     <related>
-      <sid>xmlsxmlaaamysid2</sid>
-      <eid>xmlsxmlaaamyeid2</eid>
+      <sid>xmlaaamysid2</sid>
+      <eid>xmlaaamyeid2</eid>
     </related>
     <related>
-      <sid>xmlsxmlaaamysid</sid>
-      <eid>xmlsxmlaaamyeid</eid>
+      <sid>xmlaaamysid</sid>
+      <eid>xmlaaamyeid</eid>
     </related>
     <contained>
-      <sid>xmlsxmlmysid2</sid>
-      <eid>xmlsxmlmyeid2</eid>
+      <sid>xmlmysid2</sid>
+      <eid>xmlmyeid2</eid>
     </contained>
     <contained>
-      <sid>xmlsxmlmysid</sid>
-      <eid>xmlsxmlmyeid</eid>
+      <sid>xmlmysid</sid>
+      <eid>xmlmyeid</eid>
     </contained>
   </event>
   <event xml:lang="en" lang="en">
     <source>http://qsdf</source>
-    <sid>xmlsxmlqsdfqsdf</sid>
-    <eid>xmlsxml4sqdf</eid>
-    <title>xmlsxmlevent1</title>
+    <sid>xmlqsdfqsdf</sid>
+    <eid>xml4sqdf</eid>
+    <title>xmlevent1</title>
     <description>16546548979846</description>
     <subjects>fdhd</subjects>
     <subjects>d  fg</subjects>
@@ -289,17 +270,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -312,44 +293,41 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
     <audio_license>qsdfsdqf</audio_license>
+    <press_url>http://qsdf</press_url>
     <expires></expires>
     <effective></effective>
     <event_start>20121004T0000</event_start>
     <event_end>20121010T1400</event_end>
     <related>
-      <sid>xmlsxmlaaamysid2</sid>
-      <eid>xmlsxmlaaamyeid2</eid>
+      <sid>xmlaaamysid2</sid>
+      <eid>xmlaaamyeid2</eid>
     </related>
     <related>
-      <sid>xmlsxmlaaamysid</sid>
-      <eid>xmlsxmlaaamyeid</eid>
+      <sid>xmlaaamysid</sid>
+      <eid>xmlaaamyeid</eid>
     </related>
     <contained>
-      <sid>xmlsxmlmysid2</sid>
-      <eid>xmlsxmlmyeid2</eid>
+      <sid>xmlmysid2</sid>
+      <eid>xmlmyeid2</eid>
     </contained>
     <contained>
-      <sid>xmlsxmlmysid</sid>
-      <eid>xmlsxmlmyeid</eid>
+      <sid>xmlmysid</sid>
+      <eid>xmlmyeid</eid>
     </contained>
   </event>
   <event xml:lang="en" lang="en">
     <source>http://qsdf</source>
-    <sid>xmlsxmlqsdfqsdf</sid>
-    <eid>xmlsxml5sqdf</eid>
-    <title>xmlsxmlevent1</title>
+    <sid>xmlqsdfqsdf</sid>
+    <eid>xml5sqdf</eid>
+    <title>xmlevent1</title>
     <description>16546548979846</description>
     <subjects>fdhd</subjects>
     <subjects>d  fg</subjects>
@@ -358,17 +336,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -381,44 +359,41 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
     <audio_license>qsdfsdqf</audio_license>
+    <press_url>http://qsdf</press_url>
     <expires></expires>
     <effective></effective>
     <event_start>20121004T0000</event_start>
     <event_end>20121010T1400</event_end>
     <related>
-      <sid>xmlsxmlaaamysid2</sid>
-      <eid>xmlsxmlaaamyeid2</eid>
+      <sid>xmlaaamysid2</sid>
+      <eid>xmlaaamyeid2</eid>
     </related>
     <related>
-      <sid>xmlsxmlaaamysid</sid>
-      <eid>xmlsxmlaaamyeid</eid>
+      <sid>xmlaaamysid</sid>
+      <eid>xmlaaamyeid</eid>
     </related>
     <contained>
-      <sid>xmlsxmlmysid2</sid>
-      <eid>xmlsxmlmyeid2</eid>
+      <sid>xmlmysid2</sid>
+      <eid>xmlmyeid2</eid>
     </contained>
     <contained>
-      <sid>xmlsxmlmysid</sid>
-      <eid>xmlsxmlmyeid</eid>
+      <sid>xmlmysid</sid>
+      <eid>xmlmyeid</eid>
     </contained>
   </event>
   <event xml:lang="en" lang="en">
     <source>http://qsdf</source>
-    <sid>xmlsxmlqsdfqsdf</sid>
-    <eid>xmlsxml6sqdf</eid>
-    <title>xmlsxmlevent1</title>
+    <sid>xmlqsdfqsdf</sid>
+    <eid>xml6sqdf</eid>
+    <title>xmlevent1</title>
     <description>16546548979846</description>
     <subjects>fdhd</subjects>
     <subjects>d  fg</subjects>
@@ -427,17 +402,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -450,44 +425,41 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
     <audio_license>qsdfsdqf</audio_license>
+    <press_url>http://qsdf</press_url>
     <expires></expires>
     <effective></effective>
     <event_start>20121004T0000</event_start>
     <event_end>20121010T1400</event_end>
     <related>
-      <sid>xmlsxmlaaamysid2</sid>
-      <eid>xmlsxmlaaamyeid2</eid>
+      <sid>xmlaaamysid2</sid>
+      <eid>xmlaaamyeid2</eid>
     </related>
     <related>
-      <sid>xmlsxmlaaamysid</sid>
-      <eid>xmlsxmlaaamyeid</eid>
+      <sid>xmlaaamysid</sid>
+      <eid>xmlaaamyeid</eid>
     </related>
     <contained>
-      <sid>xmlsxmlmysid2</sid>
-      <eid>xmlsxmlmyeid2</eid>
+      <sid>xmlmysid2</sid>
+      <eid>xmlmyeid2</eid>
     </contained>
     <contained>
-      <sid>xmlsxmlmysid</sid>
-      <eid>xmlsxmlmyeid</eid>
+      <sid>xmlmysid</sid>
+      <eid>xmlmyeid</eid>
     </contained>
   </event>
   <event xml:lang="en" lang="en">
     <source>http://qsdf</source>
-    <sid>xmlsxmlqsdfqsdf</sid>
-    <eid>xmlsxml7sqdf</eid>
-    <title>xmlsxmlevent1</title>
+    <sid>xmlqsdfqsdf</sid>
+    <eid>xml7sqdf</eid>
+    <title>xmlevent1</title>
     <description>16546548979846</description>
     <subjects>fdhd</subjects>
     <subjects>d  fg</subjects>
@@ -496,17 +468,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -519,44 +491,41 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
     <audio_license>qsdfsdqf</audio_license>
+    <press_url>http://qsdf</press_url>
     <expires></expires>
     <effective></effective>
     <event_start>20121004T0000</event_start>
     <event_end>20121010T1400</event_end>
     <related>
-      <sid>xmlsxmlaaamysid2</sid>
-      <eid>xmlsxmlaaamyeid2</eid>
+      <sid>xmlaaamysid2</sid>
+      <eid>xmlaaamyeid2</eid>
     </related>
     <related>
-      <sid>xmlsxmlaaamysid</sid>
-      <eid>xmlsxmlaaamyeid</eid>
+      <sid>xmlaaamysid</sid>
+      <eid>xmlaaamyeid</eid>
     </related>
     <contained>
-      <sid>xmlsxmlmysid2</sid>
-      <eid>xmlsxmlmyeid2</eid>
+      <sid>xmlmysid2</sid>
+      <eid>xmlmyeid2</eid>
     </contained>
     <contained>
-      <sid>xmlsxmlmysid</sid>
-      <eid>xmlsxmlmyeid</eid>
+      <sid>xmlmysid</sid>
+      <eid>xmlmyeid</eid>
     </contained>
   </event>
   <event xml:lang="en" lang="en">
     <source>http://qsdf</source>
-    <sid>xmlsxmlqsdfqsdf</sid>
-    <eid>xmlsxml8sqdf</eid>
-    <title>xmlsxmlevent1</title>
+    <sid>xmlqsdfqsdf</sid>
+    <eid>xml8sqdf</eid>
+    <title>xmlevent1</title>
     <description>16546548979846</description>
     <subjects>fdhd</subjects>
     <subjects>d  fg</subjects>
@@ -565,17 +534,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -588,44 +557,41 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
     <audio_license>qsdfsdqf</audio_license>
+    <press_url>http://qsdf</press_url>
     <expires></expires>
     <effective></effective>
     <event_start>20121004T0000</event_start>
     <event_end>20121010T1400</event_end>
     <related>
-      <sid>xmlsxmlaaamysid2</sid>
-      <eid>xmlsxmlaaamyeid2</eid>
+      <sid>xmlaaamysid2</sid>
+      <eid>xmlaaamyeid2</eid>
     </related>
     <related>
-      <sid>xmlsxmlaaamysid</sid>
-      <eid>xmlsxmlaaamyeid</eid>
+      <sid>xmlaaamysid</sid>
+      <eid>xmlaaamyeid</eid>
     </related>
     <contained>
-      <sid>xmlsxmlmysid2</sid>
-      <eid>xmlsxmlmyeid2</eid>
+      <sid>xmlmysid2</sid>
+      <eid>xmlmyeid2</eid>
     </contained>
     <contained>
-      <sid>xmlsxmlmysid</sid>
-      <eid>xmlsxmlmyeid</eid>
+      <sid>xmlmysid</sid>
+      <eid>xmlmyeid</eid>
     </contained>
   </event>
   <event xml:lang="en" lang="en">
     <source>http://qsdf</source>
-    <sid>xmlsxmlqsdfqsdf</sid>
-    <eid>xmlsxml10sqdf</eid>
-    <title>xmlsxmlevent1</title>
+    <sid>xmlqsdfqsdf</sid>
+    <eid>xml10sqdf</eid>
+    <title>xmlevent1</title>
     <description>16546548979846</description>
     <subjects>fdhd</subjects>
     <subjects>d  fg</subjects>
@@ -634,17 +600,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -657,44 +623,41 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
     <audio_license>qsdfsdqf</audio_license>
+    <press_url>http://qsdf</press_url>
     <expires></expires>
     <effective></effective>
     <event_start>20121004T0000</event_start>
     <event_end>20121010T1400</event_end>
     <related>
-      <sid>xmlsxmlaaamysid2</sid>
-      <eid>xmlsxmlaaamyeid2</eid>
+      <sid>xmlaaamysid2</sid>
+      <eid>xmlaaamyeid2</eid>
     </related>
     <related>
-      <sid>xmlsxmlaaamysid</sid>
-      <eid>xmlsxmlaaamyeid</eid>
+      <sid>xmlaaamysid</sid>
+      <eid>xmlaaamyeid</eid>
     </related>
     <contained>
-      <sid>xmlsxmlmysid2</sid>
-      <eid>xmlsxmlmyeid2</eid>
+      <sid>xmlmysid2</sid>
+      <eid>xmlmyeid2</eid>
     </contained>
     <contained>
-      <sid>xmlsxmlmysid</sid>
-      <eid>xmlsxmlmyeid</eid>
+      <sid>xmlmysid</sid>
+      <eid>xmlmyeid</eid>
     </contained>
   </event>
   <event xml:lang="en" lang="en">
     <source>http://qsdf</source>
-    <sid>xmlsxmlmysid2</sid>
-    <eid>xmlsxmlmyeid2</eid>
-    <title>xmlsxmlevent1</title>
+    <sid>xmlmysid2</sid>
+    <eid>xmlmyeid2</eid>
+    <title>xmlevent1</title>
     <description>16546548979846</description>
     <subjects>fdhd</subjects>
     <subjects>d  fg</subjects>
@@ -703,17 +666,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -726,36 +689,33 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
     <audio_license>qsdfsdqf</audio_license>
+    <press_url>http://qsdf</press_url>
     <expires></expires>
     <effective></effective>
     <event_start>20121004T0000</event_start>
     <event_end>20121010T1400</event_end>
     <related>
-      <sid>xmlsxmlaaamysid2</sid>
-      <eid>xmlsxmlaaamyeid2</eid>
+      <sid>xmlaaamysid2</sid>
+      <eid>xmlaaamyeid2</eid>
     </related>
     <related>
-      <sid>xmlsxmlaaamysid</sid>
-      <eid>xmlsxmlaaamyeid</eid>
+      <sid>xmlaaamysid</sid>
+      <eid>xmlaaamyeid</eid>
     </related>
   </event>
   <event xml:lang="en" lang="en">
     <source>http://qsdf</source>
-    <sid>xmlsxmlmysid</sid>
-    <eid>xmlsxmlmyeid</eid>
-    <title>xmlsxmlevent1</title>
+    <sid>xmlmysid</sid>
+    <eid>xmlmyeid</eid>
+    <title>xmlevent1</title>
     <description>16546548979846</description>
     <subjects>fdhd</subjects>
     <subjects>d  fg</subjects>
@@ -764,17 +724,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -787,36 +747,33 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
     <audio_license>qsdfsdqf</audio_license>
+    <press_url>http://qsdf</press_url>
     <expires></expires>
     <effective></effective>
     <event_start>20121004T0000</event_start>
     <event_end>20121010T1400</event_end>
     <related>
-      <sid>xmlsxmlaaamysid2</sid>
-      <eid>xmlsxmlaaamyeid2</eid>
+      <sid>xmlaaamysid2</sid>
+      <eid>xmlaaamyeid2</eid>
     </related>
     <related>
-      <sid>xmlsxmlaaamysid</sid>
-      <eid>xmlsxmlaaamyeid</eid>
+      <sid>xmlaaamysid</sid>
+      <eid>xmlaaamyeid</eid>
     </related>
   </event>
   <event xml:lang="en" lang="en">
     <source>http://qsdf</source>
-    <sid>xmlsxmlaaamysid2</sid>
-    <eid>xmlsxmlaaamyeid2</eid>
-    <title>xmlsxmlevent1</title>
+    <sid>xmlaaamysid2</sid>
+    <eid>xmlaaamyeid2</eid>
+    <title>xmlevent1</title>
     <description>16546548979846</description>
     <subjects>fdhd</subjects>
     <subjects>d  fg</subjects>
@@ -825,17 +782,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -848,18 +805,15 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
     <audio_license>qsdfsdqf</audio_license>
+    <press_url>http://qsdf</press_url>
     <expires></expires>
     <effective></effective>
     <event_start>20121004T0000</event_start>
@@ -867,9 +821,9 @@
   </event>
   <event xml:lang="en" lang="en">
     <source>http://qsdf</source>
-    <sid>xmlsxmlaaamysid</sid>
-    <eid>xmlsxmlaaamyeid</eid>
-    <title>xmlsxmlevent1</title>
+    <sid>xmlaaamysid</sid>
+    <eid>xmlaaamyeid</eid>
+    <title>xmlevent1</title>
     <description>16546548979846</description>
     <subjects>fdhd</subjects>
     <subjects>d  fg</subjects>
@@ -878,17 +832,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -901,18 +855,15 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
     <audio_license>qsdfsdqf</audio_license>
+    <press_url>http://qsdf</press_url>
     <expires></expires>
     <effective></effective>
     <event_start>20121004T0000</event_start>

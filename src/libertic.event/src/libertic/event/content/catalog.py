@@ -129,7 +129,7 @@ searchable(ILiberticEvent, 'address')
 
 @indexer(ILiberticEvent)
 def tarif_informationIndexer(obj):
-    return obj.tariff_information
+    return obj.tarif_information
 grok.global_adapter(tarif_informationIndexer, name="tarif_information")
 searchable(ILiberticEvent, 'tarif_information') 
 

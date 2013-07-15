@@ -13,17 +13,10 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>edited address details</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>edited address details</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -36,14 +29,10 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
@@ -82,17 +71,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -105,14 +94,10 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
@@ -151,17 +136,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -174,14 +159,10 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
@@ -220,17 +201,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -243,14 +224,10 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
@@ -289,17 +266,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -312,14 +289,10 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
@@ -358,17 +331,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -381,14 +354,10 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
@@ -427,17 +396,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -450,14 +419,10 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
@@ -496,17 +461,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -519,14 +484,10 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
@@ -565,17 +526,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -588,14 +549,10 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
@@ -634,17 +591,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -657,14 +614,10 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
@@ -703,17 +656,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -726,14 +679,10 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
@@ -764,17 +713,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -787,14 +736,10 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
@@ -825,17 +770,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -848,14 +793,10 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>
@@ -878,17 +819,17 @@
     <subjects>h</subjects>
     <subjects>gh</subjects>
     <subjects>ddd</subjects>
-    <targets>5959z(e</targets>
-    <targets>rgsfd</targets>
-    <targets>g</targets>
-    <targets>sfdg</targets>
-    <targets>sfd</targets>
-    <targets>xbxvcw</targets>
-    <targets>b</targets>
-    <targets>xvc</targets>
+    <target>Grand public</target>
+    <performers>rgsfd</performers>
+    <performers>g</performers>
+    <performers>sfdg</performers>
+    <performers>sfd</performers>
+    <performers>xbxvcw</performers>
+    <performers>b</performers>
+    <performers>xvc</performers>
     <address>sdfgsfdsfdgsfdgsfdgsfdg</address>
-    <address_details>sfdgsdfgsfdgsfdgfdgsfd</address_details>
-    <street>sfdgsfdgsfdg</street>
+    <location_name>sfdgsdfgsfdgsfdgfdgsfd</location_name>
+    <cp>31000</cp>
     <town>gdfgfdg</town>
     <country>fdgsfdgsfdg</country>
     <latlong>-47.5;48.5</latlong>
@@ -901,14 +842,10 @@
     <author_firstname>sqdfsdqf</author_firstname>
     <author_telephone>sdfgsfdgfd</author_telephone>
     <author_email>qsdfqsdf@fooqsdf.com</author_email>
-    <gallery_url>http://qsdf</gallery_url>
-    <gallery_license>fsdq</gallery_license>
     <photos1_url>http://qsdf</photos1_url>
     <photos1_license>qsddfqsdf</photos1_license>
     <photos2_url>http:/:foo</photos2_url>
     <photos2_license>qsdfsdqf</photos2_license>
-    <photos3_url>http://qsdf</photos3_url>
-    <photos3_license>qsdfsdqf</photos3_license>
     <video_url>http://qsdf</video_url>
     <video_license>qsdfsdqf</video_license>
     <audio_url>http://qsdf</audio_url>

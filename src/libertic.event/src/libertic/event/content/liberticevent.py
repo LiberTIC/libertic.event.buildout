@@ -107,6 +107,7 @@ def empty_data():
         'author_lastname': None,
         'author_telephone': None,
         'contained': [],
+        'cp': None,
         'country': None,
         'description': None,
         'effective': None,
@@ -116,29 +117,24 @@ def empty_data():
         'event_start': None,
         'expires': None,
         'firstname': None,
-        'gallery_license': None,
-        'gallery_url': None,
         'language': None,
         'lastname': None,
         'latlong': None,
         'organiser': None,
-        'jauge': None,
-        'left_places': None,
-        'tariff_information:': None,
+        'capacity': None,
+        'tarif_information:': None,
+        'performers': tuple(),
         'photos1_license': None,
         'photos1_license': None,
         'photos1_url': None,
         'photos2_license': None,
         'photos2_url': None,
-        'photos3_license': None,
-        'photos3_url': None,
         'press_url': None,
         'related': [],
         'sid': None,
         'source': None,
-        'street': None,
         'subjects': tuple(),
-        'targets': tuple(),
+        'target': None,
         'telephone': None,
         'title': None,
         'town': None,
@@ -153,7 +149,6 @@ def data_from_ctx(ctx, **kw):
     pub = IPublication(ctx)
     sdata =  {
         'address': ctx.address,
-        'address_details': ctx.address_details,
         'audio_license': ctx.audio_license,
         'audio_url': ctx.audio_url,
         'author_email': ctx.author_email,
@@ -161,31 +156,28 @@ def data_from_ctx(ctx, **kw):
         'author_lastname': ctx.author_lastname,
         'author_telephone': ctx.author_telephone,
         'country': ctx.country,
+        'cp': ctx.cp,
         'description': dc.description,
         'eid': ctx.eid,
         'email': ctx.email,
         'firstname': ctx.firstname,
-        'gallery_license': ctx.gallery_license,
-        'gallery_url': ctx.gallery_url,
         'language': dc.language,
         'lastname': ctx.lastname,
         'latlong': ctx.latlong,
+        'location_name': ctx.location_name,
         'organiser': ctx.organiser,
-        'jauge':               ctx.jauge,
-        'left_places':         ctx.left_places,
-        'tariff_information': ctx.tariff_information,
+        'capacity': ctx.capacity,
+        'tarif_information': ctx.tarif_information,
+        'performers': ctx.performers,
         'photos1_license': ctx.photos1_license,
         'photos1_url': ctx.photos1_url,
         'photos2_license': ctx.photos2_license,
         'photos2_url': ctx.photos2_url,
-        'photos3_license': ctx.photos3_license,
-        'photos3_url': ctx.photos3_url,
         'press_url': ctx.press_url,
         'sid': ctx.sid,
         'source': ctx.source,
-        'street': ctx.street,
         'subjects':  dc.subjects,
-        'targets': ctx.targets,
+        'target': ctx.target,
         'telephone': ctx.telephone,
         'title': dc.title,
         'town': ctx.town,
@@ -339,6 +331,7 @@ class View(dexterity.DisplayForm):
     grok.context(lei.ILiberticEvent)
     grok.require('libertic.event.View')
 
+    form.omitted('sid','address_details','country','related')
 
 class Json(grok.View):
     grok.context(lei.ILiberticEvent)
@@ -383,7 +376,7 @@ class Csv(grok.View):
 
     def render(self):
         sdata = data_from_ctx(self.context)
-        for it in 'targets', 'subjects':
+        for it in 'performers', 'subjects':
             sdata[it] = '|'.join(sdata[it])
         for it in 'related', 'contained':
             values = []
@@ -527,7 +520,7 @@ class EventApiUtil(grok.Adapter):
                 if ret in ['created', 'edited']:
                     secondpass_datas.append(data)
                 results['results'].append(res)
-            # wehn we finally have added / edited, set the references
+            # when we finally have added / edited, set the references
             for data in secondpass_datas:
                 try:
                     cdata = deepcopy(data)

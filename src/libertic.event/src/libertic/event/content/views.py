@@ -111,12 +111,12 @@ class EventsAsCsv(EventsViewMixin):
         rows = []
         for ix in self.items:
             sdata = data_from_ctx(ix.getObject())
-            for it in ['targets', 'subjects',
+            for it in ['performers', 'subjects',
                        'related', 'contained']:
                 values = []
                 for item in sdata[it]:
                     val = item
-                    if it in ['targets', 'subjects']:
+                    if it in ['performers', 'subjects']:
                         if not val.strip():
                             # skip empty keywords
                             continue
