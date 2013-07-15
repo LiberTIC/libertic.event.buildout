@@ -12,14 +12,14 @@
     <h1 class="documentFirstHeading" tal:content="context/Title" /> 
 
     <fieldset tal:repeat="group view/groups" 
-              tal:attributes="id python:'-'.join(('form', group.__name__)).replace('.', '-')">
+              tal:attributes="id python:'-'.join(('form-fieldset', group.__name__)).replace('.', '-')">
         <legend tal:content="group/label" />
         
         <p tal:condition="python:group.__name__ == 'event_description'" class="documentDescription" tal:content="context/Description" />
         
         <div class="field" tal:attributes="id widget/id" tal:repeat="widget group/widgets/values">
             <label tal:content="widget/label" />
-            <div tal:content="structure widget/render" />
+            <div tal:replace="structure widget/render" />
         </div>
     </fieldset>
 

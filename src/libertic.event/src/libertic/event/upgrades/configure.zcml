@@ -37,6 +37,7 @@
   </genericsetup:upgradeSteps>
   <genericsetup:upgradeStep profile="libertic.event:default" source="1009" destination="1010"  handler=".upgrade_1010" title="libertic.event 1010" description="Import new collection available view" />
   <genericsetup:upgradeStep profile="libertic.event:default" source="1010" destination="1011"  handler=".upgrade_1011" title="libertic.event 1011" description="Add user info in user menu" />
+  <genericsetup:upgradeStep profile="libertic.event:default" source="1011" destination="1012"  handler=".upgrade_1012" title="libertic.event 1012" description="Deactivate form_tabbing.js" />
 
   <!-- vim:set ft=xml: -->
 </configure>

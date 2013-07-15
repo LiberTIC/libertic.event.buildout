@@ -222,3 +222,11 @@ def upgrade_1011(context):
     portal_setup = site.portal_setup
     portal_setup.runImportStepFromProfile(PROFILEID, 'actions', run_dependencies=False)
     portal_setup.runImportStepFromProfile(PROFILEID, 'typeinfo', run_dependencies=False)
+
+def upgrade_1012(context):
+    """ """
+    site = getToolByName(context, 'portal_url').getPortalObject()
+    portal_setup = site.portal_setup
+    import_js(context)
+    recook_resources(context)
+    portal_setup.runImportStepFromProfile(PROFILEID, 'typeinfo', run_dependencies=False)
