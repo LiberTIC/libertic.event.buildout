@@ -34,21 +34,21 @@ BASE_CONTENTS_TO_INIT = [
 INDEXES = {
     'FieldIndex': [
         'sid', 'eid', 'source',
-        'town', 'country',
+        'town', 'country', 'cp',
         'author_lastname', 'author_firstname',
         'author_telephone', 'author_email',
         'lastname', 'firstname', 'telephone', 'email',
         'organiser', 'get_last_source_parsingstatus',
         'source_created_events', 'source_failed_events', 'source_edited_events',
         'source_runs', 'source_fails', 'source_warns',
-        'left_places', 'jauge',
+        'capacity',
     ],
     'KeywordIndex' : [
         'latlong',
         'contained', 'related',
     ],
     'ZCTextIndex' : [
-        'address', 'tariff_information',
+        'address', 'tarif_information',
     ],
     'DateIndex' : [
         'event_start', 'event_end',
