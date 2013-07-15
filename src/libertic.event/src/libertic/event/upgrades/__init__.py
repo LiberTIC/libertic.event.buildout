@@ -230,3 +230,5 @@ def upgrade_1012(context):
     import_js(context)
     recook_resources(context)
     portal_setup.runImportStepFromProfile(PROFILEID, 'typeinfo', run_dependencies=False)
+    portal_setup.runImportStepFromProfile(PROFILEID, 'plone.app.registry', run_dependencies=False)
+    portal_setup.runImportStepFromProfile(PROFILEID, 'atcttool', run_dependencies=False)
