@@ -830,8 +830,10 @@ fieldset#form-fieldset-event_media label {
 #content fieldset {
   background-color: #ececec;
   border: none;
+  margin: 2em 0;
 }
 #content legend {
   font-size: 150%;
   padding-left: 0;
+  margin-top: -1.2em;
 }
