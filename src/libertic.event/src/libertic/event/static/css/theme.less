@@ -409,3 +409,42 @@ table.dataTable {
         background-position: -40px 0;
     }
 }
+
+/* Forms *
+ * ===== */
+
+.field {
+    label, span {
+        display: inline-block;
+    }
+    label {
+        width: 120px;
+    }
+    span.textarea-widget {
+        display: block;
+    }
+}
+
+fieldset {
+    &#form-fieldset-event_dates,
+    &#form-fieldset-event_media {
+        .field {
+            display: inline-block;
+            width: 45%;
+        }
+        label {
+            width: auto;
+        }
+    }
+}
+
+#content {
+    fieldset {
+        background-color: @whiteGray;
+        border: none;
+    }
+    legend {
+        font-size: 150%;
+        padding-left: 0;
+    }
+}

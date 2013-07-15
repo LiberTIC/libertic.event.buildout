@@ -806,3 +806,32 @@ table.dataTable thead th {
 .DataTables_sort_icon.ui-icon.ui-icon-triangle-1-s {
   background-position: -40px 0;
 }
+/* Forms *
+ * ===== */
+.field label,
+.field span {
+  display: inline-block;
+}
+.field label {
+  width: 120px;
+}
+.field span.textarea-widget {
+  display: block;
+}
+fieldset#form-fieldset-event_dates .field,
+fieldset#form-fieldset-event_media .field {
+  display: inline-block;
+  width: 45%;
+}
+fieldset#form-fieldset-event_dates label,
+fieldset#form-fieldset-event_media label {
+  width: auto;
+}
+#content fieldset {
+  background-color: #ececec;
+  border: none;
+}
+#content legend {
+  font-size: 150%;
+  padding-left: 0;
+}
