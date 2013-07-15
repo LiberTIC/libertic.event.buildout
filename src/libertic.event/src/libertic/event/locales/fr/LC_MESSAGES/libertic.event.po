@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: libertic.event 1.0\n"
-"POT-Creation-Date: 2013-07-15 15:14+0000\n"
+"POT-Creation-Date: 2013-07-15 15:56+0000\n"
 "PO-Revision-Date: 2013-05-28 10:14+0200\n"
 "Last-Translator: kiorky <kiorky@cryptelium.net>\n"
 "Language-Team: FR <LL@li.org>\n"
@@ -61,29 +61,13 @@ msgstr "Tous les évènements"
 msgid "Artists, performers"
 msgstr "Artistes, intervenants"
 
-#: ./interfaces.py:239
+#: ./interfaces.py:240
 msgid "Audio license"
 msgstr "License audio"
 
-#: ./interfaces.py:238
+#: ./interfaces.py:239
 msgid "Audio url"
 msgstr "URL audio"
-
-#: ./interfaces.py:259
-msgid "Author email"
-msgstr "Email de l'auteur"
-
-#: ./interfaces.py:257
-msgid "Author firstname"
-msgstr "Prénom de l'auteur"
-
-#: ./interfaces.py:256
-msgid "Author lastname"
-msgstr "Nom de l'auteur"
-
-#: ./interfaces.py:258
-msgid "Author telephone"
-msgstr "Téléphone de l'auteur"
 
 #: ./interfaces.py:187
 msgid "CP"
@@ -93,7 +77,7 @@ msgstr "CP"
 msgid "Can be empty if the extension is one of : csv, json, xml"
 msgstr "Peut être vide si l'extension du fichier est l'une des suivantes : csv, json ou xml"
 
-#: ./interfaces.py:219
+#: ./interfaces.py:220
 msgid "Capacity"
 msgstr "Capacité"
 
@@ -101,7 +85,7 @@ msgstr "Capacité"
 msgid "Choose the dates between which you want to export events"
 msgstr "Choisissez les dates entre lesquelles vous voulez exporter les évènements"
 
-#: ./interfaces.py:305
+#: ./interfaces.py:311
 msgid "Contained events"
 msgstr "Evènements contenus"
 
@@ -121,7 +105,7 @@ msgstr "Créer un événement"
 msgid "Creator"
 msgstr "Auteur"
 
-#: ./interfaces.py:440
+#: ./interfaces.py:446
 msgid "Csv"
 msgstr ""
 
@@ -165,9 +149,9 @@ msgstr "Afficher les logos des fournisseurs/réutilisateurs"
 msgid "Download as XML"
 msgstr "Télécharger les évènements en XML"
 
-#: ./interfaces.py:245
-msgid "Event contact"
-msgstr "Contact événement"
+#: ./interfaces.py:259
+msgid "Email"
+msgstr ""
 
 #: ./interfaces.py:195
 msgid "Event dates"
@@ -219,6 +203,10 @@ msgstr "ECHEC"
 msgid "Failed runs"
 msgstr "Collectes ratées"
 
+#: ./interfaces.py:257
+msgid "Firstname"
+msgstr "Nom"
+
 #: ./profiles/default/registry.xml
 msgid "For a event, the capacity"
 msgstr "Pour un événement, la capacité"
@@ -251,7 +239,7 @@ msgstr "Pour une source, nombre de warnings"
 msgid "Format"
 msgstr "Format"
 
-#: ./interfaces.py:442
+#: ./interfaces.py:448
 msgid "Ical"
 msgstr "Ical"
 
@@ -266,6 +254,10 @@ msgstr "Importer un fichier"
 #: ./content/liberticevent.py:642
 msgid "Invalid File/Format"
 msgstr "Format de fichier invalide"
+
+#: ./interfaces.py:256
+msgid "Lastname"
+msgstr "Prénom"
 
 #: ./profiles/default/registry.xml
 msgid "Libertic"
@@ -418,7 +410,7 @@ msgstr "Lieu"
 msgid "Location name"
 msgstr "Nom du lieu"
 
-#: ./interfaces.py:224
+#: ./interfaces.py:225
 msgid "Medias"
 msgstr "Medias"
 
@@ -426,7 +418,7 @@ msgstr "Medias"
 msgid "MemberFolder"
 msgstr "Dossier utilisateur"
 
-#: ./interfaces.py:297
+#: ./interfaces.py:303
 msgid "Missing relative license for ${url}."
 msgstr "Il manque la license relative à ${url}."
 
@@ -462,27 +454,31 @@ msgstr "Ré-utilisateurs"
 msgid "Organisation"
 msgstr "Organisation"
 
-#: ./interfaces.py:233
+#: ./interfaces.py:234
 msgid "Photos1 license"
 msgstr "License photo1"
 
-#: ./interfaces.py:232
+#: ./interfaces.py:233
 msgid "Photos1 url"
 msgstr "URL photos1"
 
-#: ./interfaces.py:235
+#: ./interfaces.py:236
 msgid "Photos2 license"
 msgstr "License photos2"
 
-#: ./interfaces.py:234
+#: ./interfaces.py:235
 msgid "Photos2 url"
 msgstr "URL photos2"
 
-#: ./interfaces.py:240
+#: ./interfaces.py:251
+msgid "Press contact"
+msgstr "Contact presse"
+
+#: ./interfaces.py:241
 msgid "Press url"
 msgstr "URL Presse"
 
-#: ./interfaces.py:308
+#: ./interfaces.py:314
 msgid "Related events"
 msgstr "Évènements corrélés"
 
@@ -523,9 +519,13 @@ msgstr "Vocation de la structure"
 msgid "Suppliers"
 msgstr "Fournisseurs"
 
-#: ./interfaces.py:218
+#: ./interfaces.py:219
 msgid "Tarif information"
 msgstr "Tarifs"
+
+#: ./interfaces.py:258
+msgid "Telephone"
+msgstr "Téléphone"
 
 #: ./interfaces.py:119
 msgid "Text message"
@@ -555,6 +555,10 @@ msgstr "Des erreurs sont apparues durant l'import"
 msgid "This is not a lat long value, eg : -47.5;48.5"
 msgstr "Ce n'est pas une latlong valide, ex : -47.5;48.5"
 
+#: ./interfaces.py:246
+msgid "Ticket office contact"
+msgstr "Contact billetterie"
+
 #: ./browser/templates/reusers_list_view.pt:26
 #: ./browser/templates/suppliers_list_view.pt:26
 #: ./interfaces.py:188
@@ -566,11 +570,11 @@ msgstr "Ville"
 msgid "Type"
 msgstr "Type"
 
-#: ./interfaces.py:237
+#: ./interfaces.py:238
 msgid "Video license"
 msgstr "License Vidéo"
 
-#: ./interfaces.py:236
+#: ./interfaces.py:237
 msgid "Video url"
 msgstr "URL Vidéo"
 
@@ -586,7 +590,7 @@ msgstr "Jobs en avertissement"
 msgid "Webservices"
 msgstr "Webservices"
 
-#: ./interfaces.py:441
+#: ./interfaces.py:447
 msgid "Xml"
 msgstr ""
 
@@ -622,7 +626,7 @@ msgstr "auteur: téléphone"
 msgid "contained"
 msgstr "contenus"
 
-#: ./interfaces.py:266
+#: ./interfaces.py:272
 msgid "contained Items"
 msgstr "Items contenus"
 
@@ -640,7 +644,6 @@ msgstr "Pas de résultats"
 msgid "eid of the event"
 msgstr "EID de l'évènement"
 
-#: ./interfaces.py:253
 #: ./profiles/default/registry.xml
 msgid "email"
 msgstr "Email"
@@ -661,7 +664,6 @@ msgstr "évènements édités par cette source"
 msgid "events failed by this source"
 msgstr "évènement en erreur par cette source"
 
-#: ./interfaces.py:251
 #: ./profiles/default/registry.xml
 msgid "firstname"
 msgstr "Prénom"
@@ -672,7 +674,7 @@ msgstr "Prénom"
 msgid "help_audience"
 msgstr "tout public, enfants, adultes, ..."
 
-#: ./interfaces.py:423
+#: ./interfaces.py:429
 msgid "help_group_moderators"
 msgstr ""
 
@@ -691,7 +693,7 @@ msgstr "Cochez cette case pour intiquer que vous êtes un fournisseur d'évènem
 msgid "help_libertic_tgu"
 msgstr "Cochez cette case pour indiquer que vous acceptez les conditions générales de vente"
 
-#: ./interfaces.py:443
+#: ./interfaces.py:449
 msgid "json"
 msgstr ""
 
@@ -706,7 +708,7 @@ msgid "label_event_id"
 msgstr "Identifiant de l'évènement"
 
 #. Default: "Suppliers members moderrators (emails)"
-#: ./interfaces.py:422
+#: ./interfaces.py:428
 msgid "label_group_moderators"
 msgstr "Modérateurs des groupes (emails)"
 
@@ -720,7 +722,6 @@ msgstr "Source"
 msgid "label_source_id"
 msgstr "Identifiant de la source de l'évènement"
 
-#: ./interfaces.py:250
 #: ./profiles/default/registry.xml
 msgid "lastname"
 msgstr "Nom"
@@ -741,7 +742,7 @@ msgstr "journaux"
 msgid "messages"
 msgstr "messages"
 
-#: ./interfaces.py:254
+#: ./interfaces.py:260
 msgid "organiser"
 msgstr "Organisateur"
 
@@ -760,10 +761,6 @@ msgstr "évènements corrélés"
 #: ./profiles/default/registry.xml
 msgid "sid of the event"
 msgstr "sid de l'évènement"
-
-#: ./interfaces.py:252
-msgid "telephone"
-msgstr "Téléphone"
 
 #: ./profiles/default/registry.xml
 msgid "telephone of the author"

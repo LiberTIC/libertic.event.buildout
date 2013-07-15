@@ -168,7 +168,7 @@ class ISourceMapping(form.Schema):
 
 class ILiberticEvent(IDatabaseItem):
     """A libertic event"""
-    form.omitted('sid','country',)
+    form.omitted('sid','eid','country','source','contained','related')
     source = schema.URI(title=_('label_source', default='Source'), required=True)
     sid = schema.TextLine(title=_('label_source_id', default='Source id'),
                           constraint=sideidchars_check,  required=True)
@@ -214,6 +214,7 @@ class ILiberticEvent(IDatabaseItem):
     target = schema.TextLine(
         title=_('label_audience', default='Audience'),
         description=_('help_audience', default='children, adults, all..'),
+        required=False
     )
     tarif_information = schema.TextLine(title=_('Tarif information'), required=False)
     capacity = schema.Int(title=_('Capacity'), required=False)
@@ -239,24 +240,29 @@ class ILiberticEvent(IDatabaseItem):
     audio_license = schema.TextLine(title=_('Audio license', ), required=False)
     press_url = schema.URI(title=_('Press url'), required=False)
 
-    # Fieldset Contact
+    # Fieldsets Contact
     model.fieldset(
-        'event_contact',
-        label=_(u"Event contact"),
-        fields=['lastname', 'firstname', 'telephone', 'email', 'organiser', 'author_lastname', 'author_firstname', 'author_telephone', 'author_email',]
+        'to_contact',
+        label=_(u"Ticket office contact"),
+        fields=['lastname', 'firstname', 'telephone', 'email', 'organiser',]
+    )
+    model.fieldset(
+        'press_contact',
+        label=_(u"Press contact"),
+        fields=['author_lastname', 'author_firstname', 'author_telephone', 'author_email',]
     )
 
     #
-    lastname = schema.TextLine(title=_('lastname'), required=False)
-    firstname = schema.TextLine(title=_('firstname'), required=False)
-    telephone = schema.TextLine(title=_('telephone'), required=False)
-    email = schema.TextLine(title=_('email'), constraint=is_email)
+    lastname = schema.TextLine(title=_('Lastname'), required=False)
+    firstname = schema.TextLine(title=_('Firstname'), required=False)
+    telephone = schema.TextLine(title=_('Telephone'), required=False)
+    email = schema.TextLine(title=_('Email'), constraint=is_email)
     organiser = schema.TextLine(title=_('organiser'), required=False)
     #
-    author_lastname = schema.TextLine(title=_('Author lastname'), required=True)
-    author_firstname = schema.TextLine(title=_('Author firstname'), required=True)
-    author_telephone = schema.TextLine(title=_('Author telephone'), required=False)
-    author_email = schema.TextLine(title=_('Author email'), required=False, constraint=is_email)
+    author_lastname = schema.TextLine(title=_('Lastname'), required=True)
+    author_firstname = schema.TextLine(title=_('Firstname'), required=True)
+    author_telephone = schema.TextLine(title=_('Telephone'), required=False)
+    author_email = schema.TextLine(title=_('Email'), required=False, constraint=is_email)
     
     form.widget(contained=MultiContentTreeFieldWidget)
     contained = schema.List(
