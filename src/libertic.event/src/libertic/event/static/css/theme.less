@@ -46,6 +46,14 @@ footer,
         color: darken(@whiteGray, 15%);
     }
 }
+#portal-personaltools {
+    a, a:link, &:visited {
+        color: @whiteGray;
+    }
+    a:hover {
+        color: darken(@whiteGray, 15%);
+    }
+}
 /* Basic classes *
  * ------------- */
 
@@ -424,6 +432,11 @@ table.dataTable {
         display: block;
     }
 }
+form .field {
+    label, span {
+        display: inline;
+    }
+}
 
 fieldset {
     &#form-fieldset-event_dates,
@@ -431,10 +444,17 @@ fieldset {
         .field {
             display: inline-block;
             width: 45%;
+            vertical-align: top;
         }
         label {
             width: auto;
         }
+    }
+    &#form-fieldset-to_contact,
+    &#form-fieldset-press_contact {
+        display: inline-block;
+        width: 45%;
+        vertical-align: top;
     }
 }
 

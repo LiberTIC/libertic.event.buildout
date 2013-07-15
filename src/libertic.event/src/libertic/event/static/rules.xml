@@ -77,4 +77,9 @@
         
     </rules>
     
+    <rules css:if-content=".template-libertic_event">
+        <drop css:content="#form-fieldset-ownership" />
+        <drop css:content="#form-fieldset-settings" />
+    </rules>
+    
 </rules>

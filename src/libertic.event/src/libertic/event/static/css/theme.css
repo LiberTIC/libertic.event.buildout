@@ -467,6 +467,14 @@ footer a:hover,
 #portal-siteactions li a:hover {
   color: #c6c6c6;
 }
+#portal-personaltools a,
+#portal-personaltools a:link,
+#portal-personaltools:visited {
+  color: #ececec;
+}
+#portal-personaltools a:hover {
+  color: #c6c6c6;
+}
 /* Basic classes *
  * ------------- */
 .align-right {
@@ -818,14 +826,25 @@ table.dataTable thead th {
 .field span.textarea-widget {
   display: block;
 }
+form .field label,
+form .field span {
+  display: inline;
+}
 fieldset#form-fieldset-event_dates .field,
 fieldset#form-fieldset-event_media .field {
   display: inline-block;
   width: 45%;
+  vertical-align: top;
 }
 fieldset#form-fieldset-event_dates label,
 fieldset#form-fieldset-event_media label {
   width: auto;
+}
+fieldset#form-fieldset-to_contact,
+fieldset#form-fieldset-press_contact {
+  display: inline-block;
+  width: 45%;
+  vertical-align: top;
 }
 #content fieldset,
 .overlay fieldset {
