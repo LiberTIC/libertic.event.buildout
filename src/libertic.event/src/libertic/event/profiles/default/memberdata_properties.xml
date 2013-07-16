@@ -2,4 +2,12 @@
 <object name="portal_memberdata" meta_type="PlonePAS MemberData Tool">
  <property name="libertic_event_operator" type="boolean">False</property>
  <property name="libertic_event_supplier" type="boolean">False</property>
+  <property name="ode_profile_type" type="string"/>
+  <property name="ode_domain" type="string"/>
+  <property name="ode_structure_name" type="string"/>
+  <property name="ode_address" type="string"/>
+  <property name="ode_cp" type="string"/>
+  <property name="ode_contact_lastname" type="string"/>
+  <property name="ode_contact_firstname" type="string"/>
+  <property name="ode_contact_telephone" type="string"/>
 </object>

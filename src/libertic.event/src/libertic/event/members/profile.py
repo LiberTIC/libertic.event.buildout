@@ -32,6 +32,8 @@ def validateAccept(value):
     return True
 
 class ILiberticProfile(IUserDataSchema):
+    """Profile schema"""
+
     tgu = schema.Bool(
         title=_("Accept terms of use"),
         description=_(u'help_libertic_tgu',
@@ -39,18 +41,64 @@ class ILiberticProfile(IUserDataSchema):
                       " read and accepted the terms of use for this site. "),
         required=True,
         constraint=validateAccept,)
+
     libertic_event_supplier = schema.Bool(
         title=_("Libertic event supplier"),
         description=_(u'help_libertic_event_supplier',
                       default=u"Tick this box to indicate that you are an even supplier "),
         required=True,)
+
     libertic_event_operator = schema.Bool(
         title=_("Libertic event reuser"),
         description=_(u'help_libertic_event_reuser',
                       default=u"Tick this box to indicate that you are an event reuser"),
         required=True)
 
+    ode_profile_type = schema.Choice(
+        title=_("Type"),
+        description=_(u'Select your profile type.', default=u""),
+        required=False,
+        vocabulary="ode.profile_types",
+    )
+
+    ode_domain = schema.TextLine (
+        title=_("Domain"),
+        description=_(u'Activity domain.', default=u""),
+        required=False,
+    )
+    ode_structure_name = schema.TextLine (
+        title=_("Structure name"),
+        required=False,
+    )
+    ode_address = schema.TextLine (
+        title=_("Address"),
+        description=_(u"", default=u""),
+        required=False,
+    )
+    ode_cp = schema.TextLine (
+        title=_("Zip code"),
+        description=_(u"", default=u""),
+        required=False,
+    )
+    ode_contact_lastname = schema.TextLine (
+        title=_("Lastname"),
+        description=_(u"", default=u""),
+        required=False,
+    )
+    ode_contact_firstname = schema.TextLine (
+        title=_("Firstname"),
+        description=_(u"", default=u""),
+        required=False,
+    )
+    ode_contact_telephone = schema.TextLine (
+        title=_("Phone"),
+        description=_(u"", default=u""),
+        required=False,
+    )
+
 class RegistrationMixin(register.BaseRegistrationForm):
+    """Overrides plone registration"""
+
     def handle_join_success(self, data):
         register.BaseRegistrationForm.handle_join_success(self, data)
         acl_users = self.context.acl_users
@@ -171,6 +219,64 @@ class LiberticPanelAdapter(UserDataPanelAdapter):
         return self.context.setMemberProperties({'libertic_event_operator': value})
     libertic_event_operator = property(get_libertic_event_operator, set_libertic_event_operator)
 
+    def get_ode_profile_type(self):
+        value = self.context.getProperty('ode_profile_type', '')
+        if len(value): value = value[0]
+        return value
+    def set_ode_profile_type(self, value):
+        if value is not None and not isinstance(value,(list, set, tuple)): value = [value]
+        if isinstance(value, (list, tuple, set)): value = list(value)
+        return self.context.setMemberProperties({'ode_profile_type': value})
+    ode_profile_type = property(get_ode_profile_type, set_ode_profile_type)
+
+    def get_ode_domain(self):
+        value = self.context.getProperty('ode_domain', '')
+        return value
+    def set_ode_domain(self, value):
+        return self.context.setMemberProperties({'ode_domain': value})
+    ode_domain = property(get_ode_domain, set_ode_domain)
+
+    def get_ode_structure_name(self):
+        value = self.context.getProperty('ode_structure_name', '')
+        return value
+    def set_ode_structure_name(self, value):
+        return self.context.setMemberProperties({'ode_structure_name': value})
+    ode_structure_name = property(get_ode_structure_name, set_ode_structure_name)
+
+    def get_ode_address(self):
+        value = self.context.getProperty('ode_address', '')
+        return value
+    def set_ode_address(self, value):
+        return self.context.setMemberProperties({'ode_address': value})
+    ode_address = property(get_ode_address, set_ode_address)
+
+    def get_ode_cp(self):
+        value = self.context.getProperty('ode_cp', '')
+        return value
+    def set_ode_cp(self, value):
+        return self.context.setMemberProperties({'ode_cp': value})
+    ode_cp = property(get_ode_cp, set_ode_cp)
+
+    def get_ode_contact_lastname(self):
+        value = self.context.getProperty('ode_contact_lastname', '')
+        return value
+    def set_ode_contact_lastname(self, value):
+        return self.context.setMemberProperties({'ode_contact_lastname': value})
+    ode_contact_lastname = property(get_ode_contact_lastname, set_ode_contact_lastname)
+
+    def get_ode_contact_firstname(self):
+        value = self.context.getProperty('ode_contact_firstname', '')
+        return value
+    def set_ode_contact_firstname(self, value):
+        return self.context.setMemberProperties({'ode_contact_firstname': value})
+    ode_contact_firstname = property(get_ode_contact_firstname, set_ode_contact_firstname)
+
+    def get_ode_contact_telephone(self):
+        value = self.context.getProperty('ode_contact_telephone', '')
+        return value
+    def set_ode_contact_telephone(self, value):
+        return self.context.setMemberProperties({'ode_contact_telephone': value})
+    ode_contact_telephone = property(get_ode_contact_telephone, set_ode_contact_telephone)
 
 class CustomizedUserDataPanel(UserDataPanel):
     """/personal-information (preferences personnelles"""

@@ -77,6 +77,9 @@
 
   <includeOverrides package=".members"/>
   <includeOverrides package=".content"/>
+  
+  <utility component=".vocabulary.ProfileTypesVocabulary"     name="ode.profile_types"     provides="zope.schema.interfaces.IVocabularyFactory"/>
+  
   <plone:static directory="static" type="theme" name="libertic.event"/>
 </configure>
 <!-- vim:set ft=xml: -->
