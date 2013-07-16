@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: libertic.event 1.0\n"
-"POT-Creation-Date: 2013-07-15 15:56+0000\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "PO-Revision-Date: 2013-05-28 00:40+0200\n"
 "Last-Translator: kiorky <kiorky@cryptelium.net>\n"
 "Language-Team: FR <LL@li.org>\n"
@@ -20,19 +20,19 @@ msgstr ""
 msgid "${name} is not allowed"
 msgstr ""
 
-#: ./content/liberticevent.py:690
+#: ./content/liberticevent.py:689
 msgid "${nb} Elements processed in the file"
 msgstr ""
 
-#: ./members/profile.py:148
+#: ./members/profile.py:196
 msgid "A new user has registered himself on OpenDataEvents website."
 msgstr ""
 
-#: ./members/profile.py:195
+#: ./members/profile.py:301
 msgid "A new user need to be added to the suppliers group"
 msgstr ""
 
-#: ./members/profile.py:36
+#: ./members/profile.py:38
 msgid "Accept terms of use"
 msgstr ""
 
@@ -45,11 +45,16 @@ msgstr ""
 msgid "Activity"
 msgstr ""
 
+#: ./members/profile.py:66
+msgid "Activity domain."
+msgstr ""
+
 #: ./portlets/context.pt:64
 msgid "Add a source"
 msgstr ""
 
 #: ./interfaces.py:186
+#: ./members/profile.py:74
 msgid "Address"
 msgstr ""
 
@@ -73,7 +78,7 @@ msgstr ""
 msgid "CP"
 msgstr ""
 
-#: ./content/liberticevent.py:610
+#: ./content/liberticevent.py:609
 msgid "Can be empty if the extension is one of : csv, json, xml"
 msgstr ""
 
@@ -145,6 +150,10 @@ msgstr ""
 msgid "Displays supplier or reusers logos"
 msgstr ""
 
+#: ./members/profile.py:65
+msgid "Domain"
+msgstr ""
+
 #: ./portlets/context.pt:24
 msgid "Download as XML"
 msgstr ""
@@ -167,7 +176,7 @@ msgstr ""
 msgid "Event start"
 msgstr ""
 
-#: ./content/liberticevent.py:703
+#: ./content/liberticevent.py:702
 msgid "Events"
 msgstr ""
 
@@ -175,15 +184,15 @@ msgstr ""
 msgid "Events are already planned to be fetched, please refresh in a while"
 msgstr ""
 
-#: ./content/liberticevent.py:607
+#: ./content/liberticevent.py:606
 msgid "Events file"
 msgstr ""
 
-#: ./content/liberticevent.py:609
+#: ./content/liberticevent.py:608
 msgid "Events file format"
 msgstr ""
 
-#: ./content/liberticevent.py:652
+#: ./content/liberticevent.py:651
 msgid "Events import has run sucessfully, please check the following log"
 msgstr ""
 
@@ -204,6 +213,7 @@ msgid "Failed runs"
 msgstr ""
 
 #: ./interfaces.py:257
+#: ./members/profile.py:89
 msgid "Firstname"
 msgstr ""
 
@@ -251,11 +261,12 @@ msgstr ""
 msgid "Import as file"
 msgstr ""
 
-#: ./content/liberticevent.py:642
+#: ./content/liberticevent.py:641
 msgid "Invalid File/Format"
 msgstr ""
 
 #: ./interfaces.py:256
+#: ./members/profile.py:84
 msgid "Lastname"
 msgstr ""
 
@@ -290,11 +301,11 @@ msgstr ""
 msgid "Libertic Source"
 msgstr "Events source"
 
-#: ./members/profile.py:48
+#: ./members/profile.py:52
 msgid "Libertic event reuser"
 msgstr ""
 
-#: ./members/profile.py:43
+#: ./members/profile.py:46
 msgid "Libertic event supplier"
 msgstr ""
 
@@ -454,6 +465,14 @@ msgstr ""
 msgid "Organisation"
 msgstr ""
 
+#: ./profiles/default/registry.xml
+msgid "Organizer of the event"
+msgstr ""
+
+#: ./members/profile.py:94
+msgid "Phone"
+msgstr ""
+
 #: ./interfaces.py:234
 msgid "Photos1 license"
 msgstr ""
@@ -494,6 +513,10 @@ msgstr ""
 msgid "See reusers list"
 msgstr ""
 
+#: ./members/profile.py:59
+msgid "Select your profile type."
+msgstr ""
+
 #: ./profiles/default/registry.xml
 msgid "Source of the event"
 msgstr ""
@@ -508,6 +531,10 @@ msgstr ""
 
 #: ./browser/templates/suppliers_list_view.pt:22
 msgid "Structure"
+msgstr ""
+
+#: ./members/profile.py:70
+msgid "Structure name"
 msgstr ""
 
 #: ./browser/templates/suppliers_list_view.pt:24
@@ -547,7 +574,7 @@ msgstr ""
 msgid "The time and date an item will start"
 msgstr ""
 
-#: ./content/liberticevent.py:649
+#: ./content/liberticevent.py:648
 msgid "There were fatal errors during import"
 msgstr ""
 
@@ -567,6 +594,7 @@ msgstr ""
 
 #: ./browser/templates/suppliers_list_view.pt:23
 #: ./interfaces.py:127
+#: ./members/profile.py:58
 msgid "Type"
 msgstr ""
 
@@ -594,15 +622,19 @@ msgstr ""
 msgid "Xml"
 msgstr ""
 
-#: ./members/profile.py:196
+#: ./members/profile.py:302
 msgid "You can manage its groups here:"
 msgstr ""
 
-#: ./members/profile.py:149
+#: ./members/profile.py:197
 msgid "You can move him to the suppliers group to validate its registration following the next link : "
 msgstr ""
 
-#: ./members/profile.py:142
+#: ./members/profile.py:79
+msgid "Zip code"
+msgstr ""
+
+#: ./members/profile.py:190
 msgid "[LIBERTIC] A new user need to be added to the suppliers group: ${user}"
 msgstr ""
 
@@ -678,17 +710,17 @@ msgid "help_group_moderators"
 msgstr ""
 
 #. Default: "Tick this box to indicate that you are an event reuser"
-#: ./members/profile.py:49
+#: ./members/profile.py:53
 msgid "help_libertic_event_reuser"
 msgstr ""
 
 #. Default: "Tick this box to indicate that you are an even supplier "
-#: ./members/profile.py:44
+#: ./members/profile.py:47
 msgid "help_libertic_event_supplier"
 msgstr ""
 
 #. Default: "Tick this box to indicate that you have found, read and accepted the terms of use for this site. "
-#: ./members/profile.py:37
+#: ./members/profile.py:39
 msgid "help_libertic_tgu"
 msgstr ""
 
@@ -743,10 +775,6 @@ msgstr ""
 
 #: ./interfaces.py:260
 msgid "organiser"
-msgstr ""
-
-#: ./profiles/default/registry.xml
-msgid "organizer of the organizer"
 msgstr ""
 
 #: ./profiles/default/registry.xml
