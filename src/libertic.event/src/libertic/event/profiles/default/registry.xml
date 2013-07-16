@@ -350,7 +350,19 @@
   </records>
   <records interface="libertic.event.interfaces.ILiberticEventSiteSettings">
     <value key="group_moderators" purge="false">
-       <element>mpa@makina-corpus.com</element>
+       <element>ehe@makina-corpus.com</element>
     </value>
   </records>
+  <record name="libertic.event.interfaces.ILiberticEventSiteSettings.profile_types">
+        <field type="plone.registry.field.Tuple">
+            <title>Profile types</title>
+            <value_type type="plone.registry.field.TextLine" />
+        </field>
+        <value>
+            <element>Association</element>
+            <element>Company</element>
+            <element>Freelance</element>
+            <element>Private individual</element>
+        </value>
+  </record>
 </registry>
