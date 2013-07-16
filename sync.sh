@@ -3,7 +3,7 @@ cd $(dirname $0)
 host="zope@ode.makina-corpus.net"
 w="/opt/minitage/zope/libertic.event-preprod"
 for i in var/filestorage/Data.fs var/blobstorage/;do
-    echo "rsync -azvP --exclude="*backup*" $host:$w/$i  $i(enter to coninue)"?;read
+    echo "rsync -azvP --exclude="*backup*" $host:$w/$i  $i(enter to continue)"?;read
     rsync -azvP --exclude="*.old*" --exclude="*backup*" $host:$w/$i $i
 done
 ./bin/zeoserver restart
