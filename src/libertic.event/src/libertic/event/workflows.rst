@@ -15,18 +15,19 @@ We will have groups mapped to roles::
 
 The user role (Member (simple) & anonymous)
 --------------------------------------------
+
 He can see the website pages.
 He can't do anything the others can like viewving events database or publishing events.
 
 The supplier role
-----------------------
+-----------------
 We can add a source
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 ::
 
     >>> import transaction;transaction.commit()
     >>> browser = Browser.new('http://foo/plone/fr/database', SUPPLIER_NAME, SUPPLIER_PASSWORD)
-    >>> browser.getLink(id="le-portlet-addsource").click()
+    >>> browser.getLink(url='++add++libertic_source').click()
     >>> browser.getControl(name="form.widgets.IDublinCore.title").value="mysource"
     >>> browser.getControl(name="form.widgets.IDublinCore.description").value="mysource desc"
     >>> browser.getControl(name="form.widgets.source").value="http://foo"
@@ -34,7 +35,7 @@ We can add a source
     >>> browser.getLink(id="workflow-transition-submit").click()
 
 We can add and submit for moderation an event
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ::
 
 
@@ -42,23 +43,19 @@ We can add and submit for moderation an event
 
 
     >>> browser = Browser.new('http://foo/plone/fr/database', SUPPLIER_NAME, SUPPLIER_PASSWORD)
-    >>> browser.getLink(id="le-portlet-addevent").click()
     >>> browser.getLink(url='++add++libertic_event').click()
-    >>> browser.getControl(name="form.widgets.source").value = "http://foo"
     >>> browser.getControl(name="form.widgets.IDublinCore.title").value="myevent"
     >>> browser.getControl(name="form.widgets.IDublinCore.description").value="myevent desc"
     >>> browser.getControl(name="form.widgets.eid").value = "123"
+    >>> browser.getControl(name="form.widgets.location_name").value = "foo"
     >>> browser.getControl(name="form.widgets.address").value = "foo"
-    >>> browser.getControl(name="form.widgets.street").value = "foo"
     >>> browser.getControl(name="form.widgets.town").value = "foo"
-    >>> browser.getControl(name="form.widgets.country").value = "foo"
+    >>> browser.getControl(name="form.widgets.cp").value = "foo"
     >>> browser.getControl(name="form.widgets.latlong").value = "47.123;48.123"
     >>> browser.getControl(name="form.widgets.event_start-day").value = "2"
     >>> browser.getControl(name="form.widgets.event_start-year").value = "2002"
     >>> browser.getControl(name="form.widgets.event_end-year").value = "2002"
     >>> browser.getControl(name="form.widgets.event_end-day").value = "22"
-    >>> browser.getControl(name="form.widgets.gallery_url").value = "http://foo"
-    >>> browser.getControl(name="form.widgets.gallery_license").value = "BSD"
     >>> browser.getControl(name="form.widgets.photos1_license").value = "BSD"
     >>> browser.getControl(name="form.widgets.photos1_url").value = "http://foo"
     >>> browser.getControl(name="form.widgets.email").value = "a@foofoo.com"
@@ -80,8 +77,11 @@ Only admin or other reviewers can publish events::
 
 
 Operator role
----------------------
-We can t create content::
+-------------
+
+We can't create content
+~~~~~~~~~~~~~~~~~~~~~~~~
+::
 
     >>> browser = Browser.new('http://foo/plone/fr/database', OPERATOR_NAME, OPERATOR_PASSWORD)
     >>> '++add++libertic_source' in browser.contents
@@ -90,7 +90,7 @@ We can t create content::
     False
 
 We can download the database
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We can consult a published event
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

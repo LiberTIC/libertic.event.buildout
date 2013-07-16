@@ -217,14 +217,4 @@ Now, do a valid xml import session::
     {'address': 'sdfgsfdsfdgsfdgsfdgsfdg',...
     ERRORS:
     [('press_url', InvalidURI('not an url'))]
-    </message>...
-    <result>
-    <sid>plonesupplier</sid>
-    <eid>xmlsxmlaaamyeid</eid>
-    <status>created</status>
-    <messages>
-    </messages>
-    </result>
-    </results>
-    </response>
-
+    ...
