@@ -102,7 +102,7 @@
                           <tal:block tal:repeat="group groups" condition="has_groups">
                               <fieldset
                                   tal:define="fieldset_name repeat/group/index"
-                                  tal:attributes="id python:'-'.join(('form-fieldset', group.__name__)).replace('.', '-')";
+                                  tal:attributes="id python:'-'.join(('form-fieldset', group.__name__)).replace('.', '-');
                                                   class string:kssattr-fieldset-${fieldset_name};
                                                   data-fieldset fieldset_name">
                                       <legend tal:define="form_name group/label"
