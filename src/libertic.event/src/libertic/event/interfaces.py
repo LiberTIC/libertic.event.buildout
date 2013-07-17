@@ -169,9 +169,9 @@ class ISourceMapping(form.Schema):
 class ILiberticEvent(IDatabaseItem):
     """A libertic event"""
     #~  form.omitted('sid','country','source','contained','related','organiser')
-    source = schema.URI(title=_('label_source', default='Source'), required=True)
+    source = schema.URI(title=_('label_source', default='Source'), required=False)
     sid = schema.TextLine(title=_('label_source_id', default='Source id'),
-                          constraint=sideidchars_check,  required=True)
+                          constraint=sideidchars_check,  required=False)
     eid = schema.TextLine(title=_('label_event_id',  default='Event id'),
                           constraint=sideidchars_check, required=True)
 
@@ -266,23 +266,25 @@ class ILiberticEvent(IDatabaseItem):
     
     form.widget(contained=MultiContentTreeFieldWidget)
     contained = schema.List(
-            title=u"contained Items",
-            default=[],
-            value_type = schema.Choice(
-                title = _(u"contained Items"),
-                source = UUIDSourceBinder(
-                    **{'portal_type':'libertic_event'})
-            ),
+        title=u"contained Items",
+        default=[],
+        value_type = schema.Choice(
+            title = _(u"contained Items"),
+            source = UUIDSourceBinder(
+                **{'portal_type':'libertic_event'})
+        ),
+        required=False,
     )
     form.widget(related=MultiContentTreeFieldWidget)
     related = schema.List(
-            title=u"related events",
-            default=[],
-            value_type = schema.Choice(
-                title = _(u"related events"),
-                source = UUIDSourceBinder(
-                    **{'portal_type':'libertic_event'})
-            ),
+        title=u"related events",
+        default=[],
+        value_type = schema.Choice(
+            title = _(u"related events"),
+            source = UUIDSourceBinder(
+                **{'portal_type':'libertic_event'})
+        ),
+        required=False,
     )
 
     @invariant
@@ -446,7 +448,6 @@ class EvFormats(object):
             'xml': _('Xml'),
             'ical': _('Ical'),
             'json': _('json'),
-
         }
         if not self.export:
             del types['ical']
