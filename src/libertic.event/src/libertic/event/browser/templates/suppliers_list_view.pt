@@ -30,8 +30,8 @@
                 <metal:block tal:repeat="result results">
                 <tr>
                     <td><a tal:attributes="href result/homeurl" target="_blank" tal:content="result/fullname" /></td>
-                    <td><span tal:content="result/activity" /></td>
-                    <td><span tal:content="result/activity" /></td>
+                    <td><span tal:content="result/type" /></td>
+                    <td><span tal:content="result/description" /></td>
                     <td><span tal:content="result/activity" /></td>
                     <td><span tal:content="result/location" /></td>
                 </tr>

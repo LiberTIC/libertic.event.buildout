@@ -50,9 +50,12 @@ class MemberListing(BrowserView):
             personnal_infos = mtool.getMemberInfo(user.id)
             user_infos['id'] = user.id
             user_infos['fullname'] = personnal_infos['fullname'] or user.id
-            user_infos['location'] = personnal_infos['location'] or None
-            user_infos['activity'] = personnal_infos['description'] or None
-            user_infos['homeurl'] = personnal_infos['home_page'] or None
+            user_infos['location'] = personnal_infos['location'] or ''
+            user_infos['activity'] = memberdata.getProperty('ode_domain') or ''
+            user_infos['homeurl'] = personnal_infos['home_page'] or ''
+            contact_firstname = memberdata.getProperty('ode_contact_firstname') or ''
+            contact_lastname = memberdata.getProperty('ode_contact_lastname') or ''
+            user_infos['contact_fullname'] = ' '.join((contact_firstname, contact_lastname))
 
             results.append(user_infos)
 
@@ -70,9 +73,11 @@ class MemberListing(BrowserView):
             personnal_infos = mtool.getMemberInfo(user.id)
             user_infos['id'] = user.id
             user_infos['fullname'] = personnal_infos['fullname'] or user.id
-            user_infos['location'] = personnal_infos['location'] or None
-            user_infos['activity'] = personnal_infos['description'] or None
-            user_infos['homeurl'] = personnal_infos['home_page'] or None
+            user_infos['location'] = personnal_infos['location'] or ''
+            user_infos['description'] = personnal_infos['description'] or ''
+            user_infos['activity'] = memberdata.getProperty('ode_domain') or ''
+            user_infos['type'] = memberdata.getProperty('ode_profile_type') or ''
+            user_infos['homeurl'] = personnal_infos['home_page'] or ''
 
             results.append(user_infos)
 
