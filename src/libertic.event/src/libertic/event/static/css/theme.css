@@ -858,3 +858,11 @@ fieldset#form-fieldset-press_contact {
   padding-left: 0;
   margin-top: -1.2em;
 }
+/* hide edit bar */
+.template-advanced_export #edit-bar,
+.template-reusers #edit-bar,
+.template-suppliers #edit-bar,
+.template-file_import #edit-bar,
+.template-libertic_event_datatables_view #edit-bar {
+  visibility: hidden;
+}

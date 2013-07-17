@@ -39,15 +39,9 @@
     <copy attributes="id dir" css:content="body" css:theme="body" />
 
 <!-- HEADER -->
-<!--    <append css:theme="#header-wrapper"
-        css:content="body"
-        href="/Plone/++theme++libertic.event/header.html" />-->
     <append css:content="#portal-logo" css:theme="#portal-logo-wrapper"/>
     <append css:content="#portal-languageselector" css:theme="#tools" />
     <append css:content="#portal-personaltools-wrapper" css:theme="#tools"/>
-<!--
-    <append css:content='#portal-searchbox' css:theme='#tools' />
--->
     <append css:content-children="#portal-globalnav" css:theme="#portal-globalnav"/>
     
 
@@ -75,16 +69,13 @@
         <drop css:content="#content #supplier-menu" />
         <drop css:content="#content #operator-menu" />
         <drop css:content="#plone-document-byline" />
+        <!-- drop actions -->
+<!--
+        <drop   css:content="#edit-bar"  
+                css:if-content=".template-advanced_export, .template-reusers, .template-suppliers, .template-file_import"/>
+-->
     </rules>
     
-    <rules css:if-content=".template-libertic_event">
-        <drop css:content="#form-fieldset-ownership" />
-        <drop css:content="#form-fieldset-settings" />
-    </rules>
     
-    <!-- drop actions -->
-    <drop   css:content="#edit-bar"  
-            css:if-content=".template-advanced_export, .template-reusers, .template-suppliers, .template-file_import"/>
-    
-    
+
 </rules>
