@@ -168,7 +168,7 @@ class ISourceMapping(form.Schema):
 
 class ILiberticEvent(IDatabaseItem):
     """A libertic event"""
-    form.omitted('sid','country','source','contained','related','organiser')
+    #~  form.omitted('sid','country','source','contained','related','organiser')
     source = schema.URI(title=_('label_source', default='Source'), required=True)
     sid = schema.TextLine(title=_('label_source_id', default='Source id'),
                           constraint=sideidchars_check,  required=True)
@@ -290,7 +290,6 @@ class ILiberticEvent(IDatabaseItem):
         if data is None:
             data = self
         for url, license in (
-            ('gallery_url', 'gallery_license'),
             ('photos1_url', 'photos1_license'),
             ('photos2_url', 'photos2_license'),
             ('video_url',   'video_license'),
