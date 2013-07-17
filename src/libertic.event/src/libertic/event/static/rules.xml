@@ -55,6 +55,7 @@
     <append css:content-children="#portal-column-content" css:theme="#portal-column-content"/>
     <append css:content-children="#portal-column-one" css:theme="#portal-column-one" />
     <append css:content-children="#portal-column-two" css:theme="#portal-column-two" />
+    <drop css:content="#portal-breadcrumbs" />
 
 <!-- FOOTER -->
     <append css:content-children="#portal-footer" css:theme="#portal-footer" />
@@ -66,11 +67,11 @@
         <drop css:content="#content #portlets-above" />
     </rules>
 
+<!-- SPECIFIC -->
+
     <rules css:if-content=".section-evenements">
         <append css:content-children="#operator-menu" css:theme="#operator-menu"  href="/fr/evenements"/>
         <append css:content-children="#supplier-menu" css:theme="#supplier-menu"  href="/fr/evenements"/>
-        <append css:content-children="#portlets-above" css:theme="#viewlet-below-content-title" />
-        <after css:content-children="#viewlet-above-content-body" css:theme="#viewlet-below-content-title" />
         <drop css:content="#content #supplier-menu" />
         <drop css:content="#content #operator-menu" />
         <drop css:content="#plone-document-byline" />
@@ -80,5 +81,10 @@
         <drop css:content="#form-fieldset-ownership" />
         <drop css:content="#form-fieldset-settings" />
     </rules>
+    
+    <!-- drop actions -->
+    <drop   css:content="#edit-bar"  
+            css:if-content=".template-advanced_export, .template-reusers, .template-suppliers, .template-file_import"/>
+    
     
 </rules>
