@@ -9,9 +9,9 @@
     <theme href="theme-three.html" css:if-content=".template-manage-portlets"/>
     <theme href="index.html" css:if-content=".section-front-page" />
     <theme href="theme-events.html" css:if-content=".section-evenements" />
-    <theme href="theme-three.html" if="$have_both_portlets"/>
-    <theme href="theme-two-left.html" if="$have_left_portlets"/>
-    <theme href="theme-two-right.html" if="$have_right_portlets"/>
+    <theme href="theme-three.html" css:if-content="#portal-column-one, #portal-column-two"/>
+    <theme href="theme-two-left.html" css:if-content="#portal-column-one"/>
+    <theme href="theme-two-right.html" css:if-content="#portal-column-one"/>
     <theme href="theme-one.html" />
     <drop content='/html/head/meta[@name="viewport"]'/>
     <drop css:theme=".drop"/>
