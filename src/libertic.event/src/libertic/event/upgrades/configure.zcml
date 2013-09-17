@@ -39,6 +39,7 @@
   <genericsetup:upgradeStep profile="libertic.event:default" source="1010" destination="1011"  handler=".upgrade_1011" title="libertic.event 1011" description="Add user info in user menu" />
   <genericsetup:upgradeStep profile="libertic.event:default" source="1011" destination="1012"  handler=".upgrade_1012" title="libertic.event 1012" description="Deactivate form_tabbing.js" />
   <genericsetup:upgradeStep profile="libertic.event:default" source="1012" destination="1013"  handler=".upgrade_1013" title="libertic.event 1013" description="Import new profile and registration fields" />
+  <genericsetup:upgradeStep profile="libertic.event:default" source="1013" destination="1014"  handler=".upgrade_1014" title="libertic.event 1014" description="Make events published" />
 
   <!-- vim:set ft=xml: -->
 </configure>

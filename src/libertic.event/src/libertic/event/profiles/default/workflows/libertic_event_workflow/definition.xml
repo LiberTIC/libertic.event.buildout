@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<dc-workflow workflow_id="libertic_event_workflow" title="Libertic Event Workflow" description="" state_variable="review_state" initial_state="private" manager_bypass="False">
+<dc-workflow workflow_id="libertic_event_workflow" title="Libertic Event Workflow" description="" state_variable="review_state" initial_state="published" manager_bypass="False">
  <permission>Add libertic event</permission>
  <permission>Edit libertic event</permission>
  <permission>Delete libertic event</permission>
