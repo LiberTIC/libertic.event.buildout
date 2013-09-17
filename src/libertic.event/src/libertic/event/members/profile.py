@@ -221,13 +221,11 @@ class LiberticPanelAdapter(UserDataPanelAdapter):
 
     def get_ode_profile_type(self):
         value = self.context.getProperty('ode_profile_type', '')
-        if len(value): value = value[0]
         return value
     def set_ode_profile_type(self, value):
-        #~ import pdb;pdb.set_trace()
-        if value is not None and not isinstance(value,(list, set, tuple)): value = [value]
-        if isinstance(value, (list, tuple, set)): value = list(value)
-        return self.context.setMemberProperties({'ode_profile_type': value[0]})
+        if value is None:
+            return self.context.setMemberProperties({'ode_profile_type': ''})
+        return self.context.setMemberProperties({'ode_profile_type': value})
     ode_profile_type = property(get_ode_profile_type, set_ode_profile_type)
 
     def get_ode_domain(self):
