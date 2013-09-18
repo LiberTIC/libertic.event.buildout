@@ -285,6 +285,27 @@ h2 {
     }
 }
 
+/* Specific pages *
+ * ------------- */
+
+/* Contact */
+
+.section-contact {
+    #content #plone-document-byline {
+        display: none;
+    }
+}
+
+/* Personnal infos */
+
+.template-personal-information #edit-bar {
+    display: none;
+}
+.userrole-manager.template-personal-information #edit-bar {
+    display: block;
+}
+
+
 /* Summary view *
  * ------------ */
 
@@ -474,6 +495,8 @@ fieldset {
 /* hide edit bar */
 .template-advanced_export, .template-reusers, .template-suppliers, .template-file_import, .template-libertic_event_datatables_view {
     #edit-bar {
+/*
         visibility: hidden;
+*/
     }
 }

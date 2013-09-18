@@ -702,6 +702,19 @@ h2 {
 #content p {
   margin-bottom: 0.5em;
 }
+/* Specific pages *
+ * ------------- */
+/* Contact */
+.section-contact #content #plone-document-byline {
+  display: none;
+}
+/* Personnal infos */
+.template-personal-information #edit-bar {
+  display: none;
+}
+.userrole-manager.template-personal-information #edit-bar {
+  display: block;
+}
 /* Summary view *
  * ------------ */
 /* hide main documentByLine */
@@ -864,5 +877,8 @@ fieldset#form-fieldset-press_contact {
 .template-suppliers #edit-bar,
 .template-file_import #edit-bar,
 .template-libertic_event_datatables_view #edit-bar {
-  visibility: hidden;
+  /*
+        visibility: hidden;
+*/
+
 }
