@@ -651,6 +651,9 @@ dl.portlet-libertic-context dd.add-content li a {
 }
 /* Content *
  * ******** */
+#content {
+  font-size: 90%;
+}
 /* heading */
 h1,
 h2,
@@ -829,19 +832,40 @@ table.dataTable thead th {
 }
 /* Forms *
  * ===== */
-.field label,
-.field span {
-  display: inline-block;
+/*
+.field {
+    label, span {
+        display: inline-block;
+    }
+    label {
+        width: 120px;
+    }
+    span.textarea-widget {
+        display: block;
+    }
 }
-.field label {
-  width: 120px;
+form .field {
+    label, span {
+        display: inline;
+    }
 }
-.field span.textarea-widget {
-  display: block;
+*/
+body.template-register #content input,
+body.template-new-user #content input {
+  font-size: 110%;
 }
-form .field label,
-form .field span {
-  display: inline;
+#content li.formTab a.required span:after,
+#content-core li.formTab a.required span:after,
+div.field span.required:after {
+  content: '*';
+  padding-left: 0;
+  padding-right: 1em;
+}
+.formHelp {
+  font-size: 0.9em;
+}
+.field > img {
+  border: 1px solid #c2c2c2;
 }
 fieldset#form-fieldset-event_dates .field,
 fieldset#form-fieldset-event_media .field {

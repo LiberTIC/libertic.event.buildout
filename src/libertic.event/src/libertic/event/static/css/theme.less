@@ -239,6 +239,9 @@ dl.portlet-libertic-context {
 /* Content *
  * ******** */
 
+#content {
+    font-size: 90%;
+}
 /* heading */
 
 h1, h2, h3, h4, h5, h6 {
@@ -442,6 +445,7 @@ table.dataTable {
 /* Forms *
  * ===== */
 
+/*
 .field {
     label, span {
         display: inline-block;
@@ -457,6 +461,29 @@ form .field {
     label, span {
         display: inline;
     }
+}
+*/
+
+body.template-register, 
+body.template-new-user {
+    #content input {
+        font-size: 110%;
+    }
+}
+
+#content li.formTab a.required span:after, 
+#content-core li.formTab a.required span:after, 
+div.field span.required:after {
+    content: '*';
+    padding-left: 0;
+    padding-right: 1em;
+}
+.formHelp {
+    font-size: 0.9em;
+}
+
+.field > img {
+  border: 1px solid @grayLighter;
 }
 
 fieldset {
