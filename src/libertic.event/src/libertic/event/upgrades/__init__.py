@@ -246,3 +246,4 @@ def upgrade_1014(context):
     site = getToolByName(context, 'portal_url').getPortalObject()
     portal_setup = site.portal_setup
     portal_setup.runImportStepFromProfile(PROFILEID, 'workflow', run_dependencies=False)
+    portal_setup.runImportStepFromProfile(PROFILEID, 'languagetool', run_dependencies=False)
