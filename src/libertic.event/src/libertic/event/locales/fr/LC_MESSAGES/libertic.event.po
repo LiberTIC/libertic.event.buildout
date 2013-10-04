@@ -190,7 +190,7 @@ msgstr "Fichier d'évènements"
 
 #: ./content/liberticevent.py:608
 msgid "Events file format"
-msgstr "Format du fichier des évnènements"
+msgstr "Format du fichier des évènements"
 
 #: ./content/liberticevent.py:651
 msgid "Events import has run sucessfully, please check the following log"
